@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026-04-27 AI面试知识点更新</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-04-27 18:01</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#2026-04-27-ai面试知识点更新'>2026-04-27 AI面试知识点更新</a><a class='toc-h2' href='#executive-summary'>Executive Summary</a><a class='toc-h2' href='#knowledge-delta'>Knowledge Delta</a><a class='toc-h2' href='#topic-follow-up-checklist'>Topic Follow-up Checklist</a><a class='toc-h2' href='#new-updated-interview-questions'>New / Updated Interview Questions</a><a class='toc-h2' href='#watchlist'>Watchlist</a><a class='toc-h2' href='#sources'>Sources</a><a class='toc-h2' href='#automation-routing-fix-summary'>Automation / Routing Fix Summary</a></nav><main><div class="meta">Source: 20_Projects/AI面试系统框架/daily-updates/2026-04-27-AI面试知识点更新.md</div><h1 id='2026-04-27-ai面试知识点更新'>2026-04-27 AI面试知识点更新</h1>
+<h2 id='executive-summary'>Executive Summary</h2>
+<ul>
+<li>今天没有按预期路径生成 <code>daily-updates/2026-04-27-AI面试知识点更新.md</code>；08:34 EDT 生成的是旧路径 <code>Daily Market Updates/2026-04-27 AI Market Update.md</code>，因此没有触发标准 heartbeat 推送。</li>
+<li>主要知识增量集中在：frontier model reasoning/agent controls、Claude Managed Agents memory、vLLM 0.20.0 serving 兼容矩阵、LangChain content-block streaming 与 agent observability、LlamaIndex 文档解析 benchmark。</li>
+<li>今日建议先记录 follow-up，不自动大改主框架；其中 vLLM 0.20.0、Anthropic managed-agent memory、1M context vs RAG 是高价值面试更新。</li>
+</ul>
+<h2 id='knowledge-delta'>Knowledge Delta</h2>
+<div class='table-wrap'><table><thead><tr><th>Technology / Concept</th><th>Affected Topic</th><th>What changed</th><th>Action needed</th><th>Confidence</th></tr></thead><tbody><tr><td>Anthropic Rate Limits API</td><td>15-MLOps与LLMOps, 06-Production AI Engineering</td><td>Anthropic 2026-04-24 发布组织/workspace rate limit 查询 API。</td><td>补充一道 production 题：多 provider rate limit、配额监控、降级与排队怎么设计。</td><td>High — official docs</td></tr><tr><td>Claude Managed Agents Memory</td><td>09-Agents Tools Function Calling, 08-Chatbot与AI应用架构</td><td>Anthropic 2026-04-23 将 Managed Agents memory 推到 public beta。</td><td>新增 agent memory 题：短期状态、长期记忆、隐私/删除、debug 与 eval。</td><td>High — official docs</td></tr><tr><td>Claude Opus 4.7 / Bedrock availability</td><td>02-LLM基础与Transformer, 13-Inference与Serving优化</td><td>Anthropic 2026-04-16 发布 Opus 4.7，并在 Bedrock 自助可用；含迁移/兼容风险。</td><td>更新 frontier model 迁移清单：model/version/tokenizer/API breaking changes。</td><td>High — official docs</td></tr><tr><td>vLLM 0.20.0</td><td>13-Inference与Serving优化</td><td>vLLM 0.20.0 于 2026-04-27 发布。GitHub API 显示当天 published；wheel 覆盖 CPU/CUDA 等平台。</td><td>在 serving note 加“升级前 checklist”：CUDA/PyTorch/Transformers/模型支持/benchmark/canary/rollback。</td><td>High — GitHub release</td></tr><tr><td>LangChain content-block-centric streaming v2</td><td>03-Prompt与Context Engineering, 09-Agents Tools Function Calling</td><td><code>langchain-core==1.3.2</code> / <code>langchain-openai==1.2.1</code> release notes 提到 content-block-centric streaming v2，并刷新 GPT-5.5 Pro Responses API check。</td><td>补充 streaming/schema/Responses API 兼容题。</td><td>High — GitHub release</td></tr><tr><td>LlamaIndex structured output failure handling</td><td>05-RAG与AI Search, 11-Evaluation与Observability</td><td>LlamaIndex 0.14.21 修复 structured output failures 的 ValueError/TypeError handling。</td><td>在 RAG pipeline/debug 题中强调 parser validation、retry、failure telemetry。</td><td>Medium — GitHub release</td></tr><tr><td>LlamaIndex ParseBench</td><td>05-RAG与AI Search, 19-实现与Coding练习</td><td>LlamaIndex 发布 ParseBench，强调 agent 文档解析质量（tables/charts/faithfulness/semantic formatting/visual grounding）。</td><td>新增 Document AI/RAG ingestion 题：PDF/table/chart/code 如何评估解析质量。</td><td>Medium — vendor blog</td></tr><tr><td>TechCrunch market signals</td><td>17-AI市场每日更新系统</td><td>TechCrunch AI 页出现 Anthropic agent commerce、Cohere/Aleph Alpha、ComfyUI 估值、Google/Anthropic 投资等信号。</td><td>放入市场项目追踪；不直接改面试框架，除非后续被官方/多源确认。</td><td>Medium — tech press</td></tr></tbody></table></div>
+<h2 id='topic-follow-up-checklist'>Topic Follow-up Checklist</h2>
+<ul class='checklist'>
+<li><input type='checkbox' disabled > <code>20_Projects/AI面试系统框架/09-Agents Tools Function Calling.md</code>：加入 Managed Agents memory / agent state / HITL / durable execution 面试点。</li>
+<li><input type='checkbox' disabled > <code>20_Projects/AI面试系统框架/13-Inference与Serving优化.md</code>：加入 vLLM 0.20.0 升级与 serving 兼容矩阵。</li>
+<li><input type='checkbox' disabled > <code>20_Projects/AI面试系统框架/05-RAG与AI Search.md</code>：加入 ParseBench/文档解析质量与 1M context 是否替代 RAG 的回答。</li>
+<li><input type='checkbox' disabled > <code>20_Projects/AI面试系统框架/11-Evaluation与Observability.md</code>：加入 structured output failures、trace → eval → regression loop。</li>
+<li><input type='checkbox' disabled > <code>20_Projects/AI面试系统框架/16-高频面试题库.md</code>：把下方候选题合并入 Q077+。</li>
+</ul>
+<h2 id='new-updated-interview-questions'>New / Updated Interview Questions</h2>
+<ol>
+<li>如何设计 agent memory？哪些内容可以长期保存，哪些必须短期或不保存？如何支持删除、审计和权限？</li>
+<li>生产系统如何处理多 provider rate limit？如何做排队、降级、预算控制和用户可见错误？</li>
+<li>vLLM 大版本升级前，你会如何做 benchmark、canary、兼容性检查和 rollback？</li>
+<li>1M context 出现后，RAG 还解决什么问题？请从 freshness、权限、引用、成本、延迟、eval 回答。</li>
+<li>文档解析 pipeline 如何评估 table/chart/PDF/code 的质量？为什么解析质量会影响 RAG hallucination？</li>
+<li>Structured output 失败如何分类、重试、修复和监控？</li>
+<li>Streaming 输出如果变成 content-block-centric，对 UI、parser、tool-call handling 有什么影响？</li>
+</ol>
+<h2 id='watchlist'>Watchlist</h2>
+<ul>
+<li>OpenAI GPT-5.5 / GPT-5.5 Pro 相关公开页面抓取不完整；已有 API docs/changelog 信号，但需要后续官方页面复核。</li>
+<li>TechCrunch 的 Cursor/Anthropic equity 等市场信号不直接进入面试框架，先转市场研究 watchlist。</li>
+<li>Reddit/面经信号今日未完成自动检索：Gemini-backed <code>web_search</code> 返回 503，且需遵守 Reddit/API 与 1point3acres 合规边界。</li>
+</ul>
+<h2 id='sources'>Sources</h2>
+<ul>
+<li>Anthropic release notes — https://platform.claude.com/docs/en/release-notes/overview</li>
+<li>vLLM GitHub releases API — https://api.github.com/repos/vllm-project/vllm/releases?per_page=5</li>
+<li>LangChain GitHub releases API — https://api.github.com/repos/langchain-ai/langchain/releases?per_page=5</li>
+<li>LlamaIndex GitHub releases API — https://api.github.com/repos/run-llama/llama_index/releases?per_page=5</li>
+<li>LlamaIndex blog / ParseBench — https://www.llamaindex.ai/blog</li>
+<li>TechCrunch AI — https://techcrunch.com/category/artificial-intelligence/</li>
+<li>Legacy generated note — 2026-04-27 AI Market Update</li>
+</ul>
+<h2 id='automation-routing-fix-summary'>Automation / Routing Fix Summary</h2>
+<ul>
+<li>已将 AI市场每日更新-CronPrompt 的输出目录从 legacy <code>Daily Market Updates/</code> 修正为标准 <code>daily-updates/</code>。</li>
+<li>已在 AI市场每日更新系统 中标明：<code>Daily Market Updates/</code> 只保留历史输出，新自动化应写入 <code>daily-updates/</code>。</li>
+<li>已新增 <code>ai_daily_update_guard</code> 到 99_System/Jobs/daily_jobs.yaml，每日总控会检查/回填：AI 面试知识点更新、AI Market Research 刷新、面经信号更新、框架自审。</li>
+<li>今日检测结果：标准 AI 面试知识点更新、AI Market Research 刷新、面经信号更新和框架自审均已存在；legacy 文件 2026-04-27 AI Market Update 已保留但不再作为新输出目标。</li>
+</ul></main></div>
+</body></html>

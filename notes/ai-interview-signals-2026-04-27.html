@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026-04-27 面经信号更新</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-04-27 18:01</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#2026-04-27-面经信号更新'>2026-04-27 面经信号更新</a><a class='toc-h2' href='#executive-summary'>Executive Summary</a><a class='toc-h2' href='#new-interview-signals'>New Interview Signals</a><a class='toc-h2' href='#candidate-questions-to-add'>Candidate Questions to Add</a><a class='toc-h2' href='#existing-cards-to-update'>Existing Cards to Update</a><a class='toc-h2' href='#source-links-manual-inputs'>Source Links / Manual Inputs</a><a class='toc-h2' href='#compliance-notes'>Compliance Notes</a><a class='toc-h2' href='#follow-up'>Follow-up</a></nav><main><div class="meta">Source: 20_Projects/AI面试系统框架/daily-updates/2026-04-27-面经信号更新.md</div><h1 id='2026-04-27-面经信号更新'>2026-04-27 面经信号更新</h1>
+<h2 id='executive-summary'>Executive Summary</h2>
+<ul>
+<li>今日未发现可安全自动沉淀的新增面经信号。</li>
+<li>自动 broad search 受阻：Gemini-backed <code>web_search</code> 两次返回 503（high demand / UNAVAILABLE）。</li>
+<li>1point3acres / 一亩三分地内容不能绕过登录、积分、验证码、反爬或访问控制；需要用户提供已授权查看的文本/链接/手动导出后才能整理。</li>
+</ul>
+<h2 id='new-interview-signals'>New Interview Signals</h2>
+<div class='table-wrap'><table><thead><tr><th>Source</th><th>Role / Company</th><th>Round</th><th>Topic</th><th>Extracted Question</th><th>Mapped QID</th><th>Confidence</th></tr></thead><tbody><tr><td>Reddit/public web</td><td>N/A</td><td>N/A</td><td>N/A</td><td>今日未完成自动检索；搜索服务 503。</td><td>N/A</td><td>Low</td></tr><tr><td>1point3acres/manual input</td><td>N/A</td><td>N/A</td><td>N/A</td><td>等待用户提供授权内容。</td><td>N/A</td><td>N/A</td></tr></tbody></table></div>
+<h2 id='candidate-questions-to-add'>Candidate Questions to Add</h2>
+<ul>
+<li>暂无；不基于不完整/不可验证信号新增题目。</li>
+</ul>
+<h2 id='existing-cards-to-update'>Existing Cards to Update</h2>
+<ul>
+<li>暂无；等待重复信号或高可信来源。</li>
+</ul>
+<h2 id='source-links-manual-inputs'>Source Links / Manual Inputs</h2>
+<ul>
+<li>无新增用户提供材料。</li>
+</ul>
+<h2 id='compliance-notes'>Compliance Notes</h2>
+<ul>
+<li>不收集账号/凭据。</li>
+<li>不绕过登录、paywall、积分、验证码、robots/TOS 或反爬限制。</li>
+<li>不保存个人数据；后续若用户提供面经，优先做结构化摘要与问题映射，不复制全文。</li>
+</ul>
+<h2 id='follow-up'>Follow-up</h2>
+<ul class='checklist'>
+<li><input type='checkbox' disabled > 若用户愿意，可粘贴/导出 1point3acres 面经文本，我会映射到 <code>16-高频面试题库.md</code> 与 <code>07-高频问答卡片.md</code>。</li>
+<li><input type='checkbox' disabled > 下次 heartbeat 若搜索服务恢复，再做 Reddit/public signal scan。</li>
+</ul></main></div>
+</body></html>
