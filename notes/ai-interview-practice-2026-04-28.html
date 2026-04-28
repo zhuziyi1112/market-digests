@@ -11,7 +11,7 @@ main { min-width:0; background:var(--card); border:1px solid var(--line); border
 .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
 @media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
 </style></head><body>
-<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-04-28 14:10</div></div></div>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-04-28 16:13</div></div></div>
 <div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#ai-面试每日问答-2026-04-28'>AI 面试每日问答 - 2026-04-28</a><a class='toc-h2' href='#今日目标'>今日目标</a><a class='toc-h2' href='#new-questions'>New Questions</a><a class='toc-h3' href='#q037-tool-misuse-怎么防'>Q037｜Tool misuse 怎么防？</a><a class='toc-h3' href='#q038-multi-agent-有什么问题-什么时候不该用'>Q038｜Multi-agent 有什么问题？什么时候不该用？</a><a class='toc-h3' href='#q039-mcp-解决什么问题-和普通-tool-calling-区别'>Q039｜MCP 解决什么问题？和普通 tool calling 区别？</a><a class='toc-h2' href='#review-questions'>Review Questions</a><a class='toc-h3' href='#from-yesterday'>From yesterday</a><a class='toc-h3' href='#from-3-days-ago'>From 3 days ago</a><a class='toc-h3' href='#from-7-days-ago'>From 7 days ago</a><a class='toc-h3' href='#from-30-days-ago'>From 30 days ago</a><a class='toc-h2' href='#english-speaking-drill'>English speaking drill</a><a class='toc-h3' href='#recording-self-check'>Recording / self-check</a><a class='toc-h2' href='#今日错题-weak-points'>今日错题 / Weak Points</a><a class='toc-h2' href='#明日复习候选'>明日复习候选</a></nav><main><div class="meta">Source: 20_Projects/rich-interview/30-Practice-OS/daily-sheets/2026-04-28.md</div><h1 id='ai-面试每日问答-2026-04-28'>AI 面试每日问答 - 2026-04-28</h1>
 <h2 id='今日目标'>今日目标</h2>
 <ul>
@@ -25,8 +25,8 @@ main { min-width:0; background:var(--card); border:1px solid var(--line); border
 <p>level:: Senior</p>
 <p>type:: Security</p>
 <p>source:: 16 高频面试题库</p>
-<p>related:: rich-interview/10-Knowledge/08-Agents-Tools-Function-Calling, rich-interview/10-Knowledge/13-Safety-Security-Governance</p>
-<p>status:: weak</p>
+<p>related:: 20_Projects/rich-interview/10-Knowledge/08-Agents-Tools-Function-Calling, 20_Projects/rich-interview/10-Knowledge/13-Safety-Security-Governance</p>
+<p>status:: practiced</p>
 <p>last_reviewed:: 2026-04-28</p>
 <p>next_review:: 2026-04-29</p>
 <h4 id='中文理解'>中文理解</h4>
@@ -35,95 +35,98 @@ main { min-width:0; background:var(--card); border:1px solid var(--line); border
 </ul>
 <h4 id='english-concise-bullets'>English concise bullets</h4>
 <ul>
-<li>Definition: _待填写：一句话定义_</li>
-<li>Mechanism: _待填写：核心机制 / architecture_</li>
-<li>Tradeoff: _待填写：主要取舍 / production concern_</li>
+<li>Definition: Tool misuse means the model calls the wrong tool, uses unsafe parameters, repeats actions, or performs an action the user/system did not authorize.</li>
+<li>Mechanism: Separate tool-call intent from execution. The LLM proposes an action; a deterministic policy gate validates tool allowlist, user permission, parameter schema, risk level, idempotency, rate limit, and confirmation requirement.</li>
+<li>Tradeoff: More controls reduce autonomy and add latency, but they are necessary for tools with side effects, sensitive data, or enterprise permissions.</li>
 </ul>
 <h4 id='45-sec-interview-answer'>45-sec interview answer</h4>
 <blockquote>
-<p>_待填写：练习后写 45-60 秒英文答案。_</p>
+<p>To prevent tool misuse, I would not let the LLM directly execute tools. I would separate intent generation from execution. The model can propose a structured tool call, but a deterministic policy gate should validate whether the tool is allowed, whether the user has permission, whether the parameters match the schema, and whether the action is risky. For read-only low-risk tools, automatic execution may be fine. For actions like sending emails, deleting data, making purchases, or changing permissions, I would use dry-run, sandboxing, idempotency keys, and human confirmation. In production I would trace every tool call and evaluate tool selection accuracy, parameter correctness, side-effect safety, latency, and policy violations.</p>
 </blockquote>
 <h4 id='follow-up-questions'>Follow-up questions</h4>
 <ul>
-<li>What is the main tradeoff?</li>
-<li>How would you evaluate it in production?</li>
-<li>What can fail and how would you debug it?</li>
+<li>Where is the boundary between model decision and system execution?</li>
+<li>Which tools require dry-run or human confirmation?</li>
+<li>How do you make retries safe for tools with side effects?</li>
+<li>How would you evaluate tool safety in production?</li>
 </ul>
 <h4 id='我的回答记录'>我的回答记录</h4>
 <ul>
-<li>Round 1：</li>
-<li>卡住点：</li>
-<li>改进句：</li>
+<li>Round 1：可以讲出 allowlist / policy gate / confirmation，但需要更自然地说出 “separate intent from execution”。</li>
+<li>卡住点：容易只罗列 controls，缺少 architecture boundary。</li>
+<li>改进句：The model proposes; the policy layer disposes.</li>
 </ul>
 <h3 id='q038-multi-agent-有什么问题-什么时候不该用'>Q038｜Multi-agent 有什么问题？什么时候不该用？</h3>
 <p>topic:: Agents</p>
 <p>level:: Senior</p>
 <p>type:: Tradeoff</p>
 <p>source:: 16 高频面试题库</p>
-<p>related:: rich-interview/10-Knowledge/08-Agents-Tools-Function-Calling</p>
-<p>status:: weak</p>
+<p>related:: 20_Projects/rich-interview/10-Knowledge/08-Agents-Tools-Function-Calling</p>
+<p>status:: practiced</p>
 <p>last_reviewed:: 2026-04-28</p>
 <p>next_review:: 2026-04-29</p>
 <h4 id='中文理解'>中文理解</h4>
 <ul>
-<li>先用自己的话解释，再回到对应主题笔记补全标准答案。</li>
+<li>Multi-agent 不是默认升级。它适合任务可拆、角色边界清楚、共享状态可控的场景；不适合路径明确、风险高、强审计、低延迟或成本敏感的场景。主要风险是 coordination overhead、context bleed、重复工作、责任不清、错误传播、成本/延迟失控。</li>
 </ul>
 <h4 id='english-concise-bullets'>English concise bullets</h4>
 <ul>
-<li>Definition: _待填写：一句话定义_</li>
-<li>Mechanism: _待填写：核心机制 / architecture_</li>
-<li>Tradeoff: _待填写：主要取舍 / production concern_</li>
+<li>Definition: Multi-agent means multiple agents with separate roles coordinate on a task, usually through shared state, task envelopes, or a coordinator.</li>
+<li>Mechanism: Use role separation, shared task board, explicit ownership, memory isolation, status transitions, and audit logs. Do not let agents freely chat and trigger each other without boundaries.</li>
+<li>Tradeoff: Multi-agent can improve specialization and parallelism, but it increases coordination cost, observability burden, and failure propagation risk.</li>
 </ul>
 <h4 id='45-sec-interview-answer'>45-sec interview answer</h4>
 <blockquote>
-<p>_待填写：练习后写 45-60 秒英文答案。_</p>
+<p>I would not use multi-agent by default. Multi-agent systems are useful when the task is naturally decomposable, such as research, planning, implementation, and review, and when each agent has a clear role and output contract. But they can fail through coordination overhead, duplicated work, context leakage, role confusion, and error propagation. For production, I prefer a deterministic workflow or state machine when the path is known or the task is high risk. If I do use multiple agents, I would add a coordinator, shared task state, per-agent memory boundaries, clear ownership, audit logs, and verification gates. I would evaluate task success, unnecessary actions, handoff failures, cost, latency, and safety violations.</p>
 </blockquote>
 <h4 id='follow-up-questions'>Follow-up questions</h4>
 <ul>
-<li>What is the main tradeoff?</li>
-<li>How would you evaluate it in production?</li>
-<li>What can fail and how would you debug it?</li>
+<li>What tasks are actually decomposable enough for multi-agent?</li>
+<li>How do agents share task state without sharing private memory?</li>
+<li>How do you avoid duplicate work and file conflicts?</li>
+<li>When would a simple workflow be better?</li>
 </ul>
 <h4 id='我的回答记录'>我的回答记录</h4>
 <ul>
-<li>Round 1：</li>
-<li>卡住点：</li>
-<li>改进句：</li>
+<li>Round 1：核心立场要先说：not by default; workflow first。</li>
+<li>卡住点：容易把 multi-agent 讲成“更强”，但没讲 coordination cost。</li>
+<li>改进句：Multi-agent is an organizational pattern, not a quality guarantee.</li>
 </ul>
 <h3 id='q039-mcp-解决什么问题-和普通-tool-calling-区别'>Q039｜MCP 解决什么问题？和普通 tool calling 区别？</h3>
 <p>topic:: MCP</p>
 <p>level:: Senior</p>
 <p>type:: Concept</p>
 <p>source:: 16 高频面试题库</p>
-<p>related:: rich-interview/10-Knowledge/08-Agents-Tools-Function-Calling</p>
-<p>status:: weak</p>
+<p>related:: 20_Projects/rich-interview/10-Knowledge/08-Agents-Tools-Function-Calling</p>
+<p>status:: practiced</p>
 <p>last_reviewed:: 2026-04-28</p>
 <p>next_review:: 2026-04-29</p>
 <h4 id='中文理解'>中文理解</h4>
 <ul>
-<li>先用自己的话解释，再回到对应主题笔记补全标准答案。</li>
+<li>Function calling 是模型/API 层表达“我想调用某个工具及参数”的结构化格式；MCP 是协议层，用来把 tools、resources、prompts、context 暴露给 AI client。真正的 agent runtime 还要负责规划、权限、执行、确认、审计、重试和恢复。不要说 MCP 替代 function calling，它们不是同一层。</li>
 </ul>
 <h4 id='english-concise-bullets'>English concise bullets</h4>
 <ul>
-<li>Definition: _待填写：一句话定义_</li>
-<li>Mechanism: _待填写：核心机制 / architecture_</li>
-<li>Tradeoff: _待填写：主要取舍 / production concern_</li>
+<li>Definition: Function calling is a model/API format for tool-call intent; MCP is a protocol layer for exposing tools, resources, prompts, and context to AI clients.</li>
+<li>Mechanism: Model emits a call intent; MCP standardizes what tools/resources are available; runtime enforces policy, executes calls, handles errors, and logs traces.</li>
+<li>Tradeoff: MCP improves interoperability and tool discovery, but it does not remove the need for runtime permission control, schema design, confirmation, and eval.</li>
 </ul>
 <h4 id='45-sec-interview-answer'>45-sec interview answer</h4>
 <blockquote>
-<p>_待填写：练习后写 45-60 秒英文答案。_</p>
+<p>MCP and function calling solve related but different problems. Function calling is usually the model or API format that lets the model express a structured tool-call intent, such as the tool name and arguments. MCP is a protocol layer for exposing tools, resources, prompts, and context to an AI client in a standardized way. But neither of them alone is the full agent runtime. In production, the runtime still needs to choose tools, validate parameters, enforce permissions, request confirmation for risky actions, execute the call, handle errors, and log audit traces. So I would not say MCP replaces function calling. MCP standardizes tool and context access; function calling expresses intent; the runtime owns policy and execution.</p>
 </blockquote>
 <h4 id='follow-up-questions'>Follow-up questions</h4>
 <ul>
-<li>What is the main tradeoff?</li>
-<li>How would you evaluate it in production?</li>
-<li>What can fail and how would you debug it?</li>
+<li>What layer owns permission enforcement?</li>
+<li>Does MCP replace function calling?</li>
+<li>How do you evaluate an MCP-based tool ecosystem?</li>
+<li>What can go wrong when too many tools are exposed?</li>
 </ul>
 <h4 id='我的回答记录'>我的回答记录</h4>
 <ul>
-<li>Round 1：</li>
-<li>卡住点：</li>
-<li>改进句：</li>
+<li>Round 1：要牢牢记住三层：protocol / intent format / runtime policy。</li>
+<li>卡住点：容易把 MCP 讲成“新的 tool calling”。</li>
+<li>改进句：MCP exposes capabilities; function calling requests actions; the runtime governs execution.</li>
 </ul>
 <h2 id='review-questions'>Review Questions</h2>
 <h3 id='from-yesterday'>From yesterday</h3>
@@ -156,10 +159,14 @@ main { min-width:0; background:var(--card); border:1px solid var(--line); border
 </ul>
 <h2 id='今日错题-weak-points'>今日错题 / Weak Points</h2>
 <ul>
-<li>_待填写：需要改进的点。_</li>
+<li>Q037：不要只罗列 guardrails，要先讲清 <strong>LLM proposes, policy gate executes</strong> 的架构边界。</li>
+<li>Q038：Multi-agent 要先表明 <strong>not by default / workflow first</strong>，再讲适用条件和风险。</li>
+<li>Q039：MCP、function calling、agent runtime 是三层，不要混成一个概念。</li>
 </ul>
 <h2 id='明日复习候选'>明日复习候选</h2>
 <ul>
-<li>_暂无；练习后选择 1-3 个 weak questions。_</li>
+<li>Q037：Tool misuse 怎么防？重点练 “separate intent from execution”。</li>
+<li>Q038：Multi-agent 什么时候不该用？重点练 “coordination cost / workflow first”。</li>
+<li>Q039：MCP vs function calling。重点练 “protocol vs intent format vs runtime”。</li>
 </ul></main></div>
 </body></html>
