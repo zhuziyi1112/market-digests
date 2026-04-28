@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-04-28</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-04-28 12:46</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-04-28'>RichLens Candidate Feed — 2026-04-28</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-the-runtime-behind-production-deep-agents'>1. The Runtime Behind Production Deep Agents</a><a class='toc-h3' href='#2-quoting-matthew-yglesias'>2. Quoting Matthew Yglesias</a><a class='toc-h3' href='#3-an-intelligent-fault-diagnosis-method-for-general-aviation-aircraft-based-on-multi-fidelity-digital-twin-and-fmea-knowledge-enhancement'>3. An Intelligent Fault Diagnosis Method for General Aviation Aircraft Based on Multi-Fidelity Digital Twin and FMEA Knowledge Enhancement</a><a class='toc-h3' href='#4-karl-mitigating-hallucinations-in-llms-via-knowledge-boundary-aware-reinforcement-learning'>4. KARL: Mitigating Hallucinations in LLMs via Knowledge-Boundary-Aware Reinforcement Learning</a><a class='toc-h3' href='#5-cctop-a-keyboard-first-menubar-app-to-jump-between-ai-coding-sessions'>5. Cctop – A keyboard-first menubar app to jump between AI coding sessions</a><a class='toc-h3' href='#6-pexa-parallel-exploration-agent-for-complex-text-to-sql'>6. PExA: Parallel Exploration Agent for Complex Text-to-SQL</a><a class='toc-h3' href='#7-texocr-advancing-document-ocr-models-for-compilable-page-to-latex-reconstruction'>7. TexOCR: Advancing Document OCR Models for Compilable Page-to-LaTeX Reconstruction</a><a class='toc-h3' href='#8-adaptive-ultrasound-imaging-with-physics-informed-nv-raw2insights-us-ai'>8. Adaptive Ultrasound Imaging with Physics-Informed NV-Raw2Insights-US AI</a><a class='toc-h3' href='#9-how-we-built-langchain-s-gtm-agent'>9. How we built LangChain’s GTM Agent</a><a class='toc-h3' href='#10-what-s-new-in-pip-26-1-lockfiles-and-dependency-cooldowns'>10. What&#x27;s new in pip 26.1 - lockfiles and dependency cooldowns!</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-04-28-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-04-28'>RichLens Candidate Feed — 2026-04-28</h1>
+<ul>
+<li>Discovered candidates: 52</li>
+<li>Added to queue: 10</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-the-runtime-behind-production-deep-agents'>1. The Runtime Behind Production Deep Agents</h3>
+<ul>
+<li>ID: <code>RL-1a264db7eb</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/runtime-behind-production-deep-agents</li>
+<li>Score: <code>0.83</code></li>
+<li>Why: Matches topics: AI agents, coding agents, AI infrastructure, investment AI infrastructure</li>
+</ul>
+<h3 id='2-quoting-matthew-yglesias'>2. Quoting Matthew Yglesias</h3>
+<ul>
+<li>ID: <code>RL-9c9d8e8ea8</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/Apr/28/matthew-yglesias/#atom-everything</li>
+<li>Score: <code>0.71</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='3-an-intelligent-fault-diagnosis-method-for-general-aviation-aircraft-based-on-multi-fidelity-digital-twin-and-fmea-knowledge-enhancement'>3. An Intelligent Fault Diagnosis Method for General Aviation Aircraft Based on Multi-Fidelity Digital Twin and FMEA Knowledge Enhancement</h3>
+<ul>
+<li>ID: <code>RL-816c9cc173</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2604.22777</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: knowledge management, inference, Obsidian knowledge management</li>
+</ul>
+<h3 id='4-karl-mitigating-hallucinations-in-llms-via-knowledge-boundary-aware-reinforcement-learning'>4. KARL: Mitigating Hallucinations in LLMs via Knowledge-Boundary-Aware Reinforcement Learning</h3>
+<ul>
+<li>ID: <code>RL-1f4036eae5</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2604.22779</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: knowledge management, AI product strategy, Obsidian knowledge management</li>
+</ul>
+<h3 id='5-cctop-a-keyboard-first-menubar-app-to-jump-between-ai-coding-sessions'>5. Cctop – A keyboard-first menubar app to jump between AI coding sessions</h3>
+<ul>
+<li>ID: <code>RL-f151f2cd43</code></li>
+<li>Source: Hacker News AI Search / <code>rss</code></li>
+<li>URL: https://cctop.app/</li>
+<li>Score: <code>0.51</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='6-pexa-parallel-exploration-agent-for-complex-text-to-sql'>6. PExA: Parallel Exploration Agent for Complex Text-to-SQL</h3>
+<ul>
+<li>ID: <code>RL-aafcfd678b</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2604.22934</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='7-texocr-advancing-document-ocr-models-for-compilable-page-to-latex-reconstruction'>7. TexOCR: Advancing Document OCR Models for Compilable Page-to-LaTeX Reconstruction</h3>
+<ul>
+<li>ID: <code>RL-0beff30e94</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2604.22880</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='8-adaptive-ultrasound-imaging-with-physics-informed-nv-raw2insights-us-ai'>8. Adaptive Ultrasound Imaging with Physics-Informed NV-Raw2Insights-US AI</h3>
+<ul>
+<li>ID: <code>RL-efd836dfee</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/nvidia/raw2insights-adaptive-ultrasound-imaging</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='9-how-we-built-langchain-s-gtm-agent'>9. How we built LangChain’s GTM Agent</h3>
+<ul>
+<li>ID: <code>RL-be678f0f1c</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/how-we-built-langchains-gtm-agent</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='10-what-s-new-in-pip-26-1-lockfiles-and-dependency-cooldowns'>10. What's new in pip 26.1 - lockfiles and dependency cooldowns!</h3>
+<ul>
+<li>ID: <code>RL-47e7e54d3e</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/Apr/28/pip-261/#atom-everything</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul></main></div>
+</body></html>
