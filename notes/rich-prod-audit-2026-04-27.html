@@ -11,8 +11,8 @@ main { min-width:0; background:var(--card); border:1px solid var(--line); border
 .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
 @media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
 </style></head><body>
-<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-04-27 19:46</div></div></div>
-<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#2026-04-27-框架自审与优化'>2026-04-27 框架自审与优化</a><a class='toc-h2' href='#executive-summary'>Executive Summary</a><a class='toc-h2' href='#coverage-structure-scorecard'>Coverage / Structure Scorecard</a><a class='toc-h2' href='#safe-auto-fixes-applied'>Safe Auto-Fixes Applied</a><a class='toc-h2' href='#suggested-manual-agent-tasks'>Suggested Manual / Agent Tasks</a><a class='toc-h2' href='#questions-to-promote-into-16-高频面试题库-md'>Questions to Promote into `16-高频面试题库.md`</a><a class='toc-h2' href='#cards-to-add-improve-in-07-高频问答卡片-md'>Cards to Add / Improve in `07-高频问答卡片.md`</a><a class='toc-h2' href='#files-needing-canonical-legacy-cleanup'>Files Needing Canonical / Legacy Cleanup</a><a class='toc-h2' href='#blockers-notes'>Blockers / Notes</a></nav><main><div class="meta">Source: 20_Projects/AI面试系统框架/audits/2026-04-27-框架自审与优化.md</div><h1 id='2026-04-27-框架自审与优化'>2026-04-27 框架自审与优化</h1>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-04-27 23:30</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#2026-04-27-框架自审与优化'>2026-04-27 框架自审与优化</a><a class='toc-h2' href='#executive-summary'>Executive Summary</a><a class='toc-h2' href='#coverage-structure-scorecard'>Coverage / Structure Scorecard</a><a class='toc-h2' href='#safe-auto-fixes-applied'>Safe Auto-Fixes Applied</a><a class='toc-h2' href='#suggested-manual-agent-tasks'>Suggested Manual / Agent Tasks</a><a class='toc-h2' href='#questions-to-promote-into-16-高频面试题库-md'>Questions to Promote into `16-高频面试题库.md`</a><a class='toc-h2' href='#cards-to-add-improve-in-07-高频问答卡片-md'>Cards to Add / Improve in `07-高频问答卡片.md`</a><a class='toc-h2' href='#files-needing-canonical-legacy-cleanup'>Files Needing Canonical / Legacy Cleanup</a><a class='toc-h2' href='#blockers-notes'>Blockers / Notes</a></nav><main><div class="meta">Source: 20_Projects/rich-interview/audits/2026-04-27-框架自审与优化.md</div><h1 id='2026-04-27-框架自审与优化'>2026-04-27 框架自审与优化</h1>
 <h2 id='executive-summary'>Executive Summary</h2>
 <ul>
 <li>今日最大问题不是内容缺失，而是<strong>自动化输出路径不一致</strong>：08:34 EDT 已生成 <code>Daily Market Updates/2026-04-27 AI Market Update.md</code>，但 HEARTBEAT 期望的是 <code>daily-updates/2026-04-27-AI面试知识点更新.md</code> 和市场项目的 <code>daily-updates/2026-04-27-AI市场研究刷新.md</code>。</li>
@@ -23,21 +23,21 @@ main { min-width:0; background:var(--card); border:1px solid var(--line); border
 <div class='table-wrap'><table><thead><tr><th>Area</th><th>Score</th><th>Notes</th></tr></thead><tbody><tr><td>Topic coverage</td><td>8.5/10</td><td>主题已覆盖 LLM/RAG/Vector DB/GraphRAG/Agents/Eval/Serving/Safety/LLMOps。</td></tr><tr><td>Interview usability</td><td>8/10</td><td><code>16-高频面试题库</code> + <code>07-高频问答卡片</code> 结构清晰；部分 candidate/stub 仍需补卡。</td></tr><tr><td>Production realism</td><td>8/10</td><td>已强调 eval、observability、cost、rollback、权限；需加入 2026 agent memory / rate limit / serving upgrade checklist。</td></tr><tr><td>File structure consistency</td><td>6.5/10</td><td>存在 <code>Daily Market Updates/</code> 与 <code>daily-updates/</code> 双路径；MOC 文件名不是 HEARTBEAT 中的 <code>MOC.md</code>。</td></tr><tr><td>Automation reliability</td><td>6/10</td><td>今日已证明路径 mismatch 会导致不推送；需修正 heartbeat/cron 输出目标。</td></tr></tbody></table></div>
 <h2 id='safe-auto-fixes-applied'>Safe Auto-Fixes Applied</h2>
 <ul>
-<li>已创建标准目录：<code>20_Projects/AI面试系统框架/daily-updates/</code>、<code>20_Projects/AI面试系统框架/audits/</code>、<code>20_Projects/AI-Market-Research-2026-Q2/daily-updates/</code>。</li>
+<li>已创建标准目录：<code>20_Projects/rich-interview/daily-updates/</code>、<code>20_Projects/rich-interview/audits/</code>、<code>20_Projects/rich-ai-research/daily-updates/</code>。</li>
 <li>已补写今日标准路径文件：</li>
-<li><code>20_Projects/AI面试系统框架/daily-updates/2026-04-27-AI面试知识点更新.md</code></li>
-<li><code>20_Projects/AI-Market-Research-2026-Q2/daily-updates/2026-04-27-AI市场研究刷新.md</code></li>
-<li><code>20_Projects/AI面试系统框架/audits/2026-04-27-框架自审与优化.md</code></li>
+<li><code>20_Projects/rich-interview/daily-updates/2026-04-27-AI面试知识点更新.md</code></li>
+<li><code>20_Projects/rich-ai-research/daily-updates/2026-04-27-AI市场研究刷新.md</code></li>
+<li><code>20_Projects/rich-interview/audits/2026-04-27-框架自审与优化.md</code></li>
 <li>未删除、未移动、未覆盖旧路径文件。</li>
 </ul>
 <h2 id='suggested-manual-agent-tasks'>Suggested Manual / Agent Tasks</h2>
 <ol>
 <li><strong>P0：修正自动化输出路径</strong></li>
 <ul>
-<li>将任何仍写入 <code>20_Projects/AI面试系统框架/Daily Market Updates/</code> 的脚本/cron/prompt 改为 HEARTBEAT 指定路径。</li>
+<li>将任何仍写入 <code>20_Projects/rich-interview/Daily Market Updates/</code> 的脚本/cron/prompt 改为 HEARTBEAT 指定路径。</li>
 <li>或在 HEARTBEAT 中明确兼容旧路径，但推荐统一到 <code>daily-updates/</code>。</li>
 <li><strong>P0：统一 MOC 文件名引用</strong></li>
-<li>当前主 MOC 看起来是 <code>AI面试系统框架 MOC.md</code>，HEARTBEAT 写的是 <code>MOC</code>。</li>
+<li>当前主 MOC 看起来是 <code>rich-interview MOC.md</code>，HEARTBEAT 写的是 <code>MOC</code>。</li>
 <li>建议创建一个轻量 <code>MOC.md</code> 转链，或把 HEARTBEAT 改为实际文件名。</li>
 <li><strong>P1：题库回流</strong></li>
 <li>将今日新增题作为 Q077-Q083 加入 <code>16-高频面试题库.md</code>，状态先设 <code>candidate</code>。</li>
@@ -66,10 +66,10 @@ main { min-width:0; background:var(--card); border:1px solid var(--line); border
 </ul>
 <h2 id='files-needing-canonical-legacy-cleanup'>Files Needing Canonical / Legacy Cleanup</h2>
 <ul>
-<li><code>20_Projects/AI面试系统框架/Daily Market Updates/</code>：今日仍被写入；应标记 legacy 或迁移到 <code>daily-updates/</code>。</li>
-<li><code>20_Projects/AI面试系统框架/AI面试系统框架 MOC.md</code> vs HEARTBEAT 的 <code>MOC</code>：引用不一致。</li>
-<li><code>20_Projects/AI面试系统框架/06-Production AI Engineering.md</code> 与 <code>06-Vector DB与Knowledge Stores.md</code>：编号重复，容易影响排序和引用。</li>
-<li><code>20_Projects/AI面试系统框架/07-Knowledge Graph与GraphRAG.md</code> 与 <code>07-高频问答卡片.md</code>：编号重复，建议后续改为 <code>07A/07B</code> 或重新编号。</li>
+<li><code>20_Projects/rich-interview/Daily Market Updates/</code>：今日仍被写入；应标记 legacy 或迁移到 <code>daily-updates/</code>。</li>
+<li><code>20_Projects/rich-interview/rich-interview MOC.md</code> vs HEARTBEAT 的 <code>MOC</code>：引用不一致。</li>
+<li><code>20_Projects/rich-interview/06-Production AI Engineering.md</code> 与 <code>06-Vector DB与Knowledge Stores.md</code>：编号重复，容易影响排序和引用。</li>
+<li><code>20_Projects/rich-interview/07-Knowledge Graph与GraphRAG.md</code> 与 <code>07-高频问答卡片.md</code>：编号重复，建议后续改为 <code>07A/07B</code> 或重新编号。</li>
 </ul>
 <h2 id='blockers-notes'>Blockers / Notes</h2>
 <ul>
