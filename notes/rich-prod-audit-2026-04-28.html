@@ -11,7 +11,7 @@ main { min-width:0; background:var(--card); border:1px solid var(--line); border
 .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
 @media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
 </style></head><body>
-<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-04-28 14:10</div></div></div>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-04-28 16:13</div></div></div>
 <div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#2026-04-28-框架自审与优化'>2026-04-28 框架自审与优化</a><a class='toc-h2' href='#executive-summary'>Executive Summary</a><a class='toc-h2' href='#coverage-structure-scorecard'>Coverage / Structure Scorecard</a><a class='toc-h2' href='#safe-auto-fixes-applied'>Safe Auto-Fixes Applied</a><a class='toc-h2' href='#suggested-manual-agent-tasks'>Suggested Manual / Agent Tasks</a><a class='toc-h2' href='#files-needing-canonical-legacy-cleanup'>Files Needing Canonical / Legacy Cleanup</a></nav><main><div class="meta">Source: 20_Projects/rich-interview/60-Audits/2026-04-28-框架自审与优化.md</div><h1 id='2026-04-28-框架自审与优化'>2026-04-28 框架自审与优化</h1>
 <h2 id='executive-summary'>Executive Summary</h2>
 <ul>
@@ -23,6 +23,14 @@ main { min-width:0; background:var(--card); border:1px solid var(--line); border
 <div class='table-wrap'><table><thead><tr><th>Area</th><th>Status</th><th>Note</th></tr></thead><tbody><tr><td>AI interview daily sheet</td><td>OK</td><td>今日 sheet 存在，Q037-Q039 可练。</td></tr><tr><td>English daily sheet</td><td>OK</td><td>今日 sheet 存在，有 standard response。</td></tr><tr><td>Daily update notes</td><td>Improved</td><td>从 repair placeholder 改为 light scan / local signal。</td></tr><tr><td>RichLens candidate feed</td><td>Needs triage</td><td>已生成 10 个候选，需要 approve/review/skip。</td></tr><tr><td>Discord push UX</td><td>Improved</td><td>新推送必须包含可打开链接和筛选动作。</td></tr></tbody></table></div>
 <h2 id='safe-auto-fixes-applied'>Safe Auto-Fixes Applied</h2>
 <ul>
+<li>已创建 2026-04-30 Evaluation + LLMOps Mock session，覆盖 Q041-Q045/Q057/Q060，并挂到 Mock Log / Dashboard。</li>
+<li>已创建 2026-04-29 Agent Tooling Mock session，覆盖 Q035-Q039/Q063，并挂到 Mock Log / Dashboard。</li>
+<li>已预生成 2026-04-29 daily sheet：Q024/Q033/Q063 + Q037-Q039 spaced review。</li>
+<li>Practice OS 闭环完成一轮：2026-04-28 daily sheet 的 Q037-Q039 已补英文答案，并写入 Mistake-Log。</li>
+<li>Top-30 Answer Cards 已新增 P0 Upgrade Cards：同步 10 个高价值追问题。</li>
+<li>Question-Bank 已完成 candidate/stub triage：31 题补 answer capsule，当前 96 card-ready + 2 deep-dive-ready。</li>
+<li>P0 内容细化已推进：Behavioral stories、Top-30 answer cards、RAG pipeline、Evaluation pipeline 已补面试输出、red flags、metrics/eval/CI gate。</li>
+<li>rich-interview 内部 wikilink 已统一到 <code>rich-prod/...</code> canonical 路径，并通过本地链接检查。</li>
 <li>Hermes AI 面试推送加入 GitHub link + Obsidian link。</li>
 <li>Hermes 英语训练推送加入 GitHub link + Obsidian link。</li>
 <li>今日 daily update notes 从 repair placeholder 改为用户可读内容。</li>
