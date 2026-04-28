@@ -11,32 +11,47 @@ main { min-width:0; background:var(--card); border:1px solid var(--line); border
 .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
 @media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
 </style></head><body>
-<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-04-28 09:44</div></div></div>
-<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#2026-04-28-ai面试知识点更新'>2026-04-28 AI面试知识点更新</a><a class='toc-h2' href='#executive-summary'>Executive Summary</a><a class='toc-h2' href='#repair-context'>Repair Context</a><a class='toc-h2' href='#follow-up-checklist'>Follow-up Checklist</a><a class='toc-h2' href='#sources-inputs'>Sources / Inputs</a></nav><main><div class="meta">Source: 20_Projects/rich-interview/50-Signals-and-Updates/daily-updates/2026-04-28-AI面试知识点更新.md</div><h1 id='2026-04-28-ai面试知识点更新'>2026-04-28 AI面试知识点更新</h1>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-04-28 12:38</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#2026-04-28-ai面试知识点更新'>2026-04-28 AI面试知识点更新</a><a class='toc-h2' href='#executive-summary'>Executive Summary</a><a class='toc-h2' href='#knowledge-delta'>Knowledge Delta</a><a class='toc-h2' href='#topic-follow-up-checklist'>Topic Follow-up Checklist</a><a class='toc-h2' href='#new-updated-interview-questions'>New / Updated Interview Questions</a><a class='toc-h2' href='#watchlist'>Watchlist</a><a class='toc-h2' href='#bridge-routing'>Bridge Routing</a><a class='toc-h2' href='#sources'>Sources</a></nav><main><div class="meta">Source: 20_Projects/rich-interview/50-Signals-and-Updates/daily-updates/2026-04-28-AI面试知识点更新.md</div><h1 id='2026-04-28-ai面试知识点更新'>2026-04-28 AI面试知识点更新</h1>
 <blockquote>
-<p>[!warning] Recovery placeholder</p>
-<p>This note was created during OpenClaw/Hermes hardening so automation paths and dashboards stop pointing at missing files. It is <strong>not</strong> a full source-backed daily scan. Replace or append below after a real scan.</p>
+<p>今日为 <strong>light scan</strong>：基于 RichLens Candidate Feed + 本地 AI 面试训练任务整理，不是假装完成深度 web research。</p>
 </blockquote>
 <h2 id='executive-summary'>Executive Summary</h2>
 <ul>
-<li>Automation path repair completed: canonical output path is valid.</li>
-<li>Today's original scheduled run did not produce this artifact before repair.</li>
-<li>Follow-up needed: run the real daily scan/audit when time or budget allows.</li>
+<li>今日面试训练主线是 <strong>Agents + Tools + Skills</strong>：重点练 Tool misuse 防护、Multi-agent tradeoff、MCP vs tool calling。</li>
+<li>RichLens 今日高价值技术信号集中在 <strong>production deep agents runtime</strong>、<strong>LLM hallucination boundary/eval</strong>、<strong>Text-to-SQL agent exploration</strong>。</li>
+<li>建议把 <code>Deep Agents runtime</code> 和 <code>KARL hallucination mitigation</code> 回流到 agent architecture / safety-eval 题卡。</li>
 </ul>
-<h2 id='repair-context'>Repair Context</h2>
-<ul>
-<li>HEARTBEAT was compressed under OpenClaw's bootstrap budget.</li>
-<li>Hermes daily push cron was moved to stable wrapper scripts.</li>
-<li>Critical scripts were updated away from retired folders.</li>
-</ul>
-<h2 id='follow-up-checklist'>Follow-up Checklist</h2>
+<h2 id='knowledge-delta'>Knowledge Delta</h2>
+<div class='table-wrap'><table><thead><tr><th>Technology / Concept</th><th>Affected Topic</th><th>What Changed / Why It Matters</th><th>Action Needed</th><th>Confidence</th></tr></thead><tbody><tr><td>Production deep agents runtime</td><td>Agents / tool orchestration</td><td>LangChain 的 deep agents runtime 信号适合补充“长任务 agent 如何拆分、持久化、恢复、观测”的 senior answer。</td><td>更新 Agents 题卡：增加 runtime / state / interrupt / approval gate。</td><td>medium</td></tr><tr><td>Knowledge-boundary-aware hallucination mitigation</td><td>Evaluation / Safety</td><td>KARL 类信号适合放进“如何降低 hallucination”的回答：不要只讲 RAG，也要讲 boundary detection、abstention、RL/eval。</td><td>新增 candidate question：How do you detect when an LLM should abstain?</td><td>medium</td></tr><tr><td>Parallel Exploration Agent for Text-to-SQL</td><td>Agents + Data</td><td>Text-to-SQL 从单次生成走向多路径探索/验证，适合面试讲 search, verification, execution feedback。</td><td>回流到 tool-use / data agent 题。</td><td>medium</td></tr><tr><td>MCP vs tool calling</td><td>Tool integration</td><td>今日练习题 Q039 应强调：MCP 是上下文/工具/资源协议层，tool calling 是模型调用工具的交互模式。</td><td>完成今日 daily sheet 45-60 秒英文回答。</td><td>high</td></tr></tbody></table></div>
+<h2 id='topic-follow-up-checklist'>Topic Follow-up Checklist</h2>
 <ul class='checklist'>
-<li><input type='checkbox' disabled > Run source-backed scan or local audit for <code>AI面试知识点更新</code>.</li>
-<li><input type='checkbox' disabled > Replace this placeholder summary with actual findings.</li>
-<li><input type='checkbox' disabled > Route durable findings to the proper queue or canonical note.</li>
+<li><input type='checkbox' disabled > 20_Projects/rich-interview/10-Knowledge/08-Agents-Tools-Function-Calling：补 runtime/state/approval gate。</li>
+<li><input type='checkbox' disabled > 20_Projects/rich-interview/10-Knowledge/13-Safety-Security-Governance：补 abstention / knowledge boundary。</li>
+<li><input type='checkbox' disabled > 20_Projects/rich-interview/20-Question-Bank/Question-Bank：加入 Text-to-SQL agent verification candidate。</li>
 </ul>
-<h2 id='sources-inputs'>Sources / Inputs</h2>
+<h2 id='new-updated-interview-questions'>New / Updated Interview Questions</h2>
+<ol>
+<li>How would you design a runtime for production deep agents that can recover from failure?</li>
+<li>How do you prevent tool misuse when the LLM can call external tools?</li>
+<li>When should a multi-agent design be avoided?</li>
+<li>How would you evaluate a Text-to-SQL agent beyond exact-match accuracy?</li>
+<li>How can a system detect that the model should abstain instead of hallucinating?</li>
+</ol>
+<h2 id='watchlist'>Watchlist</h2>
 <ul>
-<li>Local automation repair session on 2026-04-28.</li>
+<li>LangChain deep agents runtime：可能影响 agent architecture 面试答案。</li>
+<li>KARL / hallucination boundary：可能影响 safety-eval 答案。</li>
+<li>Agentic coding session manager tools：更多是 productivity / product signal，先观察。</li>
+</ul>
+<h2 id='bridge-routing'>Bridge Routing</h2>
+<ul>
+<li>Route to <code>rich-ai-research</code>：LangChain runtime / GTM agent 作为 agent infra + enterprise adoption signal。</li>
+<li>Route to <code>rich-interview</code>：KARL、PExA、MCP/tool misuse 回流题库。</li>
+</ul>
+<h2 id='sources'>Sources</h2>
+<ul>
+<li>99_System/Reports/RichLens/Discovery/2026-04-28-RichLens-Candidate-Feed</li>
+<li>20_Projects/rich-interview/30-Practice-OS/daily-sheets/2026-04-28</li>
 </ul></main></div>
 </body></html>

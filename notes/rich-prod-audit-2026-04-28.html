@@ -11,32 +11,30 @@ main { min-width:0; background:var(--card); border:1px solid var(--line); border
 .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
 @media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
 </style></head><body>
-<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-04-28 09:44</div></div></div>
-<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#2026-04-28-框架自审与优化'>2026-04-28 框架自审与优化</a><a class='toc-h2' href='#executive-summary'>Executive Summary</a><a class='toc-h2' href='#repair-context'>Repair Context</a><a class='toc-h2' href='#follow-up-checklist'>Follow-up Checklist</a><a class='toc-h2' href='#sources-inputs'>Sources / Inputs</a></nav><main><div class="meta">Source: 20_Projects/rich-interview/60-Audits/2026-04-28-框架自审与优化.md</div><h1 id='2026-04-28-框架自审与优化'>2026-04-28 框架自审与优化</h1>
-<blockquote>
-<p>[!warning] Recovery placeholder</p>
-<p>This note was created during OpenClaw/Hermes hardening so automation paths and dashboards stop pointing at missing files. It is <strong>not</strong> a full source-backed daily scan. Replace or append below after a real scan.</p>
-</blockquote>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-04-28 12:38</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#2026-04-28-框架自审与优化'>2026-04-28 框架自审与优化</a><a class='toc-h2' href='#executive-summary'>Executive Summary</a><a class='toc-h2' href='#coverage-structure-scorecard'>Coverage / Structure Scorecard</a><a class='toc-h2' href='#safe-auto-fixes-applied'>Safe Auto-Fixes Applied</a><a class='toc-h2' href='#suggested-manual-agent-tasks'>Suggested Manual / Agent Tasks</a><a class='toc-h2' href='#files-needing-canonical-legacy-cleanup'>Files Needing Canonical / Legacy Cleanup</a></nav><main><div class="meta">Source: 20_Projects/rich-interview/60-Audits/2026-04-28-框架自审与优化.md</div><h1 id='2026-04-28-框架自审与优化'>2026-04-28 框架自审与优化</h1>
 <h2 id='executive-summary'>Executive Summary</h2>
 <ul>
-<li>Automation path repair completed: canonical output path is valid.</li>
-<li>Today's original scheduled run did not produce this artifact before repair.</li>
-<li>Follow-up needed: run the real daily scan/audit when time or budget allows.</li>
+<li>今日核心问题不是知识框架本身，而是 <strong>自动化推送质量</strong>：Discord 推送必须给可点击链接、真实内容和下一步动作。</li>
+<li>已修复 Hermes 推送脚本：AI 面试/英语训练现在输出 GitHub clickable link + Obsidian deep link。</li>
+<li>今日 RDB 中的 repair placeholder 已替换为 light scan 内容，避免把内部修复当作用户日报。</li>
 </ul>
-<h2 id='repair-context'>Repair Context</h2>
+<h2 id='coverage-structure-scorecard'>Coverage / Structure Scorecard</h2>
+<div class='table-wrap'><table><thead><tr><th>Area</th><th>Status</th><th>Note</th></tr></thead><tbody><tr><td>AI interview daily sheet</td><td>OK</td><td>今日 sheet 存在，Q037-Q039 可练。</td></tr><tr><td>English daily sheet</td><td>OK</td><td>今日 sheet 存在，有 standard response。</td></tr><tr><td>Daily update notes</td><td>Improved</td><td>从 repair placeholder 改为 light scan / local signal。</td></tr><tr><td>RichLens candidate feed</td><td>Needs triage</td><td>已生成 10 个候选，需要 approve/review/skip。</td></tr><tr><td>Discord push UX</td><td>Improved</td><td>新推送必须包含可打开链接和筛选动作。</td></tr></tbody></table></div>
+<h2 id='safe-auto-fixes-applied'>Safe Auto-Fixes Applied</h2>
 <ul>
-<li>HEARTBEAT was compressed under OpenClaw's bootstrap budget.</li>
-<li>Hermes daily push cron was moved to stable wrapper scripts.</li>
-<li>Critical scripts were updated away from retired folders.</li>
+<li>Hermes AI 面试推送加入 GitHub link + Obsidian link。</li>
+<li>Hermes 英语训练推送加入 GitHub link + Obsidian link。</li>
+<li>今日 daily update notes 从 repair placeholder 改为用户可读内容。</li>
 </ul>
-<h2 id='follow-up-checklist'>Follow-up Checklist</h2>
+<h2 id='suggested-manual-agent-tasks'>Suggested Manual / Agent Tasks</h2>
 <ul class='checklist'>
-<li><input type='checkbox' disabled > Run source-backed scan or local audit for <code>框架自审与优化</code>.</li>
-<li><input type='checkbox' disabled > Replace this placeholder summary with actual findings.</li>
-<li><input type='checkbox' disabled > Route durable findings to the proper queue or canonical note.</li>
+<li><input type='checkbox' disabled > 用户从 RichLens 候选中回复 <code>approve RL-...</code> / <code>skip RL-...</code>。</li>
+<li><input type='checkbox' disabled > 今天完成 Q037-Q039 任意 1 题英文回答。</li>
+<li><input type='checkbox' disabled > 今天完成英语训练 Part 2 standard response 朗读和复述。</li>
 </ul>
-<h2 id='sources-inputs'>Sources / Inputs</h2>
+<h2 id='files-needing-canonical-legacy-cleanup'>Files Needing Canonical / Legacy Cleanup</h2>
 <ul>
-<li>Local automation repair session on 2026-04-28.</li>
+<li>继续观察 99_System/Reports/Automation/2026-04-28-Automation-Health 中的 launchd stale warnings；核心 OpenClaw/Hermes 已 OK。</li>
 </ul></main></div>
 </body></html>

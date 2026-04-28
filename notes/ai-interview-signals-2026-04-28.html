@@ -11,32 +11,30 @@ main { min-width:0; background:var(--card); border:1px solid var(--line); border
 .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
 @media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
 </style></head><body>
-<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-04-28 09:44</div></div></div>
-<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#2026-04-28-面经信号更新'>2026-04-28 面经信号更新</a><a class='toc-h2' href='#executive-summary'>Executive Summary</a><a class='toc-h2' href='#repair-context'>Repair Context</a><a class='toc-h2' href='#follow-up-checklist'>Follow-up Checklist</a><a class='toc-h2' href='#sources-inputs'>Sources / Inputs</a></nav><main><div class="meta">Source: 20_Projects/rich-interview/50-Signals-and-Updates/daily-updates/2026-04-28-面经信号更新.md</div><h1 id='2026-04-28-面经信号更新'>2026-04-28 面经信号更新</h1>
-<blockquote>
-<p>[!warning] Recovery placeholder</p>
-<p>This note was created during OpenClaw/Hermes hardening so automation paths and dashboards stop pointing at missing files. It is <strong>not</strong> a full source-backed daily scan. Replace or append below after a real scan.</p>
-</blockquote>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-04-28 12:38</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#2026-04-28-面经信号更新'>2026-04-28 面经信号更新</a><a class='toc-h2' href='#executive-summary'>Executive Summary</a><a class='toc-h2' href='#new-interview-signals'>New Interview Signals</a><a class='toc-h2' href='#candidate-questions-to-add'>Candidate Questions to Add</a><a class='toc-h2' href='#existing-cards-to-update'>Existing Cards to Update</a><a class='toc-h2' href='#compliance-notes'>Compliance Notes</a></nav><main><div class="meta">Source: 20_Projects/rich-interview/50-Signals-and-Updates/daily-updates/2026-04-28-面经信号更新.md</div><h1 id='2026-04-28-面经信号更新'>2026-04-28 面经信号更新</h1>
 <h2 id='executive-summary'>Executive Summary</h2>
 <ul>
-<li>Automation path repair completed: canonical output path is valid.</li>
-<li>Today's original scheduled run did not produce this artifact before repair.</li>
-<li>Follow-up needed: run the real daily scan/audit when time or budget allows.</li>
+<li>今天没有自动抓取 1point3acres/一亩三分地内容；保持合规，不绕过登录、积分、付费墙或验证码。</li>
+<li>今日可用信号来自本地训练系统：Agents + Tools + MCP 是今天的 mock interview focus。</li>
+<li>建议今天只做一个动作：完成 Q037/Q038/Q039 中任意 1 题 60 秒英文回答，并记录卡点。</li>
 </ul>
-<h2 id='repair-context'>Repair Context</h2>
+<h2 id='new-interview-signals'>New Interview Signals</h2>
+<div class='table-wrap'><table><thead><tr><th>Source</th><th>Role / Company</th><th>Round</th><th>Topic</th><th>Extracted Question</th><th>Mapped QID</th><th>Confidence</th></tr></thead><tbody><tr><td>Local daily sheet</td><td>AI Engineer / LLM Engineer</td><td>mock</td><td>Tool safety</td><td>Tool misuse 怎么防？</td><td>Q037</td><td>high</td></tr><tr><td>Local daily sheet</td><td>AI Engineer / LLM Engineer</td><td>mock</td><td>Multi-agent</td><td>Multi-agent 有什么问题？什么时候不该用？</td><td>Q038</td><td>high</td></tr><tr><td>Local daily sheet</td><td>AI Engineer / LLM Engineer</td><td>mock</td><td>MCP / tool calling</td><td>MCP 解决什么问题？和普通 tool calling 区别？</td><td>Q039</td><td>high</td></tr></tbody></table></div>
+<h2 id='candidate-questions-to-add'>Candidate Questions to Add</h2>
 <ul>
-<li>HEARTBEAT was compressed under OpenClaw's bootstrap budget.</li>
-<li>Hermes daily push cron was moved to stable wrapper scripts.</li>
-<li>Critical scripts were updated away from retired folders.</li>
+<li>How do you design approval gates for high-risk tool calls?</li>
+<li>What failure modes are unique to multi-agent systems?</li>
+<li>How would you debug a failed MCP tool/resource integration?</li>
 </ul>
-<h2 id='follow-up-checklist'>Follow-up Checklist</h2>
-<ul class='checklist'>
-<li><input type='checkbox' disabled > Run source-backed scan or local audit for <code>面经信号更新</code>.</li>
-<li><input type='checkbox' disabled > Replace this placeholder summary with actual findings.</li>
-<li><input type='checkbox' disabled > Route durable findings to the proper queue or canonical note.</li>
-</ul>
-<h2 id='sources-inputs'>Sources / Inputs</h2>
+<h2 id='existing-cards-to-update'>Existing Cards to Update</h2>
 <ul>
-<li>Local automation repair session on 2026-04-28.</li>
+<li>20_Projects/rich-interview/20-Question-Bank/Question-Bank：Q037-Q039 练完后补 weak point。</li>
+<li>20_Projects/rich-interview/30-Practice-OS/Mistake-Log：记录今天至少 1 个卡住点。</li>
+</ul>
+<h2 id='compliance-notes'>Compliance Notes</h2>
+<ul>
+<li>Reddit / 一亩三分地等真实面经必须使用用户提供文本、授权页面或公开合规来源。</li>
+<li>不保存个人信息；只抽象为通用题型和知识点。</li>
 </ul></main></div>
 </body></html>

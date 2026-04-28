@@ -11,32 +11,38 @@ main { min-width:0; background:var(--card); border:1px solid var(--line); border
 .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
 @media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
 </style></head><body>
-<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-04-28 09:44</div></div></div>
-<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#2026-04-28-ai市场研究刷新'>2026-04-28 AI市场研究刷新</a><a class='toc-h2' href='#executive-summary'>Executive Summary</a><a class='toc-h2' href='#repair-context'>Repair Context</a><a class='toc-h2' href='#follow-up-checklist'>Follow-up Checklist</a><a class='toc-h2' href='#sources-inputs'>Sources / Inputs</a></nav><main><div class="meta">Source: 20_Projects/rich-ai-research/daily-updates/2026-04-28-AI市场研究刷新.md</div><h1 id='2026-04-28-ai市场研究刷新'>2026-04-28 AI市场研究刷新</h1>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-04-28 12:38</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#2026-04-28-ai市场研究刷新'>2026-04-28 AI市场研究刷新</a><a class='toc-h2' href='#executive-summary'>Executive Summary</a><a class='toc-h2' href='#market-delta'>Market Delta</a><a class='toc-h2' href='#investment-implications-top-3-signals'>Investment Implications / Top 3 Signals</a><a class='toc-h2' href='#update-existing-notes-checklist'>Update Existing Notes Checklist</a><a class='toc-h2' href='#bridge-routing'>Bridge Routing</a><a class='toc-h2' href='#sources'>Sources</a></nav><main><div class="meta">Source: 20_Projects/rich-ai-research/daily-updates/2026-04-28-AI市场研究刷新.md</div><h1 id='2026-04-28-ai市场研究刷新'>2026-04-28 AI市场研究刷新</h1>
 <blockquote>
-<p>[!warning] Recovery placeholder</p>
-<p>This note was created during OpenClaw/Hermes hardening so automation paths and dashboards stop pointing at missing files. It is <strong>not</strong> a full source-backed daily scan. Replace or append below after a real scan.</p>
+<p>今日为基于 RichLens Candidate Feed 的 light market scan；不是完整深度市场研究。</p>
 </blockquote>
 <h2 id='executive-summary'>Executive Summary</h2>
 <ul>
-<li>Automation path repair completed: canonical output path is valid.</li>
-<li>Today's original scheduled run did not produce this artifact before repair.</li>
-<li>Follow-up needed: run the real daily scan/audit when time or budget allows.</li>
+<li>今日最值得看的是 <strong>agent infrastructure 从 demo 走向 runtime / GTM workflow / session management</strong>。</li>
+<li>LangChain 连续出现 deep agents runtime 与 GTM agent 信号，说明 agent 框架厂商正在从“开发者框架”延伸到“业务流程产品化”。</li>
+<li>NVIDIA/Hugging Face 医疗影像信号属于 vertical AI watch，不直接影响今日 interview，但可作为 AI infra + domain model 案例。</li>
 </ul>
-<h2 id='repair-context'>Repair Context</h2>
-<ul>
-<li>HEARTBEAT was compressed under OpenClaw's bootstrap budget.</li>
-<li>Hermes daily push cron was moved to stable wrapper scripts.</li>
-<li>Critical scripts were updated away from retired folders.</li>
-</ul>
-<h2 id='follow-up-checklist'>Follow-up Checklist</h2>
+<h2 id='market-delta'>Market Delta</h2>
+<div class='table-wrap'><table><thead><tr><th>Vertical</th><th>Vendor / Project</th><th>What Changed</th><th>Impact</th><th>Action Needed</th><th>Confidence</th></tr></thead><tbody><tr><td>Agent infrastructure</td><td>LangChain</td><td>Deep agents runtime 信号强化“agent runtime / observability / recovery”方向。</td><td>对 LangChain vendor card 和 agent infra thesis 有正向信号。</td><td>加入 watchlist：runtime 能否形成平台粘性。</td><td>medium</td></tr><tr><td>Enterprise workflow agents</td><td>LangChain</td><td>GTM Agent 说明 agent 从 coding/dev 工具扩展到 GTM/ops workflow。</td><td>关注 enterprise adoption 与 workflow lock-in。</td><td>路由到 rich-ai-research vendor landscape。</td><td>medium</td></tr><tr><td>Agentic coding productivity</td><td>Cctop</td><td>AI coding session manager 说明多 agent/coding session 管理正在形成工具层。</td><td>小工具信号，未必有长期 moat。</td><td>观察是否成为 Cursor/Claude Code 周边生态。</td><td>low-medium</td></tr><tr><td>Vertical AI / medical imaging</td><td>NVIDIA / Hugging Face</td><td>医疗影像 adaptive ultrasound signal。</td><td>垂直 AI 案例，但离当前投资 thesis 较远。</td><td>仅 watch；不升主线。</td><td>low</td></tr></tbody></table></div>
+<h2 id='investment-implications-top-3-signals'>Investment Implications / Top 3 Signals</h2>
+<ol>
+<li><strong>Agent infra 正在平台化</strong>：runtime、state、observability、approval gate 可能比单个 agent demo 更有商业价值。</li>
+<li><strong>Workflow agents 会先在内部 GTM/ops 落地</strong>：比完全 autonomous coding 更容易形成 ROI case。</li>
+<li><strong>Coding agent 周边工具会爆发但 moat 分化</strong>：session manager/launcher 类产品要谨慎区分 feature vs company。</li>
+</ol>
+<h2 id='update-existing-notes-checklist'>Update Existing Notes Checklist</h2>
 <ul class='checklist'>
-<li><input type='checkbox' disabled > Run source-backed scan or local audit for <code>AI市场研究刷新</code>.</li>
-<li><input type='checkbox' disabled > Replace this placeholder summary with actual findings.</li>
-<li><input type='checkbox' disabled > Route durable findings to the proper queue or canonical note.</li>
+<li><input type='checkbox' disabled > rich-ai-research vendor landscape：补 LangChain runtime / GTM agent signal。</li>
+<li><input type='checkbox' disabled > rich-interview Agents topic：把 runtime/state/recovery 加进 senior answer。</li>
+<li><input type='checkbox' disabled > RichLens queue：优先筛选 RL-1a264db7eb、RL-1f4036eae5、RL-be678f0f1c。</li>
 </ul>
-<h2 id='sources-inputs'>Sources / Inputs</h2>
+<h2 id='bridge-routing'>Bridge Routing</h2>
 <ul>
-<li>Local automation repair session on 2026-04-28.</li>
+<li>To <code>rich-interview</code>：Deep agents runtime、KARL、PExA。</li>
+<li>To <code>rich-ai-research</code>：LangChain GTM agent、agentic coding session tools。</li>
+</ul>
+<h2 id='sources'>Sources</h2>
+<ul>
+<li>99_System/Reports/RichLens/Discovery/2026-04-28-RichLens-Candidate-Feed</li>
 </ul></main></div>
 </body></html>
