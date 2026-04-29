@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 面试每日问答 - 2026-04-29</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-04-29 09:47</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#ai-面试每日问答-2026-04-29'>AI 面试每日问答 - 2026-04-29</a><a class='toc-h2' href='#今日目标'>今日目标</a><a class='toc-h2' href='#review-questions-from-2026-04-28'>Review Questions｜From 2026-04-28</a><a class='toc-h2' href='#new-questions'>New Questions</a><a class='toc-h3' href='#q024-embedding-index-的更新-删除和回滚怎么做'>Q024｜Embedding index 的更新、删除和回滚怎么做？</a><a class='toc-h3' href='#q033-streaming-retry-fallback-怎么设计'>Q033｜Streaming、retry、fallback 怎么设计？</a><a class='toc-h3' href='#q063-设计-ai-assistant-的-threat-model'>Q063｜设计 AI assistant 的 threat model。</a><a class='toc-h2' href='#english-speaking-drill'>English speaking drill</a><a class='toc-h3' href='#recording-self-check'>Recording / self-check</a><a class='toc-h2' href='#今日错题-weak-points'>今日错题 / Weak Points</a><a class='toc-h2' href='#明日复习候选'>明日复习候选</a></nav><main><div class="meta">Source: 20_Projects/rich-interview/30-Practice-OS/daily-sheets/2026-04-29.md</div><h1 id='ai-面试每日问答-2026-04-29'>AI 面试每日问答 - 2026-04-29</h1>
+<h2 id='今日目标'>今日目标</h2>
+<ul>
+<li>Focus：Production Tooling + Reliability + Security</li>
+<li>Output goal：复述昨天 Q037-Q039 的三句核心表达；新练 Q024/Q033/Q063。</li>
+<li>Rule：每题必须说出 architecture boundary、failure mode、production metric。</li>
+</ul>
+<h2 id='review-questions-from-2026-04-28'>Review Questions｜From 2026-04-28</h2>
+<ul class='checklist'>
+<li><input type='checkbox' disabled > Q037：复述 “The model proposes; the policy layer disposes.”</li>
+<li><input type='checkbox' disabled > Q038：复述 “Multi-agent is an organizational pattern, not a quality guarantee.”</li>
+<li><input type='checkbox' disabled > Q039：复述 “MCP exposes capabilities; function calling requests actions; the runtime governs execution.”</li>
+<li>Source：2026-04-28 Daily Sheet · Mistake Log</li>
+</ul>
+<h2 id='new-questions'>New Questions</h2>
+<h3 id='q024-embedding-index-的更新-删除和回滚怎么做'>Q024｜Embedding index 的更新、删除和回滚怎么做？</h3>
+<p>topic:: Vector DB</p>
+<p>level:: Senior</p>
+<p>type:: Production</p>
+<p>source:: Question-Bank Q024</p>
+<p>related:: 20_Projects/rich-interview/10-Knowledge/05-Knowledge-Stores, 20_Projects/rich-interview/10-Knowledge/14-MLOps-LLMOps</p>
+<p>status:: planned</p>
+<p>last_reviewed:: 2026-04-29</p>
+<p>next_review:: 2026-04-30</p>
+<h4 id='中文理解'>中文理解</h4>
+<ul>
+<li>Document store / object store / SQL 是 source of truth；embedding index 是可重建的 derived index。更新要有 doc version、chunk id、index snapshot；删除要 tombstone 和 ACL propagation；发布用 blue-green / shadow index；回滚切 snapshot，但要小心旧索引不要泄露已删除内容。</li>
+</ul>
+<h4 id='english-concise-bullets'>English concise bullets</h4>
+<ul>
+<li>Definition: An embedding index is a derived retrieval structure, not the source of truth.</li>
+<li>Mechanism: Use document versions, stable chunk IDs, tombstones, index snapshots, and blue-green or shadow index rollout.</li>
+<li>Tradeoff: Freshness and rollback safety add operational complexity, but they prevent stale answers, orphan chunks, and unauthorized retrieval.</li>
+</ul>
+<h4 id='45-sec-interview-answer'>45-sec interview answer</h4>
+<blockquote>
+<p>I would treat the embedding index as a rebuildable derived index, not the source of truth. The canonical documents stay in a document store or database. For updates, each document and chunk should have stable IDs, versions, timestamps, ACL metadata, and an index snapshot. For deletes, I would use tombstones and make sure deletion propagates to all chunks and derived indexes. For rollout, I would prefer a shadow or blue-green index, run retrieval eval, then switch traffic. Rollback means switching back to a previous snapshot, but we must be careful not to restore deleted or unauthorized content. I would monitor stale chunks, orphan chunks, recall, latency, and unauthorized retrieval tests.</p>
+</blockquote>
+<h4 id='follow-up-questions'>Follow-up questions</h4>
+<ul>
+<li>How do you handle document deletion across all chunks?</li>
+<li>What is an index snapshot?</li>
+<li>How do you validate a new embedding model or index before rollout?</li>
+<li>What can go wrong during rollback?</li>
+</ul>
+<h4 id='我的回答记录'>我的回答记录</h4>
+<ul>
+<li>Round 1：</li>
+<li>卡住点：</li>
+<li>改进句：Index is derived and rebuildable; canonical data is the source of truth.</li>
+</ul>
+<h3 id='q033-streaming-retry-fallback-怎么设计'>Q033｜Streaming、retry、fallback 怎么设计？</h3>
+<p>topic:: Chatbot</p>
+<p>level:: Senior</p>
+<p>type:: Production</p>
+<p>source:: Question-Bank Q033</p>
+<p>related:: 20_Projects/rich-interview/10-Knowledge/07-Chatbot-App-Architecture, 20_Projects/rich-interview/10-Knowledge/15-Production-AI-Engineering</p>
+<p>status:: planned</p>
+<p>last_reviewed:: 2026-04-29</p>
+<p>next_review:: 2026-04-30</p>
+<h4 id='中文理解'>中文理解</h4>
+<ul>
+<li>Streaming 改善 perceived latency，不一定降低 total latency；retry 要按错误类型区分 timeout、rate limit、parser failure、provider transient error；fallback 可以换模型、缩短 context、转人工或 partial answer。危险工具不能盲目 retry，必须幂等、dry-run 或 confirmation。</li>
+</ul>
+<h4 id='english-concise-bullets'>English concise bullets</h4>
+<ul>
+<li>Definition: Streaming improves perceived latency; retry and fallback improve reliability under failure.</li>
+<li>Mechanism: Classify failures, use bounded retries with backoff, idempotency keys, model/context fallback, and human handoff for high-risk cases.</li>
+<li>Tradeoff: Aggressive retry improves success rate but can increase cost, latency, duplicate side effects, and provider load.</li>
+</ul>
+<h4 id='45-sec-interview-answer'>45-sec interview answer</h4>
+<blockquote>
+<p>I would design streaming, retry, and fallback as separate reliability mechanisms. Streaming improves perceived latency by showing partial output earlier, but it does not necessarily reduce total latency. Retry should be bounded and error-aware: rate limits, timeouts, parser failures, and transient provider errors need different handling. For tool calls or side-effect actions, retries must be idempotent or require confirmation, otherwise we may duplicate actions. Fallback can mean using a smaller or backup model, reducing context, skipping a non-critical reranker, returning a partial answer, or escalating to a human. In production I would monitor retry rate, fallback reason, duplicate action risk, p95 latency, cost, and final task success.</p>
+</blockquote>
+<h4 id='follow-up-questions'>Follow-up questions</h4>
+<ul>
+<li>How do you avoid duplicate side effects during retry?</li>
+<li>When is fallback to a smaller model unsafe?</li>
+<li>What metrics show retry is masking a deeper issue?</li>
+<li>How do you stream safely when final answer may fail policy checks?</li>
+</ul>
+<h4 id='我的回答记录'>我的回答记录</h4>
+<ul>
+<li>Round 1：</li>
+<li>卡住点：</li>
+<li>改进句：Retry is not free; it trades reliability for cost, latency, and side-effect risk.</li>
+</ul>
+<h3 id='q063-设计-ai-assistant-的-threat-model'>Q063｜设计 AI assistant 的 threat model。</h3>
+<p>topic:: Security</p>
+<p>level:: Senior</p>
+<p>type:: Threat Model</p>
+<p>source:: Question-Bank Q063</p>
+<p>related:: 20_Projects/rich-interview/10-Knowledge/13-Safety-Security-Governance, 20_Projects/rich-interview/10-Knowledge/08-Agents-Tools-Function-Calling</p>
+<p>status:: planned</p>
+<p>last_reviewed:: 2026-04-29</p>
+<p>next_review:: 2026-04-30</p>
+<h4 id='中文理解'>中文理解</h4>
+<ul>
+<li>Threat model 按 assets、actors、entry points、abuse cases、controls 拆。风险包括 prompt injection、data exfiltration、unauthorized retrieval、tool misuse、PII leakage、logging/training leakage、content poisoning。控制包括 authority separation、ACL pre-filter、tool policy gate、sandbox、confirmation、audit、red-team eval、incident response。</li>
+</ul>
+<h4 id='english-concise-bullets'>English concise bullets</h4>
+<ul>
+<li>Definition: A threat model identifies what we protect, who can attack, where the system can be abused, and what controls reduce risk.</li>
+<li>Mechanism: Map assets, actors, entry points, abuse cases, controls, monitoring, and incident response.</li>
+<li>Tradeoff: Strong controls may reduce flexibility and add latency, but enterprise assistants need system-level enforcement rather than prompt-only safety.</li>
+</ul>
+<h4 id='45-sec-interview-answer'>45-sec interview answer</h4>
+<blockquote>
+<p>I would threat-model an AI assistant by starting with assets, actors, entry points, abuse cases, and controls. Assets include private documents, user data, tools, credentials, prompts, logs, and long-term memory. Entry points include user prompts, retrieved documents, uploaded files, browser pages, tool outputs, and APIs. The main risks are prompt injection, data exfiltration, unauthorized retrieval, tool misuse, PII leakage, poisoned content, and sensitive data in logs or training. Controls should be layered: authority separation, ACL-filtered retrieval, tool policy gates, sandboxing, confirmation for risky actions, redaction, retention policy, audit logs, red-team eval, monitoring, and incident response. The key is that prompt guardrails help, but enforcement must happen in data, tool, API, and logging layers.</p>
+</blockquote>
+<h4 id='follow-up-questions'>Follow-up questions</h4>
+<ul>
+<li>What are the assets in an AI assistant?</li>
+<li>Why is prompt-only safety insufficient?</li>
+<li>How do you test unauthorized retrieval?</li>
+<li>What should be logged and what should be redacted?</li>
+</ul>
+<h4 id='我的回答记录'>我的回答记录</h4>
+<ul>
+<li>Round 1：</li>
+<li>卡住点：</li>
+<li>改进句：Prompt guardrails help, but enforcement belongs in data, tool, API, and logging layers.</li>
+</ul>
+<h2 id='english-speaking-drill'>English speaking drill</h2>
+<blockquote>
+<p>Pick one new question and answer in English within 60 seconds. Then answer one follow-up.</p>
+</blockquote>
+<h3 id='recording-self-check'>Recording / self-check</h3>
+<ul class='checklist'>
+<li><input type='checkbox' disabled > I gave a short definition first.</li>
+<li><input type='checkbox' disabled > I explained mechanism / architecture.</li>
+<li><input type='checkbox' disabled > I mentioned tradeoffs.</li>
+<li><input type='checkbox' disabled > I mentioned production concerns: eval / latency / cost / safety / monitoring.</li>
+<li><input type='checkbox' disabled > I connected the answer to S003/S004/S005 if relevant.</li>
+</ul>
+<h2 id='今日错题-weak-points'>今日错题 / Weak Points</h2>
+<ul>
+<li>_练习后记录卡住点。_</li>
+</ul>
+<h2 id='明日复习候选'>明日复习候选</h2>
+<ul>
+<li>Q024：Index update/delete/rollback。</li>
+<li>Q033：Retry / fallback side-effect safety。</li>
+<li>Q063：Threat model layers。</li>
+</ul></main></div>
+</body></html>
