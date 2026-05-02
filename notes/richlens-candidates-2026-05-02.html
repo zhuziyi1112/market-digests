@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-05-02</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-05-02 10:20</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-05-02'>RichLens Candidate Feed — 2026-05-02</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-powering-ai-factories-with-nvidia-enterprise-reference-architectures'>1. Powering AI Factories with NVIDIA Enterprise Reference Architectures</a><a class='toc-h3' href='#2-ai-evals-are-becoming-the-new-compute-bottleneck'>2. AI evals are becoming the new compute bottleneck</a><a class='toc-h3' href='#3-deepinfra-on-hugging-face-inference-providers'>3. DeepInfra on Hugging Face Inference Providers 🔥</a><a class='toc-h3' href='#4-iterating-towards-llm-reliability-with-evaluation-driven-development'>4. Iterating Towards LLM Reliability with Evaluation Driven Development</a><a class='toc-h3' href='#5-hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game'>5. Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game</a><a class='toc-h3' href='#6-ainews-ai-engineer-world-s-fair-autoresearch-memory-world-models-tokenmaxxing-agentic-commerce-and-vertical-ai-call-for-speakers'>6. [AINews] AI Engineer World&#x27;s Fair — Autoresearch, Memory, World Models, Tokenmaxxing, Agentic Commerce, and Vertical AI Call for Speakers</a><a class='toc-h3' href='#7-ainews-the-inference-inflection'>7. [AINews] The Inference Inflection</a><a class='toc-h3' href='#8-introducing-advanced-account-security'>8. Introducing Advanced Account Security</a><a class='toc-h3' href='#9-where-the-goblins-came-from'>9. Where the goblins came from</a><a class='toc-h3' href='#10-cybersecurity-in-the-intelligence-age'>10. Cybersecurity in the Intelligence Age</a><a class='toc-h3' href='#11-our-commitment-to-community-safety'>11. Our commitment to community safety</a><a class='toc-h3' href='#12-enabling-a-new-model-for-healthcare-with-ai-co-clinician'>12. Enabling a new model for healthcare with AI co-clinician</a><a class='toc-h3' href='#13-partnering-with-industry-leaders-to-accelerate-ai-transformation'>13. Partnering with industry leaders to accelerate AI transformation</a><a class='toc-h3' href='#14-gemini-3-1-flash-tts-the-next-generation-of-expressive-ai-speech'>14. Gemini 3.1 Flash TTS: the next generation of expressive AI speech</a><a class='toc-h3' href='#15-celebrating-20-years-of-google-translate-fun-facts-tips-and-new-features-to-try'>15. Celebrating 20 years of Google Translate: Fun facts, tips and new features to try</a><a class='toc-h3' href='#16-here-s-how-our-tpus-power-increasingly-demanding-ai-workloads'>16. Here’s how our TPUs power increasingly demanding AI workloads.</a><a class='toc-h3' href='#17-elevating-austria-google-invests-in-its-first-data-center-in-the-alps'>17. Elevating Austria: Google invests in its first data center in the Alps.</a><a class='toc-h3' href='#18-microsoft-open-sources-its-farm-of-the-future-toolkit'>18. Microsoft open sources its ‘farm of the future’ toolkit</a><a class='toc-h3' href='#19-how-data-and-ai-will-transform-contact-centres-for-financial-services'>19. How data and AI will transform contact centres for financial services</a><a class='toc-h3' href='#20-ai-equipped-drones-study-dolphins-on-the-edge-of-extinction'>20. AI-equipped drones study dolphins on the edge of extinction</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-05-02-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-05-02'>RichLens Candidate Feed — 2026-05-02</h1>
+<ul>
+<li>Discovered candidates: 105</li>
+<li>Added to queue: 20</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-powering-ai-factories-with-nvidia-enterprise-reference-architectures'>1. Powering AI Factories with NVIDIA Enterprise Reference Architectures</h3>
+<ul>
+<li>ID: <code>RL-e010e0942a</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/powering-ai-factories-with-nvidia-enterprise-reference-architectures/</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: agentic coding</li>
+</ul>
+<h3 id='2-ai-evals-are-becoming-the-new-compute-bottleneck'>2. AI evals are becoming the new compute bottleneck</h3>
+<ul>
+<li>ID: <code>RL-1280d7239d</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/evaleval/eval-costs-bottleneck</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: evals</li>
+</ul>
+<h3 id='3-deepinfra-on-hugging-face-inference-providers'>3. DeepInfra on Hugging Face Inference Providers 🔥</h3>
+<ul>
+<li>ID: <code>RL-a89e6f10b7</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/inference-providers-deepinfra</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='4-iterating-towards-llm-reliability-with-evaluation-driven-development'>4. Iterating Towards LLM Reliability with Evaluation Driven Development</h3>
+<ul>
+<li>ID: <code>RL-cd55758717</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/iterating-towards-llm-reliability-with-evaluation-driven-development</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='5-hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game'>5. Hack the AI agent: Build agentic AI security skills with the GitHub Secure Code Game</h3>
+<ul>
+<li>ID: <code>RL-ed860607c7</code></li>
+<li>Source: GitHub AI and ML Blog / <code>rss</code></li>
+<li>URL: https://github.blog/security/hack-the-ai-agent-build-agentic-ai-security-skills-with-the-github-secure-code-game/</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: agentic coding</li>
+</ul>
+<h3 id='6-ainews-ai-engineer-world-s-fair-autoresearch-memory-world-models-tokenmaxxing-agentic-commerce-and-vertical-ai-call-for-speakers'>6. [AINews] AI Engineer World's Fair — Autoresearch, Memory, World Models, Tokenmaxxing, Agentic Commerce, and Vertical AI Call for Speakers</h3>
+<ul>
+<li>ID: <code>RL-455953fead</code></li>
+<li>Source: Latent Space / <code>rss</code></li>
+<li>URL: https://www.latent.space/p/ainews-ai-engineer-worlds-fair-autoresearch</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: agentic coding</li>
+</ul>
+<h3 id='7-ainews-the-inference-inflection'>7. [AINews] The Inference Inflection</h3>
+<ul>
+<li>ID: <code>RL-78af4bd1a3</code></li>
+<li>Source: Latent Space / <code>rss</code></li>
+<li>URL: https://www.latent.space/p/ainews-the-inference-inflection</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='8-introducing-advanced-account-security'>8. Introducing Advanced Account Security</h3>
+<ul>
+<li>ID: <code>RL-92f8ee26a8</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/advanced-account-security</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='9-where-the-goblins-came-from'>9. Where the goblins came from</h3>
+<ul>
+<li>ID: <code>RL-6ce07af346</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/where-the-goblins-came-from</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='10-cybersecurity-in-the-intelligence-age'>10. Cybersecurity in the Intelligence Age</h3>
+<ul>
+<li>ID: <code>RL-6d737041e9</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/cybersecurity-in-the-intelligence-age</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='11-our-commitment-to-community-safety'>11. Our commitment to community safety</h3>
+<ul>
+<li>ID: <code>RL-e6284b864c</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/our-commitment-to-community-safety</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='12-enabling-a-new-model-for-healthcare-with-ai-co-clinician'>12. Enabling a new model for healthcare with AI co-clinician</h3>
+<ul>
+<li>ID: <code>RL-960e6bf14c</code></li>
+<li>Source: Google DeepMind Blog / <code>rss</code></li>
+<li>URL: https://deepmind.google/blog/ai-co-clinician/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='13-partnering-with-industry-leaders-to-accelerate-ai-transformation'>13. Partnering with industry leaders to accelerate AI transformation</h3>
+<ul>
+<li>ID: <code>RL-15929aafa9</code></li>
+<li>Source: Google DeepMind Blog / <code>rss</code></li>
+<li>URL: https://deepmind.google/blog/partnering-with-industry-leaders-to-accelerate-ai-transformation/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='14-gemini-3-1-flash-tts-the-next-generation-of-expressive-ai-speech'>14. Gemini 3.1 Flash TTS: the next generation of expressive AI speech</h3>
+<ul>
+<li>ID: <code>RL-c6cbf678fe</code></li>
+<li>Source: Google DeepMind Blog / <code>rss</code></li>
+<li>URL: https://deepmind.google/blog/gemini-3-1-flash-tts-the-next-generation-of-expressive-ai-speech/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='15-celebrating-20-years-of-google-translate-fun-facts-tips-and-new-features-to-try'>15. Celebrating 20 years of Google Translate: Fun facts, tips and new features to try</h3>
+<ul>
+<li>ID: <code>RL-f98304eba2</code></li>
+<li>Source: Google AI Blog / <code>rss</code></li>
+<li>URL: https://blog.google/products-and-platforms/products/translate/fun-facts-google-translate-20-years/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='16-here-s-how-our-tpus-power-increasingly-demanding-ai-workloads'>16. Here’s how our TPUs power increasingly demanding AI workloads.</h3>
+<ul>
+<li>ID: <code>RL-ea9543e1b1</code></li>
+<li>Source: Google AI Blog / <code>rss</code></li>
+<li>URL: https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/what-is-a-tpu/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='17-elevating-austria-google-invests-in-its-first-data-center-in-the-alps'>17. Elevating Austria: Google invests in its first data center in the Alps.</h3>
+<ul>
+<li>ID: <code>RL-1539442f8f</code></li>
+<li>Source: Google AI Blog / <code>rss</code></li>
+<li>URL: https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/google-data-center-austria/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='18-microsoft-open-sources-its-farm-of-the-future-toolkit'>18. Microsoft open sources its ‘farm of the future’ toolkit</h3>
+<ul>
+<li>ID: <code>RL-28b735ee42</code></li>
+<li>Source: Microsoft AI Blog / <code>rss</code></li>
+<li>URL: https://blogs.microsoft.com/ai/microsoft-open-sources-its-farm-of-the-future-toolkit/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='19-how-data-and-ai-will-transform-contact-centres-for-financial-services'>19. How data and AI will transform contact centres for financial services</h3>
+<ul>
+<li>ID: <code>RL-75445cf826</code></li>
+<li>Source: Microsoft AI Blog / <code>rss</code></li>
+<li>URL: https://cloudblogs.microsoft.com/industry-blog/en-gb/financial-services/2022/07/25/how-data-and-ai-will-transform-contact-centres-for-financial-services/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='20-ai-equipped-drones-study-dolphins-on-the-edge-of-extinction'>20. AI-equipped drones study dolphins on the edge of extinction</h3>
+<ul>
+<li>ID: <code>RL-ae5d0f6c89</code></li>
+<li>Source: Microsoft AI Blog / <code>rss</code></li>
+<li>URL: https://news.microsoft.com/apac/features/ai-drones-dolphins-maui63/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul></main></div>
+</body></html>
