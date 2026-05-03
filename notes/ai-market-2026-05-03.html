@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026-05-03 AI市场研究刷新</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-05-03 12:18</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#2026-05-03-ai市场研究刷新'>2026-05-03 AI市场研究刷新</a><a class='toc-h2' href='#executive-summary'>Executive Summary</a><a class='toc-h2' href='#market-delta-table'>Market Delta table</a><a class='toc-h2' href='#update-existing-notes-checklist'>Update Existing Notes checklist</a><a class='toc-h2' href='#new-vendor-watchlist-candidates'>New Vendor/Watchlist candidates</a><a class='toc-h2' href='#investment-implications'>Investment Implications</a><a class='toc-h2' href='#bridge-routing'>Bridge Routing</a><a class='toc-h2' href='#sources'>Sources</a><a class='toc-h2' href='#notes'>Notes</a></nav><main><div class="meta">Source: 20_Projects/rich-ai-research/daily-updates/2026-05-03-AI市场研究刷新.md</div><h1 id='2026-05-03-ai市场研究刷新'>2026-05-03 AI市场研究刷新</h1>
+<h2 id='executive-summary'>Executive Summary</h2>
+<ul>
+<li>今日为周日 lightweight refresh：使用官方/来源页，不做 broad market search。</li>
+<li>市场主线：AI agent 正从“聊天/代码建议”转向 <strong>受治理的企业控制面 + 远程执行 runtime + 可评估 harness</strong>。</li>
+<li>OpenAI 的 Advanced Account Security 把 AI account/ Codex context 变成 enterprise trust feature；Mistral Vibe 强化 remote coding-agent 竞争；Google Cloud 强调 enterprise agent platform 控制面。</li>
+<li>Eval 成本成为 agent 平台 adoption 的隐性成本变量；LangChain 的 harness profiles 说明平台/框架可通过 runtime 层优化获得差异化。</li>
+</ul>
+<h2 id='market-delta-table'>Market Delta table</h2>
+<div class='table-wrap'><table><thead><tr><th>Segment</th><th>Vendor / Source</th><th>Delta</th><th>Thesis impact</th><th>Confidence</th></tr></thead><tbody><tr><td>Security / trust</td><td>OpenAI</td><td>Advanced Account Security 提供 phishing-resistant sign-in、禁用 password login、更强 recovery、短 session、训练排除，并覆盖 Codex。</td><td>AI workspace/account security 成为高价值用户和 enterprise adoption 的 trust moat。</td><td>High</td></tr><tr><td>Agent framework / harness</td><td>LangChain</td><td>Deep Agents 增加 model-specific profiles，按模型族调整 prompts/tools/middleware。</td><td>Framework moat 不只在 API glue，也在 eval-backed harness optimization。</td><td>High</td></tr><tr><td>Eval infrastructure</td><td>Hugging Face</td><td>Agent eval 成本和噪声上升，scaffold-sensitive，重复 rollouts 成本高。</td><td>Eval/observability vendors 有机会提供 cheaper, adaptive, reproducible eval stack。</td><td>High</td></tr><tr><td>Enterprise agent platform</td><td>Google Cloud</td><td>Gemini Enterprise Agent Platform 以 build/scale/govern/optimize/integrate/operate agents 为核心。</td><td>Hyperscalers 正把 agent platform 做成 cloud control plane，利好集成与治理能力。</td><td>High</td></tr><tr><td>Coding agents / open weights</td><td>Mistral</td><td>Mistral Medium 3.5 为 128B dense、256k context、open weights modified MIT；Vibe remote agents 云端并行运行并接 GitHub/Linear/Jira/Sentry/Slack/Teams。</td><td>欧洲/开放模型厂商用 open-weight + remote coding runtime 争夺 developer workflow。</td><td>High</td></tr></tbody></table></div>
+<h2 id='update-existing-notes-checklist'>Update Existing Notes checklist</h2>
+<ul class='checklist'>
+<li><input type='checkbox' disabled > 更新 OpenAI vendor note：Advanced Account Security as trust/security feature for ChatGPT/Codex power users.</li>
+<li><input type='checkbox' disabled > 更新 LangChain note：model-specific harness profiles and eval-backed framework differentiation.</li>
+<li><input type='checkbox' disabled > 更新 Hugging Face/eval infrastructure note：eval cost as bottleneck and vendor opportunity.</li>
+<li><input type='checkbox' disabled > 更新 Google Cloud note：Gemini Enterprise Agent Platform as enterprise agent control plane.</li>
+<li><input type='checkbox' disabled > 更新 Mistral note：Medium 3.5 + Vibe remote agents + self-hosting/open-weights positioning.</li>
+</ul>
+<h2 id='new-vendor-watchlist-candidates'>New Vendor/Watchlist candidates</h2>
+<div class='table-wrap'><table><thead><tr><th>Candidate</th><th>Why watch</th><th>Next evidence needed</th></tr></thead><tbody><tr><td>Agent security / account protection layer</td><td>AI accounts increasingly control tools, repos, and sensitive context.</td><td>Enterprise admin controls, SSO/SCIM, audit exports, recovery model.</td></tr><tr><td>Agent harness optimization platforms</td><td>Same model can perform differently under harness/profile.</td><td>Benchmarks, customer case studies, reproducibility, cost impact.</td></tr><tr><td>Eval-cost optimization stack</td><td>Agent eval may become a release bottleneck.</td><td>Adaptive sampling, cache reuse, reliability estimates, CI integration.</td></tr><tr><td>Remote coding-agent runtimes</td><td>Cloud agents can run parallel PR tasks while humans review.</td><td>Permission model, sandbox guarantees, pricing, enterprise logs.</td></tr></tbody></table></div>
+<h2 id='investment-implications'>Investment Implications</h2>
+<ul>
+<li><strong>Positive for control-plane vendors</strong>: governance, identity, session management, audit logs, connectors, and eval tooling become core enterprise buying criteria.</li>
+<li><strong>Positive for framework/runtime vendors</strong>: harness profiles and remote runtimes create differentiation beyond model access.</li>
+<li><strong>Watch eval spend</strong>: expensive noisy evals may slow adoption unless platforms offer reliable low-cost regression paths.</li>
+<li><strong>Open-weight pressure persists</strong>: Mistral’s Medium 3.5 self-hosting story may pressure proprietary providers in regulated or cost-sensitive accounts.</li>
+<li><strong>No direct stock/trade action</strong>: informational only; no portfolio weights or buy/sell guidance included.</li>
+</ul>
+<h2 id='bridge-routing'>Bridge Routing</h2>
+<div class='table-wrap'><table><thead><tr><th>Signal</th><th>Route</th><th>Proposed action</th></tr></thead><tbody><tr><td>OpenAI Advanced Account Security</td><td>rich-interview / security</td><td>Add AI-account threat-model interview drill.</td></tr><tr><td>LangChain profiles</td><td>rich-interview / agents-eval</td><td>Add model-vs-harness question.</td></tr><tr><td>HF eval-cost bottleneck</td><td>rich-interview / eval</td><td>Add budget-aware eval design question.</td></tr><tr><td>Gemini Enterprise Agent Platform</td><td>rich-interview / system design</td><td>Use as enterprise agent platform architecture frame.</td></tr><tr><td>Mistral Vibe remote agents</td><td>rich-interview / coding agents</td><td>Add sandbox/review/PR workflow drill.</td></tr></tbody></table></div>
+<h2 id='sources'>Sources</h2>
+<ul>
+<li>OpenAI, “Introducing Advanced Account Security,” 2026-04-30: https://openai.com/index/advanced-account-security/</li>
+<li>LangChain, “Tuning Deep Agents to Work Well with Different Models,” 2026-04-29: https://www.langchain.com/blog/tuning-deep-agents-different-models</li>
+<li>Hugging Face, “AI evals are becoming the new compute bottleneck,” 2026-04-29: https://huggingface.co/blog/evaleval/eval-costs-bottleneck</li>
+<li>Google Cloud, “Introducing Gemini Enterprise Agent Platform,” 2026-04-22: https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-agent-platform</li>
+<li>Mistral AI, “Remote agents in Vibe. Powered by Mistral Medium 3.5,” 2026-04-29: https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5</li>
+</ul>
+<h2 id='notes'>Notes</h2>
+<ul>
+<li>No broad web search used today.</li>
+<li>Sunday: stock digest not due under HEARTBEAT market-day rule.</li>
+</ul></main></div>
+</body></html>
