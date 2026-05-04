@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-05-04</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-05-04 09:09</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-05-04'>RichLens Candidate Feed — 2026-05-04</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-norberto-a-modernbert-model-trained-for-portuguese-with-331-billion-tokens-corpus'>1. NorBERTo: A ModernBERT Model Trained for Portuguese with 331 Billion Tokens Corpus</a><a class='toc-h3' href='#2-show-hn-aurra-bi-temporal-memory-for-ai-agents-with-llm-auto-supersede'>2. Show HN: Aurra – Bi-temporal memory for AI agents (with LLM auto-supersede)</a><a class='toc-h3' href='#3-putting-humans-first-efficient-lam-evaluation-with-human-preference-alignment'>3. Putting HUMANS first: Efficient LAM Evaluation with Human Preference Alignment</a><a class='toc-h3' href='#4-how-frontier-llms-adapt-to-neurodivergence-context-a-measurement-framework-for-surface-vs-structural-change-in-system-prompted-responses'>4. How Frontier LLMs Adapt to Neurodivergence Context: A Measurement Framework for Surface vs. Structural Change in System-Prompted Responses</a><a class='toc-h3' href='#5-vilegalnli-natural-language-inference-for-vietnamese-legal-texts'>5. ViLegalNLI: Natural Language Inference for Vietnamese Legal Texts</a><a class='toc-h3' href='#6-cloud-is-closer-than-it-appears-revisiting-the-tradeoffs-of-distributed-real-time-inference'>6. Cloud Is Closer Than It Appears: Revisiting the Tradeoffs of Distributed Real-Time Inference</a><a class='toc-h3' href='#7-airfm-dda-air-interface-foundation-model-in-the-delay-doppler-angle-domain-for-ai-native-6g'>7. AirFM-DDA: Air-Interface Foundation Model in the Delay-Doppler-Angle Domain for AI-Native 6G</a><a class='toc-h3' href='#8-learning-physically-grounded-traffic-accident-reconstruction-from-public-accident-reports'>8. Learning physically grounded traffic accident reconstruction from public accident reports</a><a class='toc-h3' href='#9-build-ai-powered-games-with-nvidia-dlss-4-5-rtx-and-unreal-engine-5'>9. Build AI-Powered Games with NVIDIA DLSS 4.5, RTX, and Unreal Engine 5</a><a class='toc-h3' href='#10-how-to-build-run-and-scale-high-quality-creator-workflows-in-comfyui'>10. How to Build, Run, and Scale High-Quality Creator Workflows in ComfyUI</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-05-04-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-05-04'>RichLens Candidate Feed — 2026-05-04</h1>
+<ul>
+<li>Discovered candidates: 125</li>
+<li>Added to queue: 10</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-norberto-a-modernbert-model-trained-for-portuguese-with-331-billion-tokens-corpus'>1. NorBERTo: A ModernBERT Model Trained for Portuguese with 331 Billion Tokens Corpus</h3>
+<ul>
+<li>ID: <code>RL-38e12c5d23</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.00086</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: knowledge management, retrieval, Obsidian knowledge management</li>
+</ul>
+<h3 id='2-show-hn-aurra-bi-temporal-memory-for-ai-agents-with-llm-auto-supersede'>2. Show HN: Aurra – Bi-temporal memory for AI agents (with LLM auto-supersede)</h3>
+<ul>
+<li>ID: <code>RL-19d423fe05</code></li>
+<li>Source: Hacker News AI Search / <code>rss</code></li>
+<li>URL: https://www.aurra.us/blog/level-2-auto-supersede-beta</li>
+<li>Score: <code>0.39</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='3-putting-humans-first-efficient-lam-evaluation-with-human-preference-alignment'>3. Putting HUMANS first: Efficient LAM Evaluation with Human Preference Alignment</h3>
+<ul>
+<li>ID: <code>RL-103eb269a3</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.00022</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='4-how-frontier-llms-adapt-to-neurodivergence-context-a-measurement-framework-for-surface-vs-structural-change-in-system-prompted-responses'>4. How Frontier LLMs Adapt to Neurodivergence Context: A Measurement Framework for Surface vs. Structural Change in System-Prompted Responses</h3>
+<ul>
+<li>ID: <code>RL-7520a61e04</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.00113</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: AI product strategy</li>
+</ul>
+<h3 id='5-vilegalnli-natural-language-inference-for-vietnamese-legal-texts'>5. ViLegalNLI: Natural Language Inference for Vietnamese Legal Texts</h3>
+<ul>
+<li>ID: <code>RL-2b702bc68a</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.00116</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='6-cloud-is-closer-than-it-appears-revisiting-the-tradeoffs-of-distributed-real-time-inference'>6. Cloud Is Closer Than It Appears: Revisiting the Tradeoffs of Distributed Real-Time Inference</h3>
+<ul>
+<li>ID: <code>RL-f5ed0f0aa9</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.00005</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='7-airfm-dda-air-interface-foundation-model-in-the-delay-doppler-angle-domain-for-ai-native-6g'>7. AirFM-DDA: Air-Interface Foundation Model in the Delay-Doppler-Angle Domain for AI-Native 6G</h3>
+<ul>
+<li>ID: <code>RL-7a3767b221</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.00020</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='8-learning-physically-grounded-traffic-accident-reconstruction-from-public-accident-reports'>8. Learning physically grounded traffic accident reconstruction from public accident reports</h3>
+<ul>
+<li>ID: <code>RL-007a4c2251</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.00050</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: multimodal AI</li>
+</ul>
+<h3 id='9-build-ai-powered-games-with-nvidia-dlss-4-5-rtx-and-unreal-engine-5'>9. Build AI-Powered Games with NVIDIA DLSS 4.5, RTX, and Unreal Engine 5</h3>
+<ul>
+<li>ID: <code>RL-ad83a31d9d</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/build-ai-powered-games-with-nvidia-dlss-4-5-rtx-and-unreal-engine-5/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='10-how-to-build-run-and-scale-high-quality-creator-workflows-in-comfyui'>10. How to Build, Run, and Scale High-Quality Creator Workflows in ComfyUI</h3>
+<ul>
+<li>ID: <code>RL-cc80fd66ec</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/how-to-build-run-and-scale-high-quality-creator-workflows-in-comfyui/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul></main></div>
+</body></html>
