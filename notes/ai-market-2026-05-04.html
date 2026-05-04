@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026-05-04 AI市场研究刷新</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-05-04 09:08</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#2026-05-04-ai市场研究刷新'>2026-05-04 AI市场研究刷新</a><a class='toc-h2' href='#executive-summary'>Executive Summary</a><a class='toc-h2' href='#market-delta-table'>Market Delta table</a><a class='toc-h2' href='#update-existing-notes-checklist'>Update Existing Notes checklist</a><a class='toc-h2' href='#new-vendor-watchlist-candidates'>New Vendor/Watchlist candidates</a><a class='toc-h2' href='#investment-implications'>Investment Implications</a><a class='toc-h2' href='#bridge-routing'>Bridge Routing</a><a class='toc-h2' href='#sources'>Sources</a><a class='toc-h2' href='#notes'>Notes</a></nav><main><div class="meta">Source: 20_Projects/rich-ai-research/daily-updates/2026-05-04-AI市场研究刷新.md</div><h1 id='2026-05-04-ai市场研究刷新'>2026-05-04 AI市场研究刷新</h1>
+<h2 id='executive-summary'>Executive Summary</h2>
+<ul>
+<li>今日使用本地已生成的 <code>2026-05-04-AI面试知识点更新.md</code> 与官方/一手来源清单，不做额外 broad web search。</li>
+<li>市场主线从“新模型发布”转向 <strong>生产可用性</strong>：模型生命周期、长上下文迁移、serving runtime 稳定性、vector/KG ops、eval 成本都在影响企业 adoption。</li>
+<li>最明确的新信号是 <strong>vLLM v0.20.1 同日发布并聚焦 DeepSeek V4 serving 稳定/性能</strong>，说明开源 serving 层正在成为模型生态竞争的重要控制点。</li>
+<li>Anthropic / Google 的 release-note 信号继续强化：生产 AI 团队需要 model registry、deprecation watcher、fallback routing 和 eval migration，而不是只追最新模型名。</li>
+</ul>
+<h2 id='market-delta-table'>Market Delta table</h2>
+<div class='table-wrap'><table><thead><tr><th>Segment</th><th>Vendor / Source</th><th>Delta</th><th>Thesis impact</th><th>Confidence</th></tr></thead><tbody><tr><td>Inference serving</td><td>vLLM / DeepSeek</td><td>vLLM v0.20.1 于 2026-05-04 发布，重点修复/优化 DeepSeek V4 serving，包括 runtime/kernel/parser/MoE 相关稳定性议题。</td><td>Serving frameworks 可能成为 open-model adoption 的关键瓶颈与护城河；“支持某模型”不等于生产稳定。</td><td>High</td></tr><tr><td>Long-context lifecycle</td><td>Anthropic</td><td>Retired Claude Sonnet 4/4.5 的 1M context beta header；更长上下文转向新模型 GA 能力。</td><td>Long-context vendor claims 需要按 model/version/header/retirement 评估，迁移成本和客户兼容性是 enterprise risk。</td><td>High</td></tr><tr><td>Model lifecycle ops</td><td>Google Gemini API</td><td>Robotics preview model shutdown、embedding GA、Deep Research/File Search/MCP integration 等 release-note 信号频繁变化。</td><td>Model registry、deprecation monitoring、fallback routing、eval migration 是平台型能力。</td><td>High</td></tr><tr><td>GraphRAG tooling</td><td>Neo4j GraphRAG Python</td><td>v1.15.0 增加 Markdown、Bedrock、schema constraints、token usage tracking。</td><td>KG/RAG 工具从 demo extraction 转向 cost/quality/governance ops；schema/token accounting 可成为 enterprise feature。</td><td>Medium-High</td></tr><tr><td>Vector DB operations</td><td>Weaviate</td><td>v1.37.2 修复 TTL、vector cache、export 等操作性问题。</td><td>Vector DB thesis 不只看检索算法，也看 tenant lifecycle、cache、replication/export 的可靠性。</td><td>Medium-High</td></tr><tr><td>AI infrastructure</td><td>Meta / hyperscalers</td><td>官方 AI infra / data-center / grid/storage 信号继续出现。</td><td>Power、region、data center、chips、latency 继续制约 AI product economics and availability。</td><td>Medium</td></tr><tr><td>Eval infrastructure</td><td>Hugging Face</td><td>Agent/eval cost bottleneck remains active signal.</td><td>Eval-cost optimization stack 有机会成为 agent adoption 的必要层。</td><td>High</td></tr></tbody></table></div>
+<h2 id='update-existing-notes-checklist'>Update Existing Notes checklist</h2>
+<ul class='checklist'>
+<li><input type='checkbox' disabled > 更新 DeepSeek / open-model serving note：跟踪 vLLM 对 DeepSeek V4 的 release cadence、production reports、compatibility matrix。</li>
+<li><input type='checkbox' disabled > 更新 Long Context Models note：把 context length 作为 versioned API contract，而不是静态模型能力。</li>
+<li><input type='checkbox' disabled > 更新 AI Infrastructure Market note：补充 power/data-center/grid/storage as product constraints。</li>
+<li><input type='checkbox' disabled > 更新 vector DB / GraphRAG vendor notes：operation fixes、schema constraints、token accounting、tenant lifecycle。</li>
+<li><input type='checkbox' disabled > 更新 eval infrastructure note：agent eval 成本、repeat rollout、budget-aware regression。</li>
+</ul>
+<h2 id='new-vendor-watchlist-candidates'>New Vendor/Watchlist candidates</h2>
+<div class='table-wrap'><table><thead><tr><th>Candidate</th><th>Why watch</th><th>Next evidence needed</th></tr></thead><tbody><tr><td>Model-specific serving validation tools</td><td>Open-source runtimes need per-model kernel/parser/MoE checks.</td><td>CI matrices, production incident reports, cloud deployment references.</td></tr><tr><td>Long-context lifecycle monitors</td><td>Beta headers and context limits can retire/change across providers.</td><td>Automated spec diffing, migration playbooks, customer-impact metrics.</td></tr><tr><td>GraphRAG ops tooling</td><td>Schema constraints and token accounting become reliability/cost levers.</td><td>Case studies showing lower extraction errors/cost.</td></tr><tr><td>Eval-cost optimization platforms</td><td>Agent eval may dominate iteration budgets.</td><td>Adaptive sampling, cached rollouts, confidence intervals, CI integration.</td></tr></tbody></table></div>
+<h2 id='investment-implications'>Investment Implications</h2>
+<ul>
+<li><strong>Positive for infra/control-plane vendors</strong>: model registry, routing, eval migration, deprecation monitoring, and serving validation look increasingly mandatory.</li>
+<li><strong>Positive for open-model ecosystems only when serving stack matures</strong>: DeepSeek-style models depend on vLLM/serving runtime readiness, not just benchmark performance.</li>
+<li><strong>Long-context is becoming operationally complex</strong>: providers with clearer lifecycle contracts and migration tooling may gain enterprise trust.</li>
+<li><strong>Vector/KG vendors need ops credibility</strong>: cache/TTL/export/schema/token-accounting issues affect production adoption as much as retrieval metrics.</li>
+<li>Informational only; no direct buy/sell recommendation.</li>
+</ul>
+<h2 id='bridge-routing'>Bridge Routing</h2>
+<div class='table-wrap'><table><thead><tr><th>Signal</th><th>Route</th><th>Proposed action</th></tr></thead><tbody><tr><td>vLLM v0.20.1 / DeepSeek V4</td><td>rich-interview / inference-serving</td><td>Add model-specific serving validation checklist after review.</td></tr><tr><td>Anthropic 1M context beta retirement</td><td>rich-interview / prompt-context + LLMOps</td><td>Add long-context lifecycle and migration question.</td></tr><tr><td>Gemini API model shutdown / embeddings GA</td><td>rich-interview / LLMOps + embeddings</td><td>Add model registry / fallback / eval migration drill.</td></tr><tr><td>Neo4j GraphRAG v1.15.0</td><td>rich-interview / GraphRAG</td><td>Add schema constraints/token accounting prompt.</td></tr><tr><td>Weaviate v1.37.2</td><td>rich-interview / vector DB ops</td><td>Add TTL/cache/export reliability follow-up.</td></tr></tbody></table></div>
+<h2 id='sources'>Sources</h2>
+<ul>
+<li><code>20_Projects/rich-interview/50-Signals-and-Updates/daily-updates/2026-05-04-AI面试知识点更新.md</code></li>
+<li>vLLM v0.20.1 release: https://github.com/vllm-project/vllm/releases/tag/v0.20.1</li>
+<li>Anthropic Release Notes: https://docs.anthropic.com/en/release-notes/overview</li>
+<li>Google Gemini API changelog: https://ai.google.dev/gemini-api/docs/changelog</li>
+<li>Neo4j GraphRAG Python v1.15.0: https://github.com/neo4j/neo4j-graphrag-python/releases/tag/1.15.0</li>
+<li>Weaviate v1.37.2: https://github.com/weaviate/weaviate/releases/tag/v1.37.2</li>
+<li>Hugging Face eval-cost blog: https://huggingface.co/blog/evaleval/eval-costs-bottleneck</li>
+<li>Meta AI official feed: https://about.fb.com/news/tag/ai/feed/</li>
+</ul>
+<h2 id='notes'>Notes</h2>
+<ul>
+<li>No broad web search used in this market refresh.</li>
+<li>Stock digest has separate output and delivery marker under daily-delivery path.</li>
+</ul></main></div>
+</body></html>

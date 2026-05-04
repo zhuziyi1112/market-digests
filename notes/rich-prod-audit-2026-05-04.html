@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026-05-04 框架自审与优化</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-05-04 09:08</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#2026-05-04-框架自审与优化'>2026-05-04 框架自审与优化</a><a class='toc-h2' href='#executive-summary'>Executive Summary</a><a class='toc-h2' href='#coverage-structure-scorecard'>Coverage/Structure Scorecard</a><a class='toc-h2' href='#safe-auto-fixes-applied'>Safe Auto-Fixes Applied</a><a class='toc-h2' href='#suggested-manual-agent-tasks'>Suggested Manual/Agent Tasks</a><a class='toc-h2' href='#questions-to-promote'>Questions to Promote</a><a class='toc-h2' href='#cards-to-improve'>Cards to Improve</a><a class='toc-h2' href='#canonical-legacy-cleanup'>Canonical/Legacy Cleanup</a><a class='toc-h2' href='#sources-inputs-reviewed'>Sources / Inputs Reviewed</a></nav><main><div class="meta">Source: 20_Projects/rich-interview/60-Audits/2026-05-04-框架自审与优化.md</div><h1 id='2026-05-04-框架自审与优化'>2026-05-04 框架自审与优化</h1>
+<h2 id='executive-summary'>Executive Summary</h2>
+<ul>
+<li>Local-first light audit completed after today’s knowledge update.</li>
+<li>Framework structure is healthy: MOC and Roadmap still route cleanly into Knowledge, Question Bank, Practice OS, Architecture Views, Signals, and Audits.</li>
+<li>今日最有价值的新增结构任务是把 <code>vLLM / DeepSeek V4 serving</code>、<code>long-context lifecycle</code>、<code>model deprecation/fallback</code> 转成可面试的 production checklists。</li>
+<li>No auto-fixes applied; today’s changes are content-promotion decisions, not safe obvious link/status fixes.</li>
+</ul>
+<h2 id='coverage-structure-scorecard'>Coverage/Structure Scorecard</h2>
+<div class='table-wrap'><table><thead><tr><th>Area</th><th>Score</th><th>Notes</th></tr></thead><tbody><tr><td>MOC structure</td><td>9/10</td><td>Canonical folders and entry points are clear and match HEARTBEAT paths.</td></tr><tr><td>Roadmap coverage</td><td>8/10</td><td>Strong baseline; add lifecycle/serving validation examples into Context, Serving, LLMOps days.</td></tr><tr><td>Question Bank</td><td>9/10</td><td>Broad P0 coverage; new questions should be added as candidate rows only after review.</td></tr><tr><td>Top-30 cards</td><td>8/10</td><td>Production answer formula is strong; Q053/Q056/Q057 are best homes for today’s signals.</td></tr><tr><td>Latest daily update</td><td>9/10</td><td>Source-backed, detailed, and includes routing to both interview and market notes.</td></tr><tr><td>Compliance / safety</td><td>9/10</td><td>No protected-source scraping; no private data exposed.</td></tr></tbody></table></div>
+<h2 id='safe-auto-fixes-applied'>Safe Auto-Fixes Applied</h2>
+<ul>
+<li>None.</li>
+<li>Reason: no safe tiny backlink/status fix was clearly required; canonical updates should wait for review.</li>
+</ul>
+<h2 id='suggested-manual-agent-tasks'>Suggested Manual/Agent Tasks</h2>
+<ul class='checklist'>
+<li><input type='checkbox' disabled > Add to <code>12-Inference-Serving</code>: model-specific serving validation checklist: kernel support, MoE routing/top-k, memory pool, CUDA graph capture, parser/structured-output compatibility, rollback.</li>
+<li><input type='checkbox' disabled > Add to <code>02-Prompt-Context-Engineering</code>: long-context availability as a versioned API contract with retirement/fallback behavior.</li>
+<li><input type='checkbox' disabled > Add to <code>14-MLOps-LLMOps</code>: deprecation watcher, model registry, canary evals, fallback routing, rate-limit introspection, customer-impact alerts.</li>
+<li><input type='checkbox' disabled > Add to <code>06-Knowledge-Graph-GraphRAG</code>: schema constraints and token accounting as GraphRAG operational controls.</li>
+<li><input type='checkbox' disabled > Add to <code>05-Knowledge-Stores</code>: TTL/cache/export/tenant lifecycle as vector DB reliability topics.</li>
+</ul>
+<h2 id='questions-to-promote'>Questions to Promote</h2>
+<div class='table-wrap'><table><thead><tr><th>Candidate</th><th>Proposed destination</th><th>Priority</th></tr></thead><tbody><tr><td>vLLM adds DeepSeek V4 stabilization in a patch release. What tests would you run before upgrading a production inference cluster?</td><td>Question Bank / Serving</td><td>P1</td></tr><tr><td>Anthropic retires a beta 1M-context header. How would you migrate long-context customers safely?</td><td>Question Bank / Context + LLMOps</td><td>P1</td></tr><tr><td>Why can a model be “supported” by a serving framework but still not production-ready?</td><td>Question Bank / Serving</td><td>P1</td></tr><tr><td>How do model deprecations and preview shutdowns change your registry/routing/eval strategy?</td><td>Question Bank / LLMOps</td><td>P1</td></tr><tr><td>In GraphRAG, how do schema constraints and token usage tracking improve reliability and cost?</td><td>Question Bank / GraphRAG</td><td>P2</td></tr></tbody></table></div>
+<h2 id='cards-to-improve'>Cards to Improve</h2>
+<ul>
+<li><code>Q007 Long context</code>: add model/version/header/retirement and over-limit error handling.</li>
+<li><code>Q053 LLM latency</code>: add serving runtime compatibility and per-model kernel/parser validation.</li>
+<li><code>Q056 Model routing</code>: add deprecation watcher and fallback eval gates.</li>
+<li><code>Q057 LLMOps versioning</code>: add provider release-note monitoring and customer-impact alerting.</li>
+<li><code>Q061 Cost control</code>: add eval cost and token accounting in KG/GraphRAG pipelines.</li>
+</ul>
+<h2 id='canonical-legacy-cleanup'>Canonical/Legacy Cleanup</h2>
+<ul>
+<li>No deletes, mass moves, or rewrites recommended.</li>
+<li>Current canonical paths remain consistent:</li>
+<li><code>20_Projects/rich-interview/50-Signals-and-Updates/daily-updates/</code></li>
+<li><code>20_Projects/rich-interview/60-Audits/</code></li>
+<li><code>20_Projects/rich-ai-research/daily-updates/</code></li>
+<li>Legacy cleanup should remain manual/approved only.</li>
+</ul>
+<h2 id='sources-inputs-reviewed'>Sources / Inputs Reviewed</h2>
+<ul>
+<li><code>20_Projects/rich-interview/00-Home/MOC.md</code></li>
+<li><code>20_Projects/rich-interview/00-Home/Roadmap.md</code></li>
+<li><code>20_Projects/rich-interview/20-Question-Bank/Question-Bank.md</code></li>
+<li><code>20_Projects/rich-interview/20-Question-Bank/Top-30-Answer-Cards.md</code></li>
+<li><code>20_Projects/rich-interview/50-Signals-and-Updates/daily-updates/2026-05-04-AI面试知识点更新.md</code></li>
+</ul></main></div>
+</body></html>

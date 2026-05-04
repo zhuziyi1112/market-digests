@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026-05-04 面经信号更新</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-05-04 09:08</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#2026-05-04-面经信号更新'>2026-05-04 面经信号更新</a><a class='toc-h2' href='#executive-summary'>Executive Summary</a><a class='toc-h2' href='#new-interview-signals-table'>New Interview Signals table</a><a class='toc-h2' href='#candidate-questions-to-add'>Candidate Questions to Add</a><a class='toc-h2' href='#existing-cards-to-update'>Existing Cards to Update</a><a class='toc-h2' href='#source-links-manual-inputs'>Source Links/Manual Inputs</a><a class='toc-h2' href='#compliance-notes'>Compliance Notes</a></nav><main><div class="meta">Source: 20_Projects/rich-interview/50-Signals-and-Updates/daily-updates/2026-05-04-面经信号更新.md</div><h1 id='2026-05-04-面经信号更新'>2026-05-04 面经信号更新</h1>
+<h2 id='executive-summary'>Executive Summary</h2>
+<ul>
+<li>今日使用 compliant local/source context only；未访问登录、付费、积分、captcha 或受限社区内容。</li>
+<li>面经信号没有新增可直接提升为 canonical 的私有/社区内容；今天主要把官方技术更新转成 generalized interview drills。</li>
+<li>最高价值的面试方向：<strong>production AI engineering</strong>，尤其是 serving upgrade、long-context migration、model deprecation、vector/KG operations、eval-cost control。</li>
+<li>不复制社区帖，不保存个人信息；所有候选题均为泛化后的面试主题。</li>
+</ul>
+<h2 id='new-interview-signals-table'>New Interview Signals table</h2>
+<div class='table-wrap'><table><thead><tr><th>Signal</th><th>Role / Context</th><th>Generalized topic</th><th>Confidence</th><th>Action</th></tr></thead><tbody><tr><td>vLLM v0.20.1 / DeepSeek V4 serving stabilization</td><td>AI Infra / ML Platform / AI Engineer</td><td>Production inference upgrade plan, compatibility testing, MoE/runtime failure modes</td><td>High</td><td>Add candidate serving drill after review</td></tr><tr><td>Anthropic long-context beta retirement</td><td>AI Engineer / LLMOps</td><td>Long-context migration, provider lifecycle, versioned API contracts</td><td>High</td><td>Add context/LLMOps migration drill</td></tr><tr><td>Gemini preview model shutdown / embeddings GA</td><td>AI Platform / Solutions Architect</td><td>Model registry, fallback routing, eval migration</td><td>High</td><td>Add lifecycle operations question</td></tr><tr><td>Neo4j GraphRAG schema/token tracking</td><td>RAG / Knowledge Engineer</td><td>GraphRAG reliability, schema constraints, cost accounting</td><td>Medium</td><td>Keep as candidate GraphRAG ops prompt</td></tr><tr><td>Vector DB TTL/cache/export fixes</td><td>RAG / Platform Engineer</td><td>Operational reliability beyond retrieval metrics</td><td>Medium</td><td>Add vector DB ops follow-up if repeated</td></tr></tbody></table></div>
+<h2 id='candidate-questions-to-add'>Candidate Questions to Add</h2>
+<ul>
+<li>vLLM adds DeepSeek V4 stabilization in a patch release. What tests would you run before upgrading a production inference cluster?</li>
+<li>A provider retires a 1M-context beta header. How do you migrate long-context customers without breaking workflows?</li>
+<li>Why can a model be “supported” by a serving framework but still not production-ready?</li>
+<li>How do model deprecations and preview-model shutdowns change your model registry, routing, and eval strategy?</li>
+<li>In GraphRAG, how do schema constraints and token usage tracking improve reliability and operational cost control?</li>
+<li>A vector DB release fixes TTL, cache, and export behavior. Why should an AI engineer care if retrieval metrics look unchanged?</li>
+</ul>
+<h2 id='existing-cards-to-update'>Existing Cards to Update</h2>
+<ul>
+<li><code>Q007 Long context</code>: add provider/version/header lifecycle and over-limit fallback behavior.</li>
+<li><code>Q053 LLM latency</code>: add runtime upgrade validation and model-specific serving constraints.</li>
+<li><code>Q056 Model routing</code>: add model retirement/deprecation and fallback-route eval gates.</li>
+<li><code>Q057 LLMOps versioning</code>: add provider release-note watcher and model registry.</li>
+<li><code>Q061 Cost control</code>: add eval cost, token usage tracking, and cost-per-success framing.</li>
+<li><code>Q029 GraphRAG eval</code>: add schema constraint validation and extraction-cost tracking.</li>
+</ul>
+<h2 id='source-links-manual-inputs'>Source Links/Manual Inputs</h2>
+<ul>
+<li>Daily AI interview update: <code>20_Projects/rich-interview/50-Signals-and-Updates/daily-updates/2026-05-04-AI面试知识点更新.md</code></li>
+<li>vLLM v0.20.1: https://github.com/vllm-project/vllm/releases/tag/v0.20.1</li>
+<li>Anthropic Release Notes: https://docs.anthropic.com/en/release-notes/overview</li>
+<li>Google Gemini API changelog: https://ai.google.dev/gemini-api/docs/changelog</li>
+<li>Neo4j GraphRAG Python v1.15.0: https://github.com/neo4j/neo4j-graphrag-python/releases/tag/1.15.0</li>
+<li>Weaviate v1.37.2: https://github.com/weaviate/weaviate/releases/tag/v1.37.2</li>
+</ul>
+<h2 id='compliance-notes'>Compliance Notes</h2>
+<ul>
+<li>No usernames, private post text, or personal data stored.</li>
+<li>Community/social signals were not scraped or copied.</li>
+<li>一亩三分地 remains manual/browser-assisted only; no automation around login, points, paywalls, robots/TOS, or CAPTCHA.</li>
+<li>All interview signals are generalized production-engineering themes from official/source context.</li>
+</ul></main></div>
+</body></html>
