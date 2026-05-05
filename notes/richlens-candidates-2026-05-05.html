@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-05-05</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-05-05 10:49</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-05-05'>RichLens Candidate Feed — 2026-05-05</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-open-swe-an-open-source-framework-for-internal-coding-agents'>1. Open SWE: An Open-Source Framework for Internal Coding Agents</a><a class='toc-h3' href='#2-agentreputation-a-decentralized-agentic-ai-reputation-framework'>2. AgentReputation: A Decentralized Agentic AI Reputation Framework</a><a class='toc-h3' href='#3-open-models-have-crossed-a-threshold'>3. Open Models have crossed a threshold</a><a class='toc-h3' href='#4-are-tools-all-we-need-unveiling-the-tool-use-tax-in-llm-agents'>4. Are Tools All We Need? Unveiling the Tool-Use Tax in LLM Agents</a><a class='toc-h3' href='#5-agentopic-a-generative-ai-agent-workflow-for-explainable-topic-modeling'>5. Agentopic: A Generative AI Agent Workflow for Explainable Topic Modeling</a><a class='toc-h3' href='#6-openai-and-pwc-collaborate-to-reimagine-the-office-of-the-cfo'>6. OpenAI and PwC collaborate to reimagine the office of the CFO</a><a class='toc-h3' href='#7-vc-fired-all-analysts-is-using-ai-to-help-run-deals-for-its-new-75m-fund'>7. VC fired all analysts, is using AI to help run deals for its new $75M fund</a><a class='toc-h3' href='#8-bwvi-a-cli-tool-that-gives-ai-agents-structured-design-decision-making'>8. BWVI – A CLI tool that gives AI agents structured design decision-making</a><a class='toc-h3' href='#9-supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding'>9. Supercharging LLM inference on Google TPUs: Achieving 3X speedups with diffusion-style speculative decoding</a><a class='toc-h3' href='#10-tadi-tool-augmented-drilling-intelligence-via-agentic-llm-orchestration-over-heterogeneous-wellsite-data'>10. TADI: Tool-Augmented Drilling Intelligence via Agentic LLM Orchestration over Heterogeneous Wellsite Data</a><a class='toc-h3' href='#11-minimal-local-causal-explanations-for-jailbreak-success-in-large-language-models'>11. Minimal, Local, Causal Explanations for Jailbreak Success in Large Language Models</a><a class='toc-h3' href='#12-tur-dpo-topology-and-uncertainty-aware-direct-preference-optimization'>12. TUR-DPO: Topology- and Uncertainty-Aware Direct Preference Optimization</a><a class='toc-h3' href='#13-how-openai-delivers-low-latency-voice-ai-at-scale'>13. How OpenAI delivers low-latency voice AI at scale</a><a class='toc-h3' href='#14-the-latest-ai-news-we-announced-in-april-2026'>14. The latest AI news we announced in April 2026</a><a class='toc-h3' href='#15-reduce-friction-and-latency-for-long-running-jobs-with-webhooks-in-gemini-api'>15. Reduce friction and latency for long-running jobs with Webhooks in Gemini API</a><a class='toc-h3' href='#16-optimize-supply-chain-decision-systems-using-nvidia-cuopt-agent-skills'>16. Optimize Supply Chain Decision Systems Using NVIDIA cuOpt Agent Skills</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-05-05-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-05-05'>RichLens Candidate Feed — 2026-05-05</h1>
+<ul>
+<li>Discovered candidates: 124</li>
+<li>Added to queue: 16</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-open-swe-an-open-source-framework-for-internal-coding-agents'>1. Open SWE: An Open-Source Framework for Internal Coding Agents</h3>
+<ul>
+<li>ID: <code>RL-dbd1f1e21c</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/open-swe-an-open-source-framework-for-internal-coding-agents</li>
+<li>Score: <code>0.83</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='2-agentreputation-a-decentralized-agentic-ai-reputation-framework'>2. AgentReputation: A Decentralized Agentic AI Reputation Framework</h3>
+<ul>
+<li>ID: <code>RL-9d70e5b8fd</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.00073</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, coding agents, LLM evaluation</li>
+</ul>
+<h3 id='3-open-models-have-crossed-a-threshold'>3. Open Models have crossed a threshold</h3>
+<ul>
+<li>ID: <code>RL-838e47cded</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/open-models-have-crossed-a-threshold</li>
+<li>Score: <code>0.71</code></li>
+<li>Why: Matches topics: AI agents, coding agents, evals</li>
+</ul>
+<h3 id='4-are-tools-all-we-need-unveiling-the-tool-use-tax-in-llm-agents'>4. Are Tools All We Need? Unveiling the Tool-Use Tax in LLM Agents</h3>
+<ul>
+<li>ID: <code>RL-27b4cf93ec</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.00136</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, coding agents, inference</li>
+</ul>
+<h3 id='5-agentopic-a-generative-ai-agent-workflow-for-explainable-topic-modeling'>5. Agentopic: A Generative AI Agent Workflow for Explainable Topic Modeling</h3>
+<ul>
+<li>ID: <code>RL-3afb12dfb4</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.00833</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, coding agents, personal AI workflow</li>
+</ul>
+<h3 id='6-openai-and-pwc-collaborate-to-reimagine-the-office-of-the-cfo'>6. OpenAI and PwC collaborate to reimagine the office of the CFO</h3>
+<ul>
+<li>ID: <code>RL-9807ae0752</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/openai-pwc-finance-collaboration</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='7-vc-fired-all-analysts-is-using-ai-to-help-run-deals-for-its-new-75m-fund'>7. VC fired all analysts, is using AI to help run deals for its new $75M fund</h3>
+<ul>
+<li>ID: <code>RL-435de519fd</code></li>
+<li>Source: Hacker News AI Search / <code>rss</code></li>
+<li>URL: https://www.businessinsider.com/davidovs-venture-collective-dvc-ai-agents-talent-run-deals-2025-10</li>
+<li>Score: <code>0.39</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='8-bwvi-a-cli-tool-that-gives-ai-agents-structured-design-decision-making'>8. BWVI – A CLI tool that gives AI agents structured design decision-making</h3>
+<ul>
+<li>ID: <code>RL-4d25c7e5b5</code></li>
+<li>Source: Hacker News AI Search / <code>rss</code></li>
+<li>URL: https://github.com/lh123aa/bwvi-design</li>
+<li>Score: <code>0.39</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='9-supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding'>9. Supercharging LLM inference on Google TPUs: Achieving 3X speedups with diffusion-style speculative decoding</h3>
+<ul>
+<li>ID: <code>RL-449c276885</code></li>
+<li>Source: Google Developers Blog / <code>rss</code></li>
+<li>URL: https://developers.googleblog.com/supercharging-llm-inference-on-google-tpus-achieving-3x-speedups-with-diffusion-style-speculative-decoding/</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='10-tadi-tool-augmented-drilling-intelligence-via-agentic-llm-orchestration-over-heterogeneous-wellsite-data'>10. TADI: Tool-Augmented Drilling Intelligence via Agentic LLM Orchestration over Heterogeneous Wellsite Data</h3>
+<ul>
+<li>ID: <code>RL-8a0588b089</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.00060</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: agentic coding</li>
+</ul>
+<h3 id='11-minimal-local-causal-explanations-for-jailbreak-success-in-large-language-models'>11. Minimal, Local, Causal Explanations for Jailbreak Success in Large Language Models</h3>
+<ul>
+<li>ID: <code>RL-2572e9f9de</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.00123</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: AI product strategy</li>
+</ul>
+<h3 id='12-tur-dpo-topology-and-uncertainty-aware-direct-preference-optimization'>12. TUR-DPO: Topology- and Uncertainty-Aware Direct Preference Optimization</h3>
+<ul>
+<li>ID: <code>RL-24684ae4a2</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.00224</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: multimodal AI</li>
+</ul>
+<h3 id='13-how-openai-delivers-low-latency-voice-ai-at-scale'>13. How OpenAI delivers low-latency voice AI at scale</h3>
+<ul>
+<li>ID: <code>RL-d6581b92c8</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/delivering-low-latency-voice-ai-at-scale</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='14-the-latest-ai-news-we-announced-in-april-2026'>14. The latest AI news we announced in April 2026</h3>
+<ul>
+<li>ID: <code>RL-4e60ba9595</code></li>
+<li>Source: Google AI Blog / <code>rss</code></li>
+<li>URL: https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-april-2026/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='15-reduce-friction-and-latency-for-long-running-jobs-with-webhooks-in-gemini-api'>15. Reduce friction and latency for long-running jobs with Webhooks in Gemini API</h3>
+<ul>
+<li>ID: <code>RL-3f5239165d</code></li>
+<li>Source: Google AI Blog / <code>rss</code></li>
+<li>URL: https://blog.google/innovation-and-ai/technology/developers-tools/event-driven-webhooks/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='16-optimize-supply-chain-decision-systems-using-nvidia-cuopt-agent-skills'>16. Optimize Supply Chain Decision Systems Using NVIDIA cuOpt Agent Skills</h3>
+<ul>
+<li>ID: <code>RL-d1afd2f239</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/optimize-supply-chain-decision-systems-using-nvidia-cuopt-agent-skills/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul></main></div>
+</body></html>
