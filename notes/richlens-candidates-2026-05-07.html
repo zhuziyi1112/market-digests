@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-05-07</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-05-07 14:16</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-05-07'>RichLens Candidate Feed — 2026-05-07</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-creativitybench-evaluating-agent-creative-reasoning-via-affordance-based-tool-repurposing'>1. CreativityBench: Evaluating Agent Creative Reasoning via Affordance-Based Tool Repurposing</a><a class='toc-h3' href='#2-structured-progressive-knowledge-activation-for-llm-driven-neural-architecture-search'>2. Structured Progressive Knowledge Activation for LLM-Driven Neural Architecture Search</a><a class='toc-h3' href='#3-vibe-coding-and-agentic-engineering-are-getting-closer-than-i-d-like'>3. Vibe coding and agentic engineering are getting closer than I&#x27;d like</a><a class='toc-h3' href='#4-validating-agentic-behavior-when-correct-isn-t-deterministic'>4. Validating agentic behavior when “correct” isn’t deterministic</a><a class='toc-h3' href='#5-stable-agentic-control-tool-mediated-llm-architecture-for-autonomous-cyber-defense'>5. Stable Agentic Control: Tool-Mediated LLM Architecture for Autonomous Cyber Defense</a><a class='toc-h3' href='#6-parloa-builds-service-agents-customers-want-to-talk-to'>6. Parloa builds service agents customers want to talk to</a><a class='toc-h3' href='#7-making-the-invisible-visible-understanding-the-mismatch-between-organizational-goals-and-worker-experiences-in-ai-adoption'>7. Making the Invisible Visible: Understanding the Mismatch Between Organizational Goals and Worker Experiences in AI Adoption</a><a class='toc-h3' href='#8-a-self-attentive-meta-optimizer-with-group-adaptive-learning-rates-and-weight-decay'>8. A Self-Attentive Meta-Optimizer with Group-Adaptive Learning Rates and Weight Decay</a><a class='toc-h3' href='#9-mp-ismoe-mixed-precision-interactive-side-mixture-of-experts-for-efficient-transfer-learning'>9. MP-ISMoE: Mixed-Precision Interactive Side Mixture-of-Experts for Efficient Transfer Learning</a><a class='toc-h3' href='#10-how-frontier-enterprises-are-building-an-ai-advantage'>10. How frontier enterprises are building an AI advantage</a><a class='toc-h3' href='#11-programmatic-context-augmentation-for-llm-based-symbolic-regression'>11. Programmatic Context Augmentation for LLM-based Symbolic Regression</a><a class='toc-h3' href='#12-fmi-su-yotkova-kastreva-at-semeval-2026-task-13-lightweight-detection-of-llm-generated-code-via-stylometric-signals'>12. FMI_SU_Yotkova_Kastreva at SemEval-2026 Task 13: Lightweight Detection of LLM-Generated Code via Stylometric Signals</a><a class='toc-h3' href='#13-not-all-that-is-fluent-is-factual-investigating-hallucinations-of-large-language-models-in-academic-writing'>13. Not All That Is Fluent Is Factual: Investigating Hallucinations of Large Language Models in Academic Writing</a><a class='toc-h3' href='#14-transformation-categorization-based-on-group-decomposition-theory-using-parameter-division'>14. Transformation Categorization Based on Group Decomposition Theory Using Parameter Division</a><a class='toc-h3' href='#15-introducing-chatgpt-futures-class-of-2026'>15. Introducing ChatGPT Futures: Class of 2026</a><a class='toc-h3' href='#16-uber-uses-openai-to-help-people-earn-smarter-and-book-faster'>16. Uber uses OpenAI to help people earn smarter and book faster</a><a class='toc-h3' href='#17-singular-bank-helps-bankers-move-fast-with-chatgpt-and-codex'>17. Singular Bank helps bankers move fast with ChatGPT and Codex</a><a class='toc-h3' href='#18-5-gardening-tips-you-can-try-right-in-search'>18. 5 gardening tips you can try right in Search</a><a class='toc-h3' href='#19-vllm-v0-to-v1-correctness-before-corrections-in-rl'>19. vLLM V0 to V1: Correctness Before Corrections in RL</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-05-07-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-05-07'>RichLens Candidate Feed — 2026-05-07</h1>
+<ul>
+<li>Discovered candidates: 123</li>
+<li>Added to queue: 19</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-creativitybench-evaluating-agent-creative-reasoning-via-affordance-based-tool-repurposing'>1. CreativityBench: Evaluating Agent Creative Reasoning via Affordance-Based Tool Repurposing</h3>
+<ul>
+<li>ID: <code>RL-c015eec7cc</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.02910</li>
+<li>Score: <code>0.85</code></li>
+<li>Why: Matches topics: AI agents, coding agents, knowledge management, inference</li>
+</ul>
+<h3 id='2-structured-progressive-knowledge-activation-for-llm-driven-neural-architecture-search'>2. Structured Progressive Knowledge Activation for LLM-Driven Neural Architecture Search</h3>
+<ul>
+<li>ID: <code>RL-915f1f6fca</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.04057</li>
+<li>Score: <code>0.85</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents, knowledge management</li>
+</ul>
+<h3 id='3-vibe-coding-and-agentic-engineering-are-getting-closer-than-i-d-like'>3. Vibe coding and agentic engineering are getting closer than I'd like</h3>
+<ul>
+<li>ID: <code>RL-839f5e0b5c</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/May/6/vibe-coding-and-agentic-engineering/#atom-everything</li>
+<li>Score: <code>0.77</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='4-validating-agentic-behavior-when-correct-isn-t-deterministic'>4. Validating agentic behavior when “correct” isn’t deterministic</h3>
+<ul>
+<li>ID: <code>RL-6f75b8ecc0</code></li>
+<li>Source: GitHub AI and ML Blog / <code>rss</code></li>
+<li>URL: https://github.blog/ai-and-ml/generative-ai/validating-agentic-behavior-when-correct-isnt-deterministic/</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='5-stable-agentic-control-tool-mediated-llm-architecture-for-autonomous-cyber-defense'>5. Stable Agentic Control: Tool-Mediated LLM Architecture for Autonomous Cyber Defense</h3>
+<ul>
+<li>ID: <code>RL-291ea690a1</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.03034</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, coding agents</li>
+</ul>
+<h3 id='6-parloa-builds-service-agents-customers-want-to-talk-to'>6. Parloa builds service agents customers want to talk to</h3>
+<ul>
+<li>ID: <code>RL-e41b9b9c21</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/parloa</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='7-making-the-invisible-visible-understanding-the-mismatch-between-organizational-goals-and-worker-experiences-in-ai-adoption'>7. Making the Invisible Visible: Understanding the Mismatch Between Organizational Goals and Worker Experiences in AI Adoption</h3>
+<ul>
+<li>ID: <code>RL-5131142f2c</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.03078</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: knowledge management, Obsidian knowledge management</li>
+</ul>
+<h3 id='8-a-self-attentive-meta-optimizer-with-group-adaptive-learning-rates-and-weight-decay'>8. A Self-Attentive Meta-Optimizer with Group-Adaptive Learning Rates and Weight Decay</h3>
+<ul>
+<li>ID: <code>RL-0c6d799488</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.04055</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: knowledge management, Obsidian knowledge management</li>
+</ul>
+<h3 id='9-mp-ismoe-mixed-precision-interactive-side-mixture-of-experts-for-efficient-transfer-learning'>9. MP-ISMoE: Mixed-Precision Interactive Side Mixture-of-Experts for Efficient Transfer Learning</h3>
+<ul>
+<li>ID: <code>RL-9f3d1d6caf</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.04058</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: knowledge management, Obsidian knowledge management</li>
+</ul>
+<h3 id='10-how-frontier-enterprises-are-building-an-ai-advantage'>10. How frontier enterprises are building an AI advantage</h3>
+<ul>
+<li>ID: <code>RL-94f58b4505</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/introducing-b2b-signals</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: agentic coding</li>
+</ul>
+<h3 id='11-programmatic-context-augmentation-for-llm-based-symbolic-regression'>11. Programmatic Context Augmentation for LLM-based Symbolic Regression</h3>
+<ul>
+<li>ID: <code>RL-6650734371</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.03101</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='12-fmi-su-yotkova-kastreva-at-semeval-2026-task-13-lightweight-detection-of-llm-generated-code-via-stylometric-signals'>12. FMI_SU_Yotkova_Kastreva at SemEval-2026 Task 13: Lightweight Detection of LLM-Generated Code via Stylometric Signals</h3>
+<ul>
+<li>ID: <code>RL-3f00a7bc16</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.04157</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='13-not-all-that-is-fluent-is-factual-investigating-hallucinations-of-large-language-models-in-academic-writing'>13. Not All That Is Fluent Is Factual: Investigating Hallucinations of Large Language Models in Academic Writing</h3>
+<ul>
+<li>ID: <code>RL-0125eb0f87</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.04171</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='14-transformation-categorization-based-on-group-decomposition-theory-using-parameter-division'>14. Transformation Categorization Based on Group Decomposition Theory Using Parameter Division</h3>
+<ul>
+<li>ID: <code>RL-fe39d70af8</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.04056</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: AI product strategy</li>
+</ul>
+<h3 id='15-introducing-chatgpt-futures-class-of-2026'>15. Introducing ChatGPT Futures: Class of 2026</h3>
+<ul>
+<li>ID: <code>RL-bdecd9008a</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/introducing-chatgpt-futures-class-of-2026</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='16-uber-uses-openai-to-help-people-earn-smarter-and-book-faster'>16. Uber uses OpenAI to help people earn smarter and book faster</h3>
+<ul>
+<li>ID: <code>RL-8665a96e70</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/uber</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='17-singular-bank-helps-bankers-move-fast-with-chatgpt-and-codex'>17. Singular Bank helps bankers move fast with ChatGPT and Codex</h3>
+<ul>
+<li>ID: <code>RL-94a93b54a7</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/singular-bank</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='18-5-gardening-tips-you-can-try-right-in-search'>18. 5 gardening tips you can try right in Search</h3>
+<ul>
+<li>ID: <code>RL-7fd7635574</code></li>
+<li>Source: Google AI Blog / <code>rss</code></li>
+<li>URL: https://blog.google/products-and-platforms/products/search/gardening-tips/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='19-vllm-v0-to-v1-correctness-before-corrections-in-rl'>19. vLLM V0 to V1: Correctness Before Corrections in RL</h3>
+<ul>
+<li>ID: <code>RL-08c10eedcc</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/ServiceNow-AI/correctness-before-corrections</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul></main></div>
+</body></html>
