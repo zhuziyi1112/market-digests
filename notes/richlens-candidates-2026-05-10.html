@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-05-10</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-05-10 10:17</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-05-10'>RichLens Candidate Feed — 2026-05-10</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-alphaevolve-how-our-gemini-powered-coding-agent-is-scaling-impact-across-fields'>1. AlphaEvolve: How our Gemini-powered coding agent is scaling impact across fields</a><a class='toc-h3' href='#2-running-codex-safely-at-openai'>2. Running Codex safely at OpenAI</a><a class='toc-h3' href='#3-improving-token-efficiency-in-github-agentic-workflows'>3. Improving token efficiency in GitHub Agentic Workflows</a><a class='toc-h3' href='#4-scaling-trusted-access-for-cyber-with-gpt-5-5-and-gpt-5-5-cyber'>4. Scaling Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber</a><a class='toc-h3' href='#5-improving-bash-generation-in-small-language-models-with-grammar-constrained-decoding'>5. Improving Bash Generation in Small Language Models with Grammar-Constrained Decoding</a><a class='toc-h3' href='#6-big-words'>6. Big Words</a><a class='toc-h3' href='#7-streaming-tokens-and-tools-multi-turn-agentic-harness-support-in-nvidia-dynamo'>7. Streaming Tokens and Tools: Multi-Turn Agentic Harness Support in NVIDIA Dynamo</a><a class='toc-h3' href='#8-model-quantization-post-training-quantization-using-nvidia-model-optimizer'>8. Model Quantization: Post-Training Quantization Using NVIDIA Model Optimizer</a><a class='toc-h3' href='#9-disable-commit-comments-on-the-user-level'>9. Disable commit comments on the user level</a><a class='toc-h3' href='#10-advancing-voice-intelligence-with-new-models-in-the-api'>10. Advancing voice intelligence with new models in the API</a><a class='toc-h3' href='#11-testing-ads-in-chatgpt'>11. Testing ads in ChatGPT</a><a class='toc-h3' href='#12-see-what-happens-when-creative-legends-use-ai-to-make-ads-for-small-businesses'>12. See what happens when creative legends use AI to make ads for small businesses.</a><a class='toc-h3' href='#13-achieving-peak-system-and-workload-efficiency-on-nvidia-gb200-nvl72-with-slurm-block-scheduling'>13. Achieving Peak System and Workload Efficiency on NVIDIA GB200 NVL72 with Slurm Block Scheduling</a><a class='toc-h3' href='#14-real-time-performance-monitoring-and-faster-debugging-with-nccl-inspector-and-prometheus'>14. Real-Time Performance Monitoring and Faster Debugging with NCCL Inspector and Prometheus</a><a class='toc-h3' href='#15-oncoagent-a-dual-tier-multi-agent-framework-for-privacy-preserving-oncology-clinical-decision-support'>15. &quot;OncoAgent: A Dual-Tier Multi-Agent Framework for Privacy-Preserving Oncology Clinical Decision Support&quot;</a><a class='toc-h3' href='#16-emo-pretraining-mixture-of-experts-for-emergent-modularity'>16. EMO: Pretraining mixture of experts for emergent modularity</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-05-10-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-05-10'>RichLens Candidate Feed — 2026-05-10</h1>
+<ul>
+<li>Discovered candidates: 112</li>
+<li>Added to queue: 16</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-alphaevolve-how-our-gemini-powered-coding-agent-is-scaling-impact-across-fields'>1. AlphaEvolve: How our Gemini-powered coding agent is scaling impact across fields</h3>
+<ul>
+<li>ID: <code>RL-049666cfa3</code></li>
+<li>Source: Google DeepMind Blog / <code>rss</code></li>
+<li>URL: https://deepmind.google/blog/alphaevolve-impact/</li>
+<li>Score: <code>0.95</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents, AI infrastructure</li>
+</ul>
+<h3 id='2-running-codex-safely-at-openai'>2. Running Codex safely at OpenAI</h3>
+<ul>
+<li>ID: <code>RL-91ec1ce9a5</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/running-codex-safely</li>
+<li>Score: <code>0.71</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='3-improving-token-efficiency-in-github-agentic-workflows'>3. Improving token efficiency in GitHub Agentic Workflows</h3>
+<ul>
+<li>ID: <code>RL-2b3dd723a2</code></li>
+<li>Source: GitHub AI and ML Blog / <code>rss</code></li>
+<li>URL: https://github.blog/ai-and-ml/github-copilot/improving-token-efficiency-in-github-agentic-workflows/</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, coding agents</li>
+</ul>
+<h3 id='4-scaling-trusted-access-for-cyber-with-gpt-5-5-and-gpt-5-5-cyber'>4. Scaling Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber</h3>
+<ul>
+<li>ID: <code>RL-288ea344bb</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI infrastructure, investment AI infrastructure</li>
+</ul>
+<h3 id='5-improving-bash-generation-in-small-language-models-with-grammar-constrained-decoding'>5. Improving Bash Generation in Small Language Models with Grammar-Constrained Decoding</h3>
+<ul>
+<li>ID: <code>RL-bd62a6d1a2</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/improving-bash-generation-in-small-language-models-with-grammar-constrained-decoding/</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='6-big-words'>6. Big Words</h3>
+<ul>
+<li>ID: <code>RL-1fa9b224d7</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/May/7/big-words/#atom-everything</li>
+<li>Score: <code>0.53</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='7-streaming-tokens-and-tools-multi-turn-agentic-harness-support-in-nvidia-dynamo'>7. Streaming Tokens and Tools: Multi-Turn Agentic Harness Support in NVIDIA Dynamo</h3>
+<ul>
+<li>ID: <code>RL-f3090a403f</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/streaming-tokens-and-tools-multi-turn-agentic-harness-support-in-nvidia-dynamo/</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: agentic coding</li>
+</ul>
+<h3 id='8-model-quantization-post-training-quantization-using-nvidia-model-optimizer'>8. Model Quantization: Post-Training Quantization Using NVIDIA Model Optimizer</h3>
+<ul>
+<li>ID: <code>RL-c9954e0f89</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/model-quantization-post-training-quantization-using-nvidia-model-optimizer/</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='9-disable-commit-comments-on-the-user-level'>9. Disable commit comments on the user level</h3>
+<ul>
+<li>ID: <code>RL-a67d5a492b</code></li>
+<li>Source: GitHub Changelog / <code>rss</code></li>
+<li>URL: https://github.blog/changelog/2026-05-08-disable-commit-comments-on-the-user-level</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: personal AI workflow</li>
+</ul>
+<h3 id='10-advancing-voice-intelligence-with-new-models-in-the-api'>10. Advancing voice intelligence with new models in the API</h3>
+<ul>
+<li>ID: <code>RL-4ba89a634a</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='11-testing-ads-in-chatgpt'>11. Testing ads in ChatGPT</h3>
+<ul>
+<li>ID: <code>RL-de2ca3d757</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/testing-ads-in-chatgpt</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='12-see-what-happens-when-creative-legends-use-ai-to-make-ads-for-small-businesses'>12. See what happens when creative legends use AI to make ads for small businesses.</h3>
+<ul>
+<li>ID: <code>RL-68512a3cbe</code></li>
+<li>Source: Google AI Blog / <code>rss</code></li>
+<li>URL: https://blog.google/company-news/inside-google/company-announcements/the-small-brief/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='13-achieving-peak-system-and-workload-efficiency-on-nvidia-gb200-nvl72-with-slurm-block-scheduling'>13. Achieving Peak System and Workload Efficiency on NVIDIA GB200 NVL72 with Slurm Block Scheduling</h3>
+<ul>
+<li>ID: <code>RL-0135d7bcbc</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/achieving-peak-system-and-workload-efficiency-on-nvidia-gb200-nvl72-with-slurm-block-scheduling/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='14-real-time-performance-monitoring-and-faster-debugging-with-nccl-inspector-and-prometheus'>14. Real-Time Performance Monitoring and Faster Debugging with NCCL Inspector and Prometheus</h3>
+<ul>
+<li>ID: <code>RL-570dd5819d</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/real-time-performance-monitoring-and-faster-debugging-with-nccl-inspector-and-prometheus/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='15-oncoagent-a-dual-tier-multi-agent-framework-for-privacy-preserving-oncology-clinical-decision-support'>15. "OncoAgent: A Dual-Tier Multi-Agent Framework for Privacy-Preserving Oncology Clinical Decision Support"</h3>
+<ul>
+<li>ID: <code>RL-a66112d74e</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/lablab-ai-amd-developer-hackathon/oncoagent-official-paper</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='16-emo-pretraining-mixture-of-experts-for-emergent-modularity'>16. EMO: Pretraining mixture of experts for emergent modularity</h3>
+<ul>
+<li>ID: <code>RL-a40b2ba2d4</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/allenai/emo</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul></main></div>
+</body></html>
