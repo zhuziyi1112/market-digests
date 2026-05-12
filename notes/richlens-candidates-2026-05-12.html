@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-05-12</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-05-12 10:45</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-05-12'>RichLens Candidate Feed — 2026-05-12</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-thoughts-on-gitlab-s-workforce-reduction-and-structural-and-strategic-decisions'>1. Thoughts on GitLab&#x27;s workforce reduction&quot; and &quot;structural and strategic decisions&quot;</a><a class='toc-h3' href='#2-auto-rubric-as-reward-from-implicit-preferences-to-explicit-multimodal-generative-criteria'>2. Auto-Rubric as Reward: From Implicit Preferences to Explicit Multimodal Generative Criteria</a><a class='toc-h3' href='#3-quoting-james-shore'>3. Quoting James Shore</a><a class='toc-h3' href='#4-learning-on-the-shop-floor'>4. Learning on the Shop floor</a><a class='toc-h3' href='#5-salessim-benchmarking-and-aligning-multimodal-language-models-as-retail-user-simulators'>5. SalesSim: Benchmarking and Aligning Multimodal Language Models as Retail User Simulators</a><a class='toc-h3' href='#6-spatial-priming-outperforms-semantic-prompting-a-grid-based-approach-to-improving-llm-accuracy-on-chart-data-extraction'>6. Spatial Priming Outperforms Semantic Prompting: A Grid-Based Approach to Improving LLM Accuracy on Chart Data Extraction</a><a class='toc-h3' href='#7-jina-embeddings-v5-omni-text-geometry-preserving-multimodal-embeddings-via-frozen-tower-composition'>7. jina-embeddings-v5-omni: Text-Geometry-Preserving Multimodal Embeddings via Frozen-Tower Composition</a><a class='toc-h3' href='#8-building-blocks-for-foundation-model-training-and-inference-on-aws'>8. Building Blocks for Foundation Model Training and Inference on AWS</a><a class='toc-h3' href='#9-your-ai-use-is-breaking-my-brain'>9. Your AI Use Is Breaking My Brain</a><a class='toc-h3' href='#10-show-hn-voice-gender-classifier-for-european-voice-ai-1mb-onnx-4ms'>10. Show HN: Voice gender classifier for European voice AI (1MB, ONNX, 4ms)</a><a class='toc-h3' href='#11-why-you-shouldn-t-treat-ai-agents-like-employees'>11. Why You Shouldn&#x27;t Treat AI Agents Like Employees</a><a class='toc-h3' href='#12-where-reliability-lives-in-vision-language-models-a-mechanistic-study-of-attention-hidden-states-and-causal-circuits'>12. Where Reliability Lives in Vision-Language Models: A Mechanistic Study of Attention, Hidden States, and Causal Circuits</a><a class='toc-h3' href='#13-embeddings-for-preferences-not-semantics'>13. Embeddings for Preferences, Not Semantics</a><a class='toc-h3' href='#14-reinforcement-learning-for-inverse-structural-design-and-rapid-laser-cutting-of-kirigami-prototypes'>14. Reinforcement learning for inverse structural design and rapid laser cutting of kirigami prototypes</a><a class='toc-h3' href='#15-how-chatgpt-adoption-broadened-in-early-2026'>15. How ChatGPT adoption broadened in early 2026</a><a class='toc-h3' href='#16-introducing-nvidia-fleet-intelligence-for-real-time-gpu-fleet-visibility-and-optimization'>16. Introducing NVIDIA Fleet Intelligence for Real-Time GPU Fleet Visibility and Optimization</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-05-12-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-05-12'>RichLens Candidate Feed — 2026-05-12</h1>
+<ul>
+<li>Discovered candidates: 122</li>
+<li>Added to queue: 16</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-thoughts-on-gitlab-s-workforce-reduction-and-structural-and-strategic-decisions'>1. Thoughts on GitLab's workforce reduction" and "structural and strategic decisions"</h3>
+<ul>
+<li>ID: <code>RL-b08efaa004</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/May/11/gitlab-act-2/#atom-everything</li>
+<li>Score: <code>0.77</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='2-auto-rubric-as-reward-from-implicit-preferences-to-explicit-multimodal-generative-criteria'>2. Auto-Rubric as Reward: From Implicit Preferences to Explicit Multimodal Generative Criteria</h3>
+<ul>
+<li>ID: <code>RL-78afbf86cb</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.08354</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: knowledge management, LLM evaluation, multimodal AI, Obsidian knowledge management</li>
+</ul>
+<h3 id='3-quoting-james-shore'>3. Quoting James Shore</h3>
+<ul>
+<li>ID: <code>RL-016664074c</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/May/11/james-shore/#atom-everything</li>
+<li>Score: <code>0.65</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='4-learning-on-the-shop-floor'>4. Learning on the Shop floor</h3>
+<ul>
+<li>ID: <code>RL-af3b18e61d</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/May/11/learning-on-the-shop-floor/#atom-everything</li>
+<li>Score: <code>0.65</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='5-salessim-benchmarking-and-aligning-multimodal-language-models-as-retail-user-simulators'>5. SalesSim: Benchmarking and Aligning Multimodal Language Models as Retail User Simulators</h3>
+<ul>
+<li>ID: <code>RL-9906f4c37f</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.08334</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: agentic coding, LLM evaluation, multimodal AI</li>
+</ul>
+<h3 id='6-spatial-priming-outperforms-semantic-prompting-a-grid-based-approach-to-improving-llm-accuracy-on-chart-data-extraction'>6. Spatial Priming Outperforms Semantic Prompting: A Grid-Based Approach to Improving LLM Accuracy on Chart Data Extraction</h3>
+<ul>
+<li>ID: <code>RL-dca013b550</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.08220</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: multimodal AI, AI product strategy</li>
+</ul>
+<h3 id='7-jina-embeddings-v5-omni-text-geometry-preserving-multimodal-embeddings-via-frozen-tower-composition'>7. jina-embeddings-v5-omni: Text-Geometry-Preserving Multimodal Embeddings via Frozen-Tower Composition</h3>
+<ul>
+<li>ID: <code>RL-2f9ab0fb8f</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.08384</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: embeddings, multimodal AI</li>
+</ul>
+<h3 id='8-building-blocks-for-foundation-model-training-and-inference-on-aws'>8. Building Blocks for Foundation Model Training and Inference on AWS</h3>
+<ul>
+<li>ID: <code>RL-ce49fe8e0c</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/amazon/foundation-model-building-blocks</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='9-your-ai-use-is-breaking-my-brain'>9. Your AI Use Is Breaking My Brain</h3>
+<ul>
+<li>ID: <code>RL-608d920691</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/May/11/zombie-internet/#atom-everything</li>
+<li>Score: <code>0.41</code></li>
+<li>Why: Matches topics: AI agents, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='10-show-hn-voice-gender-classifier-for-european-voice-ai-1mb-onnx-4ms'>10. Show HN: Voice gender classifier for European voice AI (1MB, ONNX, 4ms)</h3>
+<ul>
+<li>ID: <code>RL-4e21fc7ec5</code></li>
+<li>Source: Hacker News AI Search / <code>rss</code></li>
+<li>URL: https://huggingface.co/syntropicsignal-ai/gender-voice-classifier</li>
+<li>Score: <code>0.39</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='11-why-you-shouldn-t-treat-ai-agents-like-employees'>11. Why You Shouldn't Treat AI Agents Like Employees</h3>
+<ul>
+<li>ID: <code>RL-804ca36914</code></li>
+<li>Source: Hacker News AI Search / <code>rss</code></li>
+<li>URL: https://hbr.org/2026/05/research-why-you-shouldnt-treat-ai-agents-like-employees</li>
+<li>Score: <code>0.39</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='12-where-reliability-lives-in-vision-language-models-a-mechanistic-study-of-attention-hidden-states-and-causal-circuits'>12. Where Reliability Lives in Vision-Language Models: A Mechanistic Study of Attention, Hidden States, and Causal Circuits</h3>
+<ul>
+<li>ID: <code>RL-6030100331</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.08200</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='13-embeddings-for-preferences-not-semantics'>13. Embeddings for Preferences, Not Semantics</h3>
+<ul>
+<li>ID: <code>RL-eef63e4137</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.08360</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: embeddings</li>
+</ul>
+<h3 id='14-reinforcement-learning-for-inverse-structural-design-and-rapid-laser-cutting-of-kirigami-prototypes'>14. Reinforcement learning for inverse structural design and rapid laser cutting of kirigami prototypes</h3>
+<ul>
+<li>ID: <code>RL-3902ba3454</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.08098</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: personal AI workflow</li>
+</ul>
+<h3 id='15-how-chatgpt-adoption-broadened-in-early-2026'>15. How ChatGPT adoption broadened in early 2026</h3>
+<ul>
+<li>ID: <code>RL-e13dc335be</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/signals/research/2026q1-update</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='16-introducing-nvidia-fleet-intelligence-for-real-time-gpu-fleet-visibility-and-optimization'>16. Introducing NVIDIA Fleet Intelligence for Real-Time GPU Fleet Visibility and Optimization</h3>
+<ul>
+<li>ID: <code>RL-6f70f815ae</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/introducing-nvidia-fleet-intelligence-for-real-time-gpu-fleet-visibility-and-optimization/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul></main></div>
+</body></html>
