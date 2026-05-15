@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-05-15</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-05-15 11:09</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-05-15'>RichLens Candidate Feed — 2026-05-15</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-graphbit-a-graph-based-agentic-framework-for-non-linear-agent-orchestration'>1. GraphBit: A Graph-based Agentic Framework for Non-Linear Agent Orchestration</a><a class='toc-h3' href='#2-derivation-prompting-a-logic-based-method-for-improving-retrieval-augmented-generation'>2. Derivation Prompting: A Logic-Based Method for Improving Retrieval-Augmented Generation</a><a class='toc-h3' href='#3-work-with-codex-from-anywhere'>3. Work with Codex from anywhere</a><a class='toc-h3' href='#4-everything-we-shipped-at-interrupt'>4. Everything we shipped at Interrupt</a><a class='toc-h3' href='#5-not-so-locked-in-any-more'>5. Not so locked in any more</a><a class='toc-h3' href='#6-invisible-orchestrators-suppress-protective-behavior-and-dissociate-power-holders-safety-risks-in-multi-agent-llm-systems'>6. Invisible Orchestrators Suppress Protective Behavior and Dissociate Power-Holders: Safety Risks in Multi-Agent LLM Systems</a><a class='toc-h3' href='#7-merging-methods-for-multilingual-knowledge-editing-for-large-language-models-an-empirical-odyssey'>7. Merging Methods for Multilingual Knowledge Editing for Large Language Models: An Empirical Odyssey</a><a class='toc-h3' href='#8-physics-r1-an-audited-olympiad-corpus-and-recipe-for-visual-physics-reasoning'>8. Physics-R1: An Audited Olympiad Corpus and Recipe for Visual Physics Reasoning</a><a class='toc-h3' href='#9-rethinking-molecular-ood-generalization-via-target-aware-source-selection'>9. Rethinking Molecular OOD Generalization via Target-Aware Source Selection</a><a class='toc-h3' href='#10-how-the-nvidia-vera-rubin-platform-is-solving-agentic-ai-s-scale-up-problem'>10. How the NVIDIA Vera Rubin Platform is Solving Agentic AI’s Scale-Up Problem</a><a class='toc-h3' href='#11-granite-embedding-multilingual-r2-open-apache-2-0-multilingual-embeddings-with-32k-context-best-sub-100m-retrieval-quality'>11. Granite Embedding Multilingual R2: Open Apache 2.0 Multilingual Embeddings with 32K Context — Best Sub-100M Retrieval Quality</a><a class='toc-h3' href='#12-introducing-langchain-labs'>12. Introducing LangChain Labs</a><a class='toc-h3' href='#13-mixed-integer-goal-programming-for-personalized-meal-optimization-with-user-defined-serving-granularity'>13. Mixed Integer Goal Programming for Personalized Meal Optimization with User-Defined Serving Granularity</a><a class='toc-h3' href='#14-vectrayx-nano-a-42m-parameter-spanish-cybersecurity-language-model-with-curriculum-learning-and-native-tool-use'>14. VectraYX-Nano: A 42M-Parameter Spanish Cybersecurity Language Model with Curriculum Learning and Native Tool Use</a><a class='toc-h3' href='#15-sea-s-view-on-the-future-of-agentic-software-development-with-codex'>15. Sea&#x27;s View on the Future of Agentic Software Development with Codex</a><a class='toc-h3' href='#16-what-we-learned-using-ai-agents-to-refactor-a-monolith'>16. What we learned using AI agents to refactor a monolith</a><a class='toc-h3' href='#17-announcing-genkit-middleware-intercept-extend-and-harden-your-agentic-apps'>17. Announcing Genkit Middleware: Intercept, extend, and harden your agentic apps</a><a class='toc-h3' href='#18-github-copilot-app-is-now-available-in-technical-preview'>18. GitHub Copilot app is now available in technical preview</a><a class='toc-h3' href='#19-mistletoe-stealthy-acceleration-collapse-attacks-on-speculative-decoding'>19. Mistletoe: Stealthy Acceleration-Collapse Attacks on Speculative Decoding</a><a class='toc-h3' href='#20-mechanistic-interpretability-of-eeg-foundation-models-via-sparse-autoencoders'>20. Mechanistic Interpretability of EEG Foundation Models via Sparse Autoencoders</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-05-15-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-05-15'>RichLens Candidate Feed — 2026-05-15</h1>
+<ul>
+<li>Discovered candidates: 119</li>
+<li>Added to queue: 20</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-graphbit-a-graph-based-agentic-framework-for-non-linear-agent-orchestration'>1. GraphBit: A Graph-based Agentic Framework for Non-Linear Agent Orchestration</h3>
+<ul>
+<li>ID: <code>RL-047090b145</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.13848</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, coding agents, personal AI workflow</li>
+</ul>
+<h3 id='2-derivation-prompting-a-logic-based-method-for-improving-retrieval-augmented-generation'>2. Derivation Prompting: A Logic-Based Method for Improving Retrieval-Augmented Generation</h3>
+<ul>
+<li>ID: <code>RL-7a8e39cf2b</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.14053</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: knowledge management, RAG, retrieval, Obsidian knowledge management</li>
+</ul>
+<h3 id='3-work-with-codex-from-anywhere'>3. Work with Codex from anywhere</h3>
+<ul>
+<li>ID: <code>RL-3e12c69208</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/work-with-codex-from-anywhere</li>
+<li>Score: <code>0.71</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='4-everything-we-shipped-at-interrupt'>4. Everything we shipped at Interrupt</h3>
+<ul>
+<li>ID: <code>RL-b64dbf75a7</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/interrupt-2026-overview</li>
+<li>Score: <code>0.71</code></li>
+<li>Why: Matches topics: AI agents, coding agents, AI product strategy</li>
+</ul>
+<h3 id='5-not-so-locked-in-any-more'>5. Not so locked in any more</h3>
+<ul>
+<li>ID: <code>RL-fe2e6bebed</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/May/14/not-so-locked-in/#atom-everything</li>
+<li>Score: <code>0.65</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='6-invisible-orchestrators-suppress-protective-behavior-and-dissociate-power-holders-safety-risks-in-multi-agent-llm-systems'>6. Invisible Orchestrators Suppress Protective Behavior and Dissociate Power-Holders: Safety Risks in Multi-Agent LLM Systems</h3>
+<ul>
+<li>ID: <code>RL-0ab051e006</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.13851</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, coding agents, LLM evaluation</li>
+</ul>
+<h3 id='7-merging-methods-for-multilingual-knowledge-editing-for-large-language-models-an-empirical-odyssey'>7. Merging Methods for Multilingual Knowledge Editing for Large Language Models: An Empirical Odyssey</h3>
+<ul>
+<li>ID: <code>RL-3f0f427727</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.13919</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: knowledge management, AI product strategy, Obsidian knowledge management</li>
+</ul>
+<h3 id='8-physics-r1-an-audited-olympiad-corpus-and-recipe-for-visual-physics-reasoning'>8. Physics-R1: An Audited Olympiad Corpus and Recipe for Visual Physics Reasoning</h3>
+<ul>
+<li>ID: <code>RL-24a0c5be46</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.14040</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: LLM evaluation, evals, multimodal AI</li>
+</ul>
+<h3 id='9-rethinking-molecular-ood-generalization-via-target-aware-source-selection'>9. Rethinking Molecular OOD Generalization via Target-Aware Source Selection</h3>
+<ul>
+<li>ID: <code>RL-8051be2e41</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.13932</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: knowledge management, LLM evaluation, Obsidian knowledge management</li>
+</ul>
+<h3 id='10-how-the-nvidia-vera-rubin-platform-is-solving-agentic-ai-s-scale-up-problem'>10. How the NVIDIA Vera Rubin Platform is Solving Agentic AI’s Scale-Up Problem</h3>
+<ul>
+<li>ID: <code>RL-c0ef7bb776</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/how-the-nvidia-vera-rubin-platform-is-solving-agentic-ais-scale-up-problem/</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: agentic coding, inference</li>
+</ul>
+<h3 id='11-granite-embedding-multilingual-r2-open-apache-2-0-multilingual-embeddings-with-32k-context-best-sub-100m-retrieval-quality'>11. Granite Embedding Multilingual R2: Open Apache 2.0 Multilingual Embeddings with 32K Context — Best Sub-100M Retrieval Quality</h3>
+<ul>
+<li>ID: <code>RL-469a04ba28</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/ibm-granite/granite-embedding-multilingual-r2</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: retrieval, embeddings</li>
+</ul>
+<h3 id='12-introducing-langchain-labs'>12. Introducing LangChain Labs</h3>
+<ul>
+<li>ID: <code>RL-ab78b29cfc</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/introducing-langchain-labs</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='13-mixed-integer-goal-programming-for-personalized-meal-optimization-with-user-defined-serving-granularity'>13. Mixed Integer Goal Programming for Personalized Meal Optimization with User-Defined Serving Granularity</h3>
+<ul>
+<li>ID: <code>RL-ae1ba7b7f5</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.13849</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: LLM evaluation, model serving</li>
+</ul>
+<h3 id='14-vectrayx-nano-a-42m-parameter-spanish-cybersecurity-language-model-with-curriculum-learning-and-native-tool-use'>14. VectraYX-Nano: A 42M-Parameter Spanish Cybersecurity Language Model with Curriculum Learning and Native Tool Use</h3>
+<ul>
+<li>ID: <code>RL-1010698f34</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.13989</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: knowledge management, Obsidian knowledge management</li>
+</ul>
+<h3 id='15-sea-s-view-on-the-future-of-agentic-software-development-with-codex'>15. Sea's View on the Future of Agentic Software Development with Codex</h3>
+<ul>
+<li>ID: <code>RL-ca03c8de33</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/sea-david-chen</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: agentic coding</li>
+</ul>
+<h3 id='16-what-we-learned-using-ai-agents-to-refactor-a-monolith'>16. What we learned using AI agents to refactor a monolith</h3>
+<ul>
+<li>ID: <code>RL-6f6135e831</code></li>
+<li>Source: Hacker News AI Search / <code>rss</code></li>
+<li>URL: https://1password.com/blog/what-we-learned-using-ai-agents-to-refactor-a-monolith</li>
+<li>Score: <code>0.39</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='17-announcing-genkit-middleware-intercept-extend-and-harden-your-agentic-apps'>17. Announcing Genkit Middleware: Intercept, extend, and harden your agentic apps</h3>
+<ul>
+<li>ID: <code>RL-0dedbabcff</code></li>
+<li>Source: Google Developers Blog / <code>rss</code></li>
+<li>URL: https://developers.googleblog.com/announcing-genkit-middleware-intercept-extend-and-harden-your-agentic-apps/</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: agentic coding</li>
+</ul>
+<h3 id='18-github-copilot-app-is-now-available-in-technical-preview'>18. GitHub Copilot app is now available in technical preview</h3>
+<ul>
+<li>ID: <code>RL-37e45d8c22</code></li>
+<li>Source: GitHub Changelog / <code>rss</code></li>
+<li>URL: https://github.blog/changelog/2026-05-14-github-copilot-app-is-now-available-in-technical-preview</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: agentic coding</li>
+</ul>
+<h3 id='19-mistletoe-stealthy-acceleration-collapse-attacks-on-speculative-decoding'>19. Mistletoe: Stealthy Acceleration-Collapse Attacks on Speculative Decoding</h3>
+<ul>
+<li>ID: <code>RL-d546ceef1d</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.14005</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='20-mechanistic-interpretability-of-eeg-foundation-models-via-sparse-autoencoders'>20. Mechanistic Interpretability of EEG Foundation Models via Sparse Autoencoders</h3>
+<ul>
+<li>ID: <code>RL-d9c63d72b7</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.13930</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: embeddings</li>
+</ul></main></div>
+</body></html>
