@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-05-18</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-05-18 10:23</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-05-18'>RichLens Candidate Feed — 2026-05-18</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-agentstop-terminating-local-ai-agents-early-to-save-energy-in-consumer-devices'>1. AgentStop: Terminating Local AI Agents Early to Save Energy in Consumer Devices</a><a class='toc-h3' href='#2-does-theory-of-mind-improvement-really-benefit-human-ai-interactions-empirical-findings-from-interactive-evaluations'>2. Does Theory of Mind Improvement Really Benefit Human-AI Interactions? Empirical Findings from Interactive Evaluations</a><a class='toc-h3' href='#3-skillsmith-compiling-agent-skills-into-boundary-guided-runtime-interfaces'>3. SkillSmith: Compiling Agent Skills into Boundary-Guided Runtime Interfaces</a><a class='toc-h3' href='#4-teamtr-trust-region-fine-tuning-for-multi-agent-llm-coordination'>4. TeamTR: Trust-Region Fine-Tuning for Multi-Agent LLM Coordination</a><a class='toc-h3' href='#5-show-hn-engram-adds-universal-context-spine-for-ai-coding-ides'>5. Show HN: Engram adds universal context spine for AI coding IDEs</a><a class='toc-h3' href='#6-sdof-taming-the-alignment-tax-in-multi-agent-orchestration-with-state-constrained-dispatch'>6. SDOF: Taming the Alignment Tax in Multi-Agent Orchestration with State-Constrained Dispatch</a><a class='toc-h3' href='#7-quantization-undoes-alignment-bias-emergence-in-compressed-llms-across-models-and-precision-levels'>7. Quantization Undoes Alignment: Bias Emergence in Compressed LLMs Across Models and Precision Levels</a><a class='toc-h3' href='#8-mutebench-modality-unavailability-tolerance-evaluation-for-incomplete-multimodal-fusion'>8. MuteBench: Modality Unavailability Tolerance Evaluation for Incomplete Multimodal Fusion</a><a class='toc-h3' href='#9-fair-outputs-biased-internals-causal-potency-and-asymmetry-of-latent-bias-in-llms-for-high-stakes-decisions'>9. Fair outputs, Biased Internals: Causal Potency and Asymmetry of Latent Bias in LLMs for High-Stakes Decisions</a><a class='toc-h3' href='#10-fluency-and-faithfulness-in-human-and-machine-literary-translation'>10. Fluency and Faithfulness in Human and Machine Literary Translation</a><a class='toc-h3' href='#11-automatic-construction-of-a-legal-citation-graph-from-100-million-ukrainian-court-decisions-large-scale-extraction-topological-analysis-and-ontology-driven-clustering'>11. Automatic Construction of a Legal Citation Graph from 100 Million Ukrainian Court Decisions: Large-Scale Extraction, Topological Analysis, and Ontology-Driven Clustering</a><a class='toc-h3' href='#12-greedy-or-not-here-i-come-language-production-under-vocabulary-constraints-in-humans-and-resource-rational-models'>12. Greedy or not, here I come: Language production under vocabulary constraints in humans and resource-rational models</a><a class='toc-h3' href='#13-how-sales-teams-use-codex'>13. How sales teams use Codex</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-05-18-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-05-18'>RichLens Candidate Feed — 2026-05-18</h1>
+<ul>
+<li>Discovered candidates: 130</li>
+<li>Added to queue: 13</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-agentstop-terminating-local-ai-agents-early-to-save-energy-in-consumer-devices'>1. AgentStop: Terminating Local AI Agents Early to Save Energy in Consumer Devices</h3>
+<ul>
+<li>ID: <code>RL-9c50835dc7</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.15206</li>
+<li>Score: <code>0.85</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='2-does-theory-of-mind-improvement-really-benefit-human-ai-interactions-empirical-findings-from-interactive-evaluations'>2. Does Theory of Mind Improvement Really Benefit Human-AI Interactions? Empirical Findings from Interactive Evaluations</h3>
+<ul>
+<li>ID: <code>RL-bee5242733</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.15205</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents, LLM evaluation</li>
+</ul>
+<h3 id='3-skillsmith-compiling-agent-skills-into-boundary-guided-runtime-interfaces'>3. SkillSmith: Compiling Agent Skills into Boundary-Guided Runtime Interfaces</h3>
+<ul>
+<li>ID: <code>RL-dba7265ee5</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.15215</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, coding agents, LLM evaluation</li>
+</ul>
+<h3 id='4-teamtr-trust-region-fine-tuning-for-multi-agent-llm-coordination'>4. TeamTR: Trust-Region Fine-Tuning for Multi-Agent LLM Coordination</h3>
+<ul>
+<li>ID: <code>RL-ae129bb515</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.15207</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, coding agents, LLM evaluation</li>
+</ul>
+<h3 id='5-show-hn-engram-adds-universal-context-spine-for-ai-coding-ides'>5. Show HN: Engram adds universal context spine for AI coding IDEs</h3>
+<ul>
+<li>ID: <code>RL-28ff89a1fa</code></li>
+<li>Source: Hacker News AI Search / <code>rss</code></li>
+<li>URL: https://github.com/NickCirv/engram/releases/tag/v3.4.0</li>
+<li>Score: <code>0.51</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='6-sdof-taming-the-alignment-tax-in-multi-agent-orchestration-with-state-constrained-dispatch'>6. SDOF: Taming the Alignment Tax in Multi-Agent Orchestration with State-Constrained Dispatch</h3>
+<ul>
+<li>ID: <code>RL-35e0059499</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.15204</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: personal AI workflow, LLM evaluation</li>
+</ul>
+<h3 id='7-quantization-undoes-alignment-bias-emergence-in-compressed-llms-across-models-and-precision-levels'>7. Quantization Undoes Alignment: Bias Emergence in Compressed LLMs Across Models and Precision Levels</h3>
+<ul>
+<li>ID: <code>RL-978cd2913b</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.15208</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: LLM evaluation, inference</li>
+</ul>
+<h3 id='8-mutebench-modality-unavailability-tolerance-evaluation-for-incomplete-multimodal-fusion'>8. MuteBench: Modality Unavailability Tolerance Evaluation for Incomplete Multimodal Fusion</h3>
+<ul>
+<li>ID: <code>RL-9afee9e698</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.15235</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: LLM evaluation, multimodal AI</li>
+</ul>
+<h3 id='9-fair-outputs-biased-internals-causal-potency-and-asymmetry-of-latent-bias-in-llms-for-high-stakes-decisions'>9. Fair outputs, Biased Internals: Causal Potency and Asymmetry of Latent Bias in LLMs for High-Stakes Decisions</h3>
+<ul>
+<li>ID: <code>RL-de38831f71</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.15217</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='10-fluency-and-faithfulness-in-human-and-machine-literary-translation'>10. Fluency and Faithfulness in Human and Machine Literary Translation</h3>
+<ul>
+<li>ID: <code>RL-52969ffbe6</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.15282</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='11-automatic-construction-of-a-legal-citation-graph-from-100-million-ukrainian-court-decisions-large-scale-extraction-topological-analysis-and-ontology-driven-clustering'>11. Automatic Construction of a Legal Citation Graph from 100 Million Ukrainian Court Decisions: Large-Scale Extraction, Topological Analysis, and Ontology-Driven Clustering</h3>
+<ul>
+<li>ID: <code>RL-de385618f4</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.15362</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: personal AI workflow</li>
+</ul>
+<h3 id='12-greedy-or-not-here-i-come-language-production-under-vocabulary-constraints-in-humans-and-resource-rational-models'>12. Greedy or not, here I come: Language production under vocabulary constraints in humans and resource-rational models</h3>
+<ul>
+<li>ID: <code>RL-cbe777f3f6</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.15365</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='13-how-sales-teams-use-codex'>13. How sales teams use Codex</h3>
+<ul>
+<li>ID: <code>RL-248b5ff069</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/academy/codex-for-work/how-sales-teams-use-codex</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul></main></div>
+</body></html>
