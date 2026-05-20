@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-05-20</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-05-20 10:52</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-05-20'>RichLens Candidate Feed — 2026-05-20</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-blazing-fast-on-device-genai-with-litert-lm'>1. Blazing fast on-device GenAI with LiteRT-LM</a><a class='toc-h3' href='#2-agent-meltdowns-the-road-to-hell-is-paved-with-helpful-agents'>2. Agent Meltdowns: The Road to Hell Is Paved with Helpful Agents</a><a class='toc-h3' href='#3-reactod-bounded-neuro-symbolic-agentic-nlu-for-zero-shot-dialogue-state-tracking'>3. ReacTOD: Bounded Neuro-Symbolic Agentic NLU for Zero-Shot Dialogue State Tracking</a><a class='toc-h3' href='#4-one-year-of-innovation-celebrating-100k-members-in-the-google-cloud-x-nvidia-developer-community'>4. One Year of Innovation: Celebrating 100k Members in the Google Cloud x NVIDIA Developer Community</a><a class='toc-h3' href='#5-all-the-news-from-the-google-i-o-2026-developer-keynote'>5. All the news from the Google I/O 2026 Developer keynote</a><a class='toc-h3' href='#6-gemini-3-5-flash-is-generally-available-for-github-copilot'>6. Gemini 3.5 Flash is generally available for GitHub Copilot</a><a class='toc-h3' href='#7-the-annotation-scarcity-paradox-in-low-resource-nlp-evaluation-a-decade-of-acceleration-and-emerging-constraints'>7. The Annotation Scarcity Paradox in Low-Resource NLP Evaluation: A Decade of Acceleration and Emerging Constraints</a><a class='toc-h3' href='#8-aperion-shield-local-guardrail-that-blocks-destructive-ai-coding-agent-ops'>8. Aperion Shield: local guardrail that blocks destructive AI coding agent ops</a><a class='toc-h3' href='#9-ainews-google-i-o-2026-gemini-3-5-flash-omni-nanobanana-for-video-spark-background-agents-and-antigravity-2-0'>9. [AINews] Google I/O 2026: Gemini 3.5 Flash, Omni (NanoBanana for Video), Spark (background agents), and Antigravity 2.0</a><a class='toc-h3' href='#10-i-o-2026-welcome-to-the-agentic-gemini-era'>10. I/O 2026: Welcome to the agentic Gemini era</a><a class='toc-h3' href='#11-gemini-3-5-flash-more-expensive-but-google-plan-to-use-it-for-everything'>11. Gemini 3.5 Flash: more expensive, but Google plan to use it for everything</a><a class='toc-h3' href='#12-google-tensor-sdk-beta-with-litert'>12. Google Tensor SDK Beta with LiteRT</a><a class='toc-h3' href='#13-ucci-calibrated-uncertainty-for-cost-optimal-llm-cascade-routing'>13. UCCI: Calibrated Uncertainty for Cost-Optimal LLM Cascade Routing</a><a class='toc-h3' href='#14-simply-stabilizing-the-loop-via-fully-looped-transformer'>14. Simply Stabilizing the Loop via Fully Looped Transformer</a><a class='toc-h3' href='#15-the-next-phase-of-openai-s-education-for-countries'>15. The next phase of OpenAI’s Education for Countries</a><a class='toc-h3' href='#16-introducing-openai-for-singapore'>16. Introducing OpenAI for Singapore</a><a class='toc-h3' href='#17-advancing-content-provenance-for-a-safer-more-transparent-ai-ecosystem'>17. Advancing content provenance for a safer, more transparent AI ecosystem</a><a class='toc-h3' href='#18-fast-tracking-genetic-leads-to-reverse-cellular-aging'>18. Fast-tracking genetic leads to reverse cellular aging</a><a class='toc-h3' href='#19-simulate-real-world-places-with-project-genie-and-street-view'>19. Simulate real-world places with Project Genie and Street View</a><a class='toc-h3' href='#20-introducing-gemini-omni'>20. Introducing Gemini Omni</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-05-20-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-05-20'>RichLens Candidate Feed — 2026-05-20</h1>
+<ul>
+<li>Discovered candidates: 119</li>
+<li>Added to queue: 20</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-blazing-fast-on-device-genai-with-litert-lm'>1. Blazing fast on-device GenAI with LiteRT-LM</h3>
+<ul>
+<li>ID: <code>RL-695600bf28</code></li>
+<li>Source: Google Developers Blog / <code>rss</code></li>
+<li>URL: https://developers.googleblog.com/blazing-fast-on-device-genai-with-litert-lm/</li>
+<li>Score: <code>0.85</code></li>
+<li>Why: Matches topics: agentic coding, AI infrastructure, inference, multimodal AI</li>
+</ul>
+<h3 id='2-agent-meltdowns-the-road-to-hell-is-paved-with-helpful-agents'>2. Agent Meltdowns: The Road to Hell Is Paved with Helpful Agents</h3>
+<ul>
+<li>ID: <code>RL-3165eadd24</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.19149</li>
+<li>Score: <code>0.85</code></li>
+<li>Why: Matches topics: AI agents, coding agents, LLM evaluation, AI infrastructure</li>
+</ul>
+<h3 id='3-reactod-bounded-neuro-symbolic-agentic-nlu-for-zero-shot-dialogue-state-tracking'>3. ReacTOD: Bounded Neuro-Symbolic Agentic NLU for Zero-Shot Dialogue State Tracking</h3>
+<ul>
+<li>ID: <code>RL-7bdc0030dd</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.19077</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: agentic coding, LLM evaluation, inference, retrieval</li>
+</ul>
+<h3 id='4-one-year-of-innovation-celebrating-100k-members-in-the-google-cloud-x-nvidia-developer-community'>4. One Year of Innovation: Celebrating 100k Members in the Google Cloud x NVIDIA Developer Community</h3>
+<ul>
+<li>ID: <code>RL-4d9a4ecdc8</code></li>
+<li>Source: Google Developers Blog / <code>rss</code></li>
+<li>URL: https://developers.googleblog.com/one-year-of-innovation-celebrating-100k-members-in-the-google-cloud-x-nvidia-developer-community/</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: agentic coding, AI infrastructure, investment AI infrastructure</li>
+</ul>
+<h3 id='5-all-the-news-from-the-google-i-o-2026-developer-keynote'>5. All the news from the Google I/O 2026 Developer keynote</h3>
+<ul>
+<li>ID: <code>RL-ce0912b676</code></li>
+<li>Source: Google Developers Blog / <code>rss</code></li>
+<li>URL: https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, coding agents, LLM evaluation</li>
+</ul>
+<h3 id='6-gemini-3-5-flash-is-generally-available-for-github-copilot'>6. Gemini 3.5 Flash is generally available for GitHub Copilot</h3>
+<ul>
+<li>ID: <code>RL-038556d5c5</code></li>
+<li>Source: GitHub Changelog / <code>rss</code></li>
+<li>URL: https://github.blog/changelog/2026-05-19-gemini-3-5-flash-is-generally-available-for-github-copilot</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='7-the-annotation-scarcity-paradox-in-low-resource-nlp-evaluation-a-decade-of-acceleration-and-emerging-constraints'>7. The Annotation Scarcity Paradox in Low-Resource NLP Evaluation: A Decade of Acceleration and Emerging Constraints</h3>
+<ul>
+<li>ID: <code>RL-25e4a9d49d</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.19066</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: LLM evaluation, AI infrastructure, investment AI infrastructure</li>
+</ul>
+<h3 id='8-aperion-shield-local-guardrail-that-blocks-destructive-ai-coding-agent-ops'>8. Aperion Shield: local guardrail that blocks destructive AI coding agent ops</h3>
+<ul>
+<li>ID: <code>RL-f60f28543b</code></li>
+<li>Source: Hacker News AI Search / <code>rss</code></li>
+<li>URL: https://github.com/AperionAI/shield</li>
+<li>Score: <code>0.51</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='9-ainews-google-i-o-2026-gemini-3-5-flash-omni-nanobanana-for-video-spark-background-agents-and-antigravity-2-0'>9. [AINews] Google I/O 2026: Gemini 3.5 Flash, Omni (NanoBanana for Video), Spark (background agents), and Antigravity 2.0</h3>
+<ul>
+<li>ID: <code>RL-ea2cb7b986</code></li>
+<li>Source: Latent Space / <code>rss</code></li>
+<li>URL: https://www.latent.space/p/ainews-google-io-2026-gemini-35-flash</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='10-i-o-2026-welcome-to-the-agentic-gemini-era'>10. I/O 2026: Welcome to the agentic Gemini era</h3>
+<ul>
+<li>ID: <code>RL-ab50a6a962</code></li>
+<li>Source: Google AI Blog / <code>rss</code></li>
+<li>URL: https://blog.google/innovation-and-ai/sundar-pichai-io-2026/</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: agentic coding</li>
+</ul>
+<h3 id='11-gemini-3-5-flash-more-expensive-but-google-plan-to-use-it-for-everything'>11. Gemini 3.5 Flash: more expensive, but Google plan to use it for everything</h3>
+<ul>
+<li>ID: <code>RL-b49356edd1</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/May/19/gemini-35-flash/#atom-everything</li>
+<li>Score: <code>0.41</code></li>
+<li>Why: Matches topics: knowledge management, Obsidian knowledge management; source fatigue -0.18</li>
+</ul>
+<h3 id='12-google-tensor-sdk-beta-with-litert'>12. Google Tensor SDK Beta with LiteRT</h3>
+<ul>
+<li>ID: <code>RL-47c6901365</code></li>
+<li>Source: Google Developers Blog / <code>rss</code></li>
+<li>URL: https://developers.googleblog.com/google-tensor-sdk-beta-with-litert/</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: personal AI workflow</li>
+</ul>
+<h3 id='13-ucci-calibrated-uncertainty-for-cost-optimal-llm-cascade-routing'>13. UCCI: Calibrated Uncertainty for Cost-Optimal LLM Cascade Routing</h3>
+<ul>
+<li>ID: <code>RL-738e3986f8</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.18796</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='14-simply-stabilizing-the-loop-via-fully-looped-transformer'>14. Simply Stabilizing the Loop via Fully Looped Transformer</h3>
+<ul>
+<li>ID: <code>RL-4b307f715d</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.18797</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='15-the-next-phase-of-openai-s-education-for-countries'>15. The next phase of OpenAI’s Education for Countries</h3>
+<ul>
+<li>ID: <code>RL-52bd1afbd8</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/the-next-phase-of-education-for-countries</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='16-introducing-openai-for-singapore'>16. Introducing OpenAI for Singapore</h3>
+<ul>
+<li>ID: <code>RL-e0640ad032</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/introducing-openai-for-singapore</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='17-advancing-content-provenance-for-a-safer-more-transparent-ai-ecosystem'>17. Advancing content provenance for a safer, more transparent AI ecosystem</h3>
+<ul>
+<li>ID: <code>RL-4f14311644</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/advancing-content-provenance</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='18-fast-tracking-genetic-leads-to-reverse-cellular-aging'>18. Fast-tracking genetic leads to reverse cellular aging</h3>
+<ul>
+<li>ID: <code>RL-2758b59a9d</code></li>
+<li>Source: Google DeepMind Blog / <code>rss</code></li>
+<li>URL: https://deepmind.google/blog/fast-tracking-genetic-leads-to-reverse-cellular-aging/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='19-simulate-real-world-places-with-project-genie-and-street-view'>19. Simulate real-world places with Project Genie and Street View</h3>
+<ul>
+<li>ID: <code>RL-c120575d79</code></li>
+<li>Source: Google DeepMind Blog / <code>rss</code></li>
+<li>URL: https://deepmind.google/blog/simulate-real-world-places-with-project-genie-and-street-view/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='20-introducing-gemini-omni'>20. Introducing Gemini Omni</h3>
+<ul>
+<li>ID: <code>RL-6ff85c3103</code></li>
+<li>Source: Google DeepMind Blog / <code>rss</code></li>
+<li>URL: https://deepmind.google/blog/introducing-gemini-omni/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul></main></div>
+</body></html>
