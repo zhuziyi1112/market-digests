@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-05-22</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-05-22 10:56</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-05-22'>RichLens Candidate Feed — 2026-05-22</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-solar-a-self-optimizing-open-ended-autonomous-agent-for-lifelong-learning-and-continual-adaptation'>1. SOLAR: A Self-Optimizing Open-Ended Autonomous Agent for Lifelong Learning and Continual Adaptation</a><a class='toc-h3' href='#2-agentco-op-retrieval-based-synthesis-of-interoperable-multi-agent-workflows'>2. AgentCo-op: Retrieval-Based Synthesis of Interoperable Multi-Agent Workflows</a><a class='toc-h3' href='#3-how-auth-proxy-secures-langsmith-agent-sandboxes'>3. How Auth Proxy secures LangSmith agent sandboxes</a><a class='toc-h3' href='#4-temporal-contrastive-transformer-for-financial-crime-detection-self-supervised-sequence-embeddings-via-predictive-contrastive-coding'>4. Temporal Contrastive Transformer for Financial Crime Detection: Self-Supervised Sequence Embeddings via Predictive Contrastive Coding</a><a class='toc-h3' href='#5-from-token-streams-to-agent-streams'>5. From Token Streams to Agent Streams</a><a class='toc-h3' href='#6-announcing-adk-for-kotlin-and-adk-for-android-0-1-0-building-ai-agents-on-android-and-beyond'>6. Announcing ADK for Kotlin and ADK for Android 0.1.0: Building AI Agents on Android and Beyond</a><a class='toc-h3' href='#7-high-quality-embeddings-for-horn-logic-reasoning'>7. High Quality Embeddings for Horn Logic Reasoning</a><a class='toc-h3' href='#8-the-attribution-impossibility-no-feature-ranking-is-faithful-stable-and-complete-under-collinearity'>8. The Attribution Impossibility: No Feature Ranking Is Faithful, Stable, and Complete Under Collinearity</a><a class='toc-h3' href='#9-giving-agents-computers-ivan-burazin-daytona'>9. Giving Agents Computers — Ivan Burazin, Daytona</a><a class='toc-h3' href='#10-get-real-time-visibility-into-gpu-usage-across-kubernetes-clusters'>10. Get Real-Time Visibility into GPU Usage Across Kubernetes Clusters</a><a class='toc-h3' href='#11-unlock-exascale-performance-on-nvidia-gb200-nvl72-with-slurm-topology-aware-job-scheduling'>11. Unlock Exascale Performance on NVIDIA GB200 NVL72 with Slurm Topology-Aware Job Scheduling</a><a class='toc-h3' href='#12-tool-augmented-agent-for-closed-loop-optimization-simulation-and-modeling-orchestration'>12. Tool-Augmented Agent for Closed-loop Optimization,Simulation,and Modeling Orchestration</a><a class='toc-h3' href='#13-broadening-access-to-transportation-safety-data-with-generative-ai-a-schema-grounded-framework-for-spatial-natural-language-queries'>13. Broadening Access to Transportation Safety Data with Generative AI: A Schema-Grounded Framework for Spatial Natural Language Queries</a><a class='toc-h3' href='#14-probabilistic-attribution-for-large-language-models'>14. Probabilistic Attribution For Large Language Models</a><a class='toc-h3' href='#15-rankjudge-a-multi-turn-llm-as-a-judge-synthetic-benchmark-generator'>15. RankJudge: A Multi-Turn LLM-as-a-Judge Synthetic Benchmark Generator</a><a class='toc-h3' href='#16-teaching-language-models-to-forecast-research-success-through-comparative-idea-evaluation'>16. Teaching Language Models to Forecast Research Success Through Comparative Idea Evaluation</a><a class='toc-h3' href='#17-adventhealth-advances-whole-person-care-with-openai'>17. AdventHealth advances whole-person care with OpenAI</a><a class='toc-h3' href='#18-we-re-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks'>18. We’re launching the Google DeepMind Accelerator program in Asia Pacific to tackle environmental risks</a><a class='toc-h3' href='#19-automating-and-optimizing-financial-signal-discovery-with-multi-agent-systems'>19. Automating and Optimizing Financial Signal Discovery with Multi-Agent Systems</a><a class='toc-h3' href='#20-building-token-metered-ai-services-on-telco-ai-factories'>20. Building Token‑Metered AI Services on Telco AI Factories</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-05-22-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-05-22'>RichLens Candidate Feed — 2026-05-22</h1>
+<ul>
+<li>Discovered candidates: 124</li>
+<li>Added to queue: 20</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-solar-a-self-optimizing-open-ended-autonomous-agent-for-lifelong-learning-and-continual-adaptation'>1. SOLAR: A Self-Optimizing Open-Ended Autonomous Agent for Lifelong Learning and Continual Adaptation</h3>
+<ul>
+<li>ID: <code>RL-7a62a16c18</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.20189</li>
+<li>Score: <code>0.95</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='2-agentco-op-retrieval-based-synthesis-of-interoperable-multi-agent-workflows'>2. AgentCo-op: Retrieval-Based Synthesis of Interoperable Multi-Agent Workflows</h3>
+<ul>
+<li>ID: <code>RL-22f45b0b43</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.20425</li>
+<li>Score: <code>0.95</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='3-how-auth-proxy-secures-langsmith-agent-sandboxes'>3. How Auth Proxy secures LangSmith agent sandboxes</h3>
+<ul>
+<li>ID: <code>RL-3664187f4b</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/how-auth-proxy-secures-network-access-for-langsmith-agent-sandboxes</li>
+<li>Score: <code>0.83</code></li>
+<li>Why: Matches topics: AI agents, coding agents, AI infrastructure, investment AI infrastructure</li>
+</ul>
+<h3 id='4-temporal-contrastive-transformer-for-financial-crime-detection-self-supervised-sequence-embeddings-via-predictive-contrastive-coding'>4. Temporal Contrastive Transformer for Financial Crime Detection: Self-Supervised Sequence Embeddings via Predictive Contrastive Coding</h3>
+<ul>
+<li>ID: <code>RL-afca055f6c</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.21490</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents, embeddings</li>
+</ul>
+<h3 id='5-from-token-streams-to-agent-streams'>5. From Token Streams to Agent Streams</h3>
+<ul>
+<li>ID: <code>RL-46c5042c2f</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/token-streams-to-agent-streams</li>
+<li>Score: <code>0.71</code></li>
+<li>Why: Matches topics: AI agents, coding agents, multimodal AI</li>
+</ul>
+<h3 id='6-announcing-adk-for-kotlin-and-adk-for-android-0-1-0-building-ai-agents-on-android-and-beyond'>6. Announcing ADK for Kotlin and ADK for Android 0.1.0: Building AI Agents on Android and Beyond</h3>
+<ul>
+<li>ID: <code>RL-487d2220ff</code></li>
+<li>Source: Google Developers Blog / <code>rss</code></li>
+<li>URL: https://developers.googleblog.com/adk-kotlin-android-building-ai-agents/</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, coding agents</li>
+</ul>
+<h3 id='7-high-quality-embeddings-for-horn-logic-reasoning'>7. High Quality Embeddings for Horn Logic Reasoning</h3>
+<ul>
+<li>ID: <code>RL-9d2ef1899e</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.20467</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: knowledge management, embeddings, Obsidian knowledge management</li>
+</ul>
+<h3 id='8-the-attribution-impossibility-no-feature-ranking-is-faithful-stable-and-complete-under-collinearity'>8. The Attribution Impossibility: No Feature Ranking Is Faithful, Stable, and Complete Under Collinearity</h3>
+<ul>
+<li>ID: <code>RL-e2e452735a</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.21492</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: knowledge management, personal AI workflow, Obsidian knowledge management</li>
+</ul>
+<h3 id='9-giving-agents-computers-ivan-burazin-daytona'>9. Giving Agents Computers — Ivan Burazin, Daytona</h3>
+<ul>
+<li>ID: <code>RL-877fc1c751</code></li>
+<li>Source: Latent Space / <code>rss</code></li>
+<li>URL: https://www.latent.space/p/daytona</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, coding agents, evals</li>
+</ul>
+<h3 id='10-get-real-time-visibility-into-gpu-usage-across-kubernetes-clusters'>10. Get Real-Time Visibility into GPU Usage Across Kubernetes Clusters</h3>
+<ul>
+<li>ID: <code>RL-40d352a143</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/get-real-time-visibility-into-gpu-usage-across-kubernetes-clusters/</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI infrastructure, investment AI infrastructure</li>
+</ul>
+<h3 id='11-unlock-exascale-performance-on-nvidia-gb200-nvl72-with-slurm-topology-aware-job-scheduling'>11. Unlock Exascale Performance on NVIDIA GB200 NVL72 with Slurm Topology-Aware Job Scheduling</h3>
+<ul>
+<li>ID: <code>RL-a0e8e07d0e</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/unlock-exascale-performance-on-nvidia-gb200-nvl72-with-slurm-topology-aware-job-scheduling/</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI infrastructure, investment AI infrastructure</li>
+</ul>
+<h3 id='12-tool-augmented-agent-for-closed-loop-optimization-simulation-and-modeling-orchestration'>12. Tool-Augmented Agent for Closed-loop Optimization,Simulation,and Modeling Orchestration</h3>
+<ul>
+<li>ID: <code>RL-b35edd645d</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.20190</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='13-broadening-access-to-transportation-safety-data-with-generative-ai-a-schema-grounded-framework-for-spatial-natural-language-queries'>13. Broadening Access to Transportation Safety Data with Generative AI: A Schema-Grounded Framework for Spatial Natural Language Queries</h3>
+<ul>
+<li>ID: <code>RL-a6ea1270c1</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.21712</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='14-probabilistic-attribution-for-large-language-models'>14. Probabilistic Attribution For Large Language Models</h3>
+<ul>
+<li>ID: <code>RL-53efd53c4b</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.21726</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='15-rankjudge-a-multi-turn-llm-as-a-judge-synthetic-benchmark-generator'>15. RankJudge: A Multi-Turn LLM-as-a-Judge Synthetic Benchmark Generator</h3>
+<ul>
+<li>ID: <code>RL-f4d878cfcd</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.21748</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='16-teaching-language-models-to-forecast-research-success-through-comparative-idea-evaluation'>16. Teaching Language Models to Forecast Research Success Through Comparative Idea Evaluation</h3>
+<ul>
+<li>ID: <code>RL-ad26f4ac49</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.21491</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='17-adventhealth-advances-whole-person-care-with-openai'>17. AdventHealth advances whole-person care with OpenAI</h3>
+<ul>
+<li>ID: <code>RL-85a3fdb43c</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/adventhealth</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='18-we-re-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks'>18. We’re launching the Google DeepMind Accelerator program in Asia Pacific to tackle environmental risks</h3>
+<ul>
+<li>ID: <code>RL-cf9e5a542f</code></li>
+<li>Source: Google DeepMind Blog / <code>rss</code></li>
+<li>URL: https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='19-automating-and-optimizing-financial-signal-discovery-with-multi-agent-systems'>19. Automating and Optimizing Financial Signal Discovery with Multi-Agent Systems</h3>
+<ul>
+<li>ID: <code>RL-d131e26df4</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/automating-and-optimizing-financial-signal-discovery-with-multi-agent-systems/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='20-building-token-metered-ai-services-on-telco-ai-factories'>20. Building Token‑Metered AI Services on Telco AI Factories</h3>
+<ul>
+<li>ID: <code>RL-9027921da3</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/building-token-metered-ai-services-on-telco-ai-factories/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul></main></div>
+</body></html>
