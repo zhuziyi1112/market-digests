@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-05-23</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-05-23 09:34</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-05-23'>RichLens Candidate Feed — 2026-05-23</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-openai-named-a-leader-in-enterprise-coding-agents-by-gartner'>1. OpenAI named a Leader in enterprise coding agents by Gartner</a><a class='toc-h3' href='#2-github-recognized-as-a-leader-in-the-gartner-magic-quadrant-for-enterprise-ai-coding-agents-for-the-third-year-in-a-row'>2. GitHub recognized as a Leader in the Gartner® Magic Quadrant™ for Enterprise AI Coding Agents for the third year in a row</a><a class='toc-h3' href='#3-how-virgin-atlantic-ships-faster-with-codex'>3. How Virgin Atlantic ships faster with Codex</a><a class='toc-h3' href='#4-catch-up-on-the-dialogues-stage-at-google-i-o-2026'>4. Catch up on the Dialogues stage at Google I/O 2026.</a><a class='toc-h3' href='#5-we-re-announcing-new-community-investments-in-missouri'>5. We’re announcing new community investments in Missouri.</a><a class='toc-h3' href='#6-100-things-we-announced-at-i-o-2026'>6. 100 things we announced at I/O 2026</a><a class='toc-h3' href='#7-a-new-experiment-brings-better-group-meetings-to-google-beam'>7. A new experiment brings better group meetings to Google Beam</a><a class='toc-h3' href='#8-i-o-2026'>8. I/O 2026</a><a class='toc-h3' href='#9-towards-speed-of-light-text-generation-with-nemotron-labs-diffusion-language-models'>9. Towards Speed-of-Light Text Generation with Nemotron-Labs Diffusion Language Models</a><a class='toc-h3' href='#10-specialization-beats-scale-a-strategic-variable-most-ai-procurement-decisions-overlook'>10. Specialization Beats Scale: A Strategic Variable Most AI Procurement Decisions Overlook</a><a class='toc-h3' href='#11-olmoearth-v1-1-a-more-efficient-family-of-earth-observation-models'>11. OlmoEarth v1.1: A more efficient family of Earth observation models</a><a class='toc-h3' href='#12-introducing-the-ettin-reranker-family'>12. Introducing the Ettin Reranker Family</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-05-23-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-05-23'>RichLens Candidate Feed — 2026-05-23</h1>
+<ul>
+<li>Discovered candidates: 59</li>
+<li>Added to queue: 12</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-openai-named-a-leader-in-enterprise-coding-agents-by-gartner'>1. OpenAI named a Leader in enterprise coding agents by Gartner</h3>
+<ul>
+<li>ID: <code>RL-ef1db9edff</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/gartner-2026-agentic-coding-leader</li>
+<li>Score: <code>0.83</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='2-github-recognized-as-a-leader-in-the-gartner-magic-quadrant-for-enterprise-ai-coding-agents-for-the-third-year-in-a-row'>2. GitHub recognized as a Leader in the Gartner® Magic Quadrant™ for Enterprise AI Coding Agents for the third year in a row</h3>
+<ul>
+<li>ID: <code>RL-9a04bf76d2</code></li>
+<li>Source: GitHub AI and ML Blog / <code>rss</code></li>
+<li>URL: https://github.blog/ai-and-ml/github-copilot/github-recognized-as-a-leader-in-the-gartner-magic-quadrant-for-enterprise-ai-coding-agents-for-the-third-year-in-a-row/</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='3-how-virgin-atlantic-ships-faster-with-codex'>3. How Virgin Atlantic ships faster with Codex</h3>
+<ul>
+<li>ID: <code>RL-4ce39150a4</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/virgin-atlantic</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='4-catch-up-on-the-dialogues-stage-at-google-i-o-2026'>4. Catch up on the Dialogues stage at Google I/O 2026.</h3>
+<ul>
+<li>ID: <code>RL-3405d5d583</code></li>
+<li>Source: Google AI Blog / <code>rss</code></li>
+<li>URL: https://blog.google/innovation-and-ai/technology/ai/io-2026-dialogues-recap/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='5-we-re-announcing-new-community-investments-in-missouri'>5. We’re announcing new community investments in Missouri.</h3>
+<ul>
+<li>ID: <code>RL-ed67995bed</code></li>
+<li>Source: Google AI Blog / <code>rss</code></li>
+<li>URL: https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/missouri-programs/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='6-100-things-we-announced-at-i-o-2026'>6. 100 things we announced at I/O 2026</h3>
+<ul>
+<li>ID: <code>RL-02632956eb</code></li>
+<li>Source: Google AI Blog / <code>rss</code></li>
+<li>URL: https://blog.google/innovation-and-ai/technology/ai/google-io-2026-all-our-announcements/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='7-a-new-experiment-brings-better-group-meetings-to-google-beam'>7. A new experiment brings better group meetings to Google Beam</h3>
+<ul>
+<li>ID: <code>RL-369fda1554</code></li>
+<li>Source: Google AI Blog / <code>rss</code></li>
+<li>URL: https://blog.google/innovation-and-ai/models-and-research/google-research/google-beam-group-meetings/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='8-i-o-2026'>8. I/O 2026</h3>
+<ul>
+<li>ID: <code>RL-eeffe9e815</code></li>
+<li>Source: Google AI Blog / <code>rss</code></li>
+<li>URL: https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-collection/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='9-towards-speed-of-light-text-generation-with-nemotron-labs-diffusion-language-models'>9. Towards Speed-of-Light Text Generation with Nemotron-Labs Diffusion Language Models</h3>
+<ul>
+<li>ID: <code>RL-e7490cde6e</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/nvidia/nemotron-labs-diffusion</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='10-specialization-beats-scale-a-strategic-variable-most-ai-procurement-decisions-overlook'>10. Specialization Beats Scale: A Strategic Variable Most AI Procurement Decisions Overlook</h3>
+<ul>
+<li>ID: <code>RL-eb5012be09</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/Dharma-AI/specialization-beats-scale</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='11-olmoearth-v1-1-a-more-efficient-family-of-earth-observation-models'>11. OlmoEarth v1.1: A more efficient family of Earth observation models</h3>
+<ul>
+<li>ID: <code>RL-bda6dcb322</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/allenai/olmoearth-v1-1</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='12-introducing-the-ettin-reranker-family'>12. Introducing the Ettin Reranker Family</h3>
+<ul>
+<li>ID: <code>RL-1bd4f1ecf0</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/ettin-reranker</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul></main></div>
+</body></html>
