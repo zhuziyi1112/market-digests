@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-05-25</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-05-25 10:22</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-05-25'>RichLens Candidate Feed — 2026-05-25</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-rma-an-agentic-system-for-research-level-mathematical-problems'>1. RMA: an Agentic System for Research-Level Mathematical Problems</a><a class='toc-h3' href='#2-sciatlas-a-large-scale-knowledge-graph-for-automated-scientific-research'>2. SciAtlas: A Large-Scale Knowledge Graph for Automated Scientific Research</a><a class='toc-h3' href='#3-query-adaptive-semantic-chunking-for-retrieval-augmented-generation-a-dynamic-strategy-with-contextual-window-expansion'>3. Query-Adaptive Semantic Chunking for Retrieval-Augmented Generation: A Dynamic Strategy with Contextual Window Expansion</a><a class='toc-h3' href='#4-knowledge-distillation-for-low-resource-open-source-text-to-sql-model'>4. Knowledge Distillation for Low-Resource Open-source Text-to-SQL Model</a><a class='toc-h3' href='#5-quoting-armin-ronacher'>5. Quoting Armin Ronacher</a><a class='toc-h3' href='#6-bohm-zero-cost-hierarchical-attribution-for-compound-ai-systems'>6. BOHM: Zero-Cost Hierarchical Attribution for Compound AI Systems</a><a class='toc-h3' href='#7-energy-per-successful-goal-goal-level-energy-accounting-for-agentic-ai-systems'>7. Energy per Successful Goal: Goal-Level Energy Accounting for Agentic AI Systems</a><a class='toc-h3' href='#8-how-far-will-they-go-red-teaming-online-influence-with-large-language-models'>8. How Far Will They Go? Red-Teaming Online Influence with Large Language Models</a><a class='toc-h3' href='#9-mad-house-usborne-creepy-computer-games'>9. Mad House — Usborne Creepy Computer Games</a><a class='toc-h3' href='#10-evaluating-large-language-models-in-a-complex-hidden-role-game'>10. Evaluating Large Language Models in a Complex Hidden Role Game</a><a class='toc-h3' href='#11-latent-cache-flow-model-to-model-communication-without-text'>11. Latent Cache Flow: Model-to-Model Communication Without Text</a><a class='toc-h3' href='#12-control-bilibili-with-cli-commands-for-ai-agents-0-token-cost'>12. Control Bilibili with CLI Commands for AI Agents (0 Token Cost)</a><a class='toc-h3' href='#13-a-survey-of-text-and-speech-resources-for-hausa-and-fongbe-availability-quality-and-gaps-for-nlp-development'>13. A Survey of Text and Speech Resources for Hausa and Fongbe: Availability, Quality, and Gaps for NLP Development</a><a class='toc-h3' href='#14-fusionsense-tri-stage-near-sensor-learning-for-runtime-adaptive-multimodal-edge-intelligence'>14. FusionSense: Tri-Stage Near-Sensor Learning for Runtime-Adaptive Multimodal Edge Intelligence</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-05-25-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-05-25'>RichLens Candidate Feed — 2026-05-25</h1>
+<ul>
+<li>Discovered candidates: 129</li>
+<li>Added to queue: 14</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-rma-an-agentic-system-for-research-level-mathematical-problems'>1. RMA: an Agentic System for Research-Level Mathematical Problems</h3>
+<ul>
+<li>ID: <code>RL-283a988894</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.22875</li>
+<li>Score: <code>0.95</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, coding agents, knowledge management</li>
+</ul>
+<h3 id='2-sciatlas-a-large-scale-knowledge-graph-for-automated-scientific-research'>2. SciAtlas: A Large-Scale Knowledge Graph for Automated Scientific Research</h3>
+<ul>
+<li>ID: <code>RL-b11b75dbbd</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.22878</li>
+<li>Score: <code>0.95</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, coding agents, knowledge management</li>
+</ul>
+<h3 id='3-query-adaptive-semantic-chunking-for-retrieval-augmented-generation-a-dynamic-strategy-with-contextual-window-expansion'>3. Query-Adaptive Semantic Chunking for Retrieval-Augmented Generation: A Dynamic Strategy with Contextual Window Expansion</h3>
+<ul>
+<li>ID: <code>RL-1528dc33d7</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.22834</li>
+<li>Score: <code>0.95</code></li>
+<li>Why: Matches topics: agentic coding, LLM evaluation, RAG, retrieval</li>
+</ul>
+<h3 id='4-knowledge-distillation-for-low-resource-open-source-text-to-sql-model'>4. Knowledge Distillation for Low-Resource Open-source Text-to-SQL Model</h3>
+<ul>
+<li>ID: <code>RL-03b3219025</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.22843</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: knowledge management, inference, retrieval, Obsidian knowledge management</li>
+</ul>
+<h3 id='5-quoting-armin-ronacher'>5. Quoting Armin Ronacher</h3>
+<ul>
+<li>ID: <code>RL-27d273aae1</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/May/24/armin-ronacher/#atom-everything</li>
+<li>Score: <code>0.65</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='6-bohm-zero-cost-hierarchical-attribution-for-compound-ai-systems'>6. BOHM: Zero-Cost Hierarchical Attribution for Compound AI Systems</h3>
+<ul>
+<li>ID: <code>RL-6d0ef9e366</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.22866</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: agentic coding, LLM evaluation, AI product strategy</li>
+</ul>
+<h3 id='7-energy-per-successful-goal-goal-level-energy-accounting-for-agentic-ai-systems'>7. Energy per Successful Goal: Goal-Level Energy Accounting for Agentic AI Systems</h3>
+<ul>
+<li>ID: <code>RL-847171e1ee</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.22883</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: agentic coding, personal AI workflow, inference</li>
+</ul>
+<h3 id='8-how-far-will-they-go-red-teaming-online-influence-with-large-language-models'>8. How Far Will They Go? Red-Teaming Online Influence with Large Language Models</h3>
+<ul>
+<li>ID: <code>RL-dd91051c60</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.22880</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, coding agents, personal AI workflow</li>
+</ul>
+<h3 id='9-mad-house-usborne-creepy-computer-games'>9. Mad House — Usborne Creepy Computer Games</h3>
+<ul>
+<li>ID: <code>RL-27ba04d76e</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/May/24/usborne-mad-house/#atom-everything</li>
+<li>Score: <code>0.53</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='10-evaluating-large-language-models-in-a-complex-hidden-role-game'>10. Evaluating Large Language Models in a Complex Hidden Role Game</h3>
+<ul>
+<li>ID: <code>RL-7bf9ebb565</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.22826</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='11-latent-cache-flow-model-to-model-communication-without-text'>11. Latent Cache Flow: Model-to-Model Communication Without Text</h3>
+<ul>
+<li>ID: <code>RL-f7fdeddd0c</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.22863</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='12-control-bilibili-with-cli-commands-for-ai-agents-0-token-cost'>12. Control Bilibili with CLI Commands for AI Agents (0 Token Cost)</h3>
+<ul>
+<li>ID: <code>RL-5680a5c7a8</code></li>
+<li>Source: Hacker News AI Search / <code>rss</code></li>
+<li>URL: https://mediause.dev/skills/bilibili</li>
+<li>Score: <code>0.39</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='13-a-survey-of-text-and-speech-resources-for-hausa-and-fongbe-availability-quality-and-gaps-for-nlp-development'>13. A Survey of Text and Speech Resources for Hausa and Fongbe: Availability, Quality, and Gaps for NLP Development</h3>
+<ul>
+<li>ID: <code>RL-6818493dd0</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.22828</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='14-fusionsense-tri-stage-near-sensor-learning-for-runtime-adaptive-multimodal-edge-intelligence'>14. FusionSense: Tri-Stage Near-Sensor Learning for Runtime-Adaptive Multimodal Edge Intelligence</h3>
+<ul>
+<li>ID: <code>RL-1cf8115e38</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.22868</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: multimodal AI</li>
+</ul></main></div>
+</body></html>
