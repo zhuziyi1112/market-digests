@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-05-27</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-05-27 10:47</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-05-27'>RichLens Candidate Feed — 2026-05-27</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-is-agent-memory-a-database-rethinking-data-foundations-for-long-term-ai-agent-memory'>1. Is Agent Memory a Database? Rethinking Data Foundations for Long-Term AI Agent Memory</a><a class='toc-h3' href='#2-personalizing-embodied-multimodal-large-language-model-agents-over-long-term-user-interactions'>2. Personalizing Embodied Multimodal Large Language Model Agents over Long-term User Interactions</a><a class='toc-h3' href='#3-quoting-kyle-ferrana'>3. Quoting Kyle Ferrana</a><a class='toc-h3' href='#4-self-verified-distillation-your-language-model-is-secretly-its-own-synthetic-data-pipeline'>4. Self-Verified Distillation: Your Language Model Is Secretly Its Own Synthetic Data Pipeline</a><a class='toc-h3' href='#5-neural-bayesian-sequential-routing'>5. Neural Bayesian Sequential Routing</a><a class='toc-h3' href='#6-microsoft-copilot-cowork-exfiltrates-files'>6. Microsoft Copilot Cowork Exfiltrates Files</a><a class='toc-h3' href='#7-constraint-acquisition-needs-better-benchmarks'>7. Constraint acquisition needs better benchmarks</a><a class='toc-h3' href='#8-pretraining-data-exposure-in-large-language-models-a-survey-of-membership-inference-data-contamination-and-security-implications'>8. Pretraining Data Exposure in Large Language Models: A Survey of Membership Inference, Data Contamination, and Security Implications</a><a class='toc-h3' href='#9-spear-code-augmented-agentic-prompt-optimization'>9. SPEAR: Code-Augmented Agentic Prompt Optimization</a><a class='toc-h3' href='#10-the-daily-dose-workflow-integrated-large-language-model-automation-for-clinical-summarization-and-trial-identification-in-radiation-oncology'>10. The Daily Dose: Workflow-Integrated Large Language Model Automation for Clinical Summarization and Trial Identification in Radiation Oncology</a><a class='toc-h3' href='#11-aircast-sr-a-foundation-model-for-kilometer-scale-atmospheric-super-resolution-via-latent-consistency-diffusion'>11. AirCast-SR: A Foundation Model for Kilometer-Scale Atmospheric Super-Resolution via Latent Consistency Diffusion</a><a class='toc-h3' href='#12-an-important-update-transitioning-gemini-cli-to-antigravity-cli'>12. An important update: Transitioning Gemini CLI to Antigravity CLI</a><a class='toc-h3' href='#13-can-llms-introspect-a-reality-check'>13. Can LLMs Introspect? A Reality Check</a><a class='toc-h3' href='#14-extract-more-kernel-performance-with-nvidia-compileiq-auto-tuning'>14. Extract More Kernel Performance with NVIDIA CompileIQ Auto-Tuning</a><a class='toc-h3' href='#15-develop-high-performance-gpu-kernels-in-c-with-nvidia-cuda-tile'>15. Develop High-Performance GPU Kernels in C++ with NVIDIA CUDA Tile</a><a class='toc-h3' href='#16-nvidia-cuda-13-3-enhances-gpu-development-with-tile-programming-in-c-compiler-autotuning-and-python-updates'>16. NVIDIA CUDA 13.3 Enhances GPU Development with Tile Programming in C++, Compiler Autotuning, and Python Updates</a><a class='toc-h3' href='#17-run-key-genomics-and-protein-folding-workloads-faster-with-nvidia-rtx-pro-4500-blackwell'>17. Run Key Genomics and Protein Folding Workloads Faster with NVIDIA RTX PRO 4500 Blackwell</a><a class='toc-h3' href='#18-mission-control-for-self-hosted-langsmith-on-kubernetes'>18. Mission Control for Self-Hosted LangSmith on Kubernetes</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-05-27-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-05-27'>RichLens Candidate Feed — 2026-05-27</h1>
+<ul>
+<li>Discovered candidates: 129</li>
+<li>Added to queue: 18</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-is-agent-memory-a-database-rethinking-data-foundations-for-long-term-ai-agent-memory'>1. Is Agent Memory a Database? Rethinking Data Foundations for Long-Term AI Agent Memory</h3>
+<ul>
+<li>ID: <code>RL-b3cd8155ae</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.26252</li>
+<li>Score: <code>0.95</code></li>
+<li>Why: Matches topics: AI agents, coding agents, knowledge management, retrieval</li>
+</ul>
+<h3 id='2-personalizing-embodied-multimodal-large-language-model-agents-over-long-term-user-interactions'>2. Personalizing Embodied Multimodal Large Language Model Agents over Long-term User Interactions</h3>
+<ul>
+<li>ID: <code>RL-6800e233d0</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.26256</li>
+<li>Score: <code>0.95</code></li>
+<li>Why: Matches topics: AI agents, coding agents, knowledge management, LLM evaluation</li>
+</ul>
+<h3 id='3-quoting-kyle-ferrana'>3. Quoting Kyle Ferrana</h3>
+<ul>
+<li>ID: <code>RL-9b68e2647c</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/May/27/kyle-ferrana/#atom-everything</li>
+<li>Score: <code>0.77</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='4-self-verified-distillation-your-language-model-is-secretly-its-own-synthetic-data-pipeline'>4. Self-Verified Distillation: Your Language Model Is Secretly Its Own Synthetic Data Pipeline</h3>
+<ul>
+<li>ID: <code>RL-70361ec8ee</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.26132</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents, inference</li>
+</ul>
+<h3 id='5-neural-bayesian-sequential-routing'>5. Neural Bayesian Sequential Routing</h3>
+<ul>
+<li>ID: <code>RL-7a2cd4947b</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.26147</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: agentic coding, knowledge management, inference, Obsidian knowledge management</li>
+</ul>
+<h3 id='6-microsoft-copilot-cowork-exfiltrates-files'>6. Microsoft Copilot Cowork Exfiltrates Files</h3>
+<ul>
+<li>ID: <code>RL-53f9221c01</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/May/26/copilot-cowork-exfiltrates-files/#atom-everything</li>
+<li>Score: <code>0.65</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, coding agents, AI product strategy; source fatigue -0.18</li>
+</ul>
+<h3 id='7-constraint-acquisition-needs-better-benchmarks'>7. Constraint acquisition needs better benchmarks</h3>
+<ul>
+<li>ID: <code>RL-8aa8c70305</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.26279</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: knowledge management, LLM evaluation, Obsidian knowledge management</li>
+</ul>
+<h3 id='8-pretraining-data-exposure-in-large-language-models-a-survey-of-membership-inference-data-contamination-and-security-implications'>8. Pretraining Data Exposure in Large Language Models: A Survey of Membership Inference, Data Contamination, and Security Implications</h3>
+<ul>
+<li>ID: <code>RL-fb8f8e0051</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.26133</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: LLM evaluation, inference</li>
+</ul>
+<h3 id='9-spear-code-augmented-agentic-prompt-optimization'>9. SPEAR: Code-Augmented Agentic Prompt Optimization</h3>
+<ul>
+<li>ID: <code>RL-b96249ddd2</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.26275</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: agentic coding, LLM evaluation</li>
+</ul>
+<h3 id='10-the-daily-dose-workflow-integrated-large-language-model-automation-for-clinical-summarization-and-trial-identification-in-radiation-oncology'>10. The Daily Dose: Workflow-Integrated Large Language Model Automation for Clinical Summarization and Trial Identification in Radiation Oncology</h3>
+<ul>
+<li>ID: <code>RL-3e1eea1df9</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.26346</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: personal AI workflow, LLM evaluation</li>
+</ul>
+<h3 id='11-aircast-sr-a-foundation-model-for-kilometer-scale-atmospheric-super-resolution-via-latent-consistency-diffusion'>11. AirCast-SR: A Foundation Model for Kilometer-Scale Atmospheric Super-Resolution via Latent Consistency Diffusion</h3>
+<ul>
+<li>ID: <code>RL-790de2709d</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.26130</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: knowledge management, Obsidian knowledge management</li>
+</ul>
+<h3 id='12-an-important-update-transitioning-gemini-cli-to-antigravity-cli'>12. An important update: Transitioning Gemini CLI to Antigravity CLI</h3>
+<ul>
+<li>ID: <code>RL-f5e79ed3b2</code></li>
+<li>Source: Google Developers Blog / <code>rss</code></li>
+<li>URL: https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: model serving</li>
+</ul>
+<h3 id='13-can-llms-introspect-a-reality-check'>13. Can LLMs Introspect? A Reality Check</h3>
+<ul>
+<li>ID: <code>RL-3299792f90</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.26242</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='14-extract-more-kernel-performance-with-nvidia-compileiq-auto-tuning'>14. Extract More Kernel Performance with NVIDIA CompileIQ Auto-Tuning</h3>
+<ul>
+<li>ID: <code>RL-365b7efe10</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/extract-more-kernel-performance-with-nvidia-compileiq-auto-tuning/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='15-develop-high-performance-gpu-kernels-in-c-with-nvidia-cuda-tile'>15. Develop High-Performance GPU Kernels in C++ with NVIDIA CUDA Tile</h3>
+<ul>
+<li>ID: <code>RL-4bf57f79bf</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/develop-high-performance-gpu-kernels-in-cpp-with-nvidia-cuda-tile/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='16-nvidia-cuda-13-3-enhances-gpu-development-with-tile-programming-in-c-compiler-autotuning-and-python-updates'>16. NVIDIA CUDA 13.3 Enhances GPU Development with Tile Programming in C++, Compiler Autotuning, and Python Updates</h3>
+<ul>
+<li>ID: <code>RL-6c16f68ca7</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/nvidia-cuda-13-3-enhances-gpu-development-with-tile-programming-in-c-compiler-autotuning-and-python-updates/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='17-run-key-genomics-and-protein-folding-workloads-faster-with-nvidia-rtx-pro-4500-blackwell'>17. Run Key Genomics and Protein Folding Workloads Faster with NVIDIA RTX PRO 4500 Blackwell</h3>
+<ul>
+<li>ID: <code>RL-7e906a25b1</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/run-key-genomics-and-protein-folding-workloads-faster-with-nvidia-rtx-pro-4500-blackwell/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='18-mission-control-for-self-hosted-langsmith-on-kubernetes'>18. Mission Control for Self-Hosted LangSmith on Kubernetes</h3>
+<ul>
+<li>ID: <code>RL-2e23f43a73</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/mission-control-operating-self-hosted-langsmith-on-kubernetes</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul></main></div>
+</body></html>
