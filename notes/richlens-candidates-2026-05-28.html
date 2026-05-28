@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-05-28</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-05-28 12:48</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-05-28'>RichLens Candidate Feed — 2026-05-28</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-rag-coding-enhancing-llm-medical-coding-with-structured-external-knowledge'>1. RAG-Coding: Enhancing LLM Medical Coding with Structured External Knowledge</a><a class='toc-h3' href='#2-oralagent-integrating-reasoning-tools-and-knowledge-for-interactive-dental-image-analysis'>2. OralAgent: Integrating Reasoning, Tools, and Knowledge for Interactive Dental Image Analysis</a><a class='toc-h3' href='#3-warp-s-big-bet-on-building-open-source-with-gpt-5-5'>3. Warp’s big bet on building open source with GPT-5.5</a><a class='toc-h3' href='#4-i-think-anthropic-and-openai-have-found-product-market-fit'>4. I think Anthropic and OpenAI have found product-market fit</a><a class='toc-h3' href='#5-e-3-agent-an-executable-and-evolving-agent-for-resource-management-of-edge-generative-inference'>5. $E^3$-Agent: An Executable and Evolving Agent for Resource Management of Edge Generative Inference</a><a class='toc-h3' href='#6-sqlite-agents-md'>6. sqlite AGENTS.md</a><a class='toc-h3' href='#7-the-latest-updates-to-google-pay'>7. The latest updates to Google Pay</a><a class='toc-h3' href='#8-soro-a-lightweight-foundation-model-and-chatbot-for-tajik'>8. Soro: A Lightweight Foundation Model and Chatbot for Tajik</a><a class='toc-h3' href='#9-dynaschedbench-calibrated-dynamic-scheduling-benchmarks-and-observability-paradox-in-llm-based-scheduling-agents'>9. DynaSchedBench: Calibrated Dynamic Scheduling Benchmarks and Observability Paradox in LLM-based Scheduling Agents</a><a class='toc-h3' href='#10-why-llms-fail-at-causal-discovery-and-how-interventional-agents-escape'>10. Why LLMs Fail at Causal Discovery and How Interventional Agents Escape</a><a class='toc-h3' href='#11-icg-improving-cover-image-generation-via-mllm-based-prompting-and-personalized-preference-alignment'>11. ICG: Improving Cover Image Generation via MLLM-based Prompting and Personalized Preference Alignment</a><a class='toc-h3' href='#12-lco-llm-based-constraint-optimization-for-safer-agentic-llms-in-real-world-tasks'>12. LCO: LLM-based Constraint Optimization for Safer Agentic LLMs in Real-world Tasks</a><a class='toc-h3' href='#13-tackling-multimodal-learning-challenges-with-mixture-of-expert-a-survey'>13. Tackling Multimodal Learning Challenges with Mixture-of-Expert: A Survey</a><a class='toc-h3' href='#14-ainews-cognition-raises-1b-in-26b-series-d'>14. [AINews] Cognition raises $1B in $26B Series D</a><a class='toc-h3' href='#15-building-self-improving-tax-agents-with-codex'>15. Building self-improving tax agents with Codex</a><a class='toc-h3' href='#16-personalized-observation-normalization-for-federated-reinforcement-learning-in-simulation-environments-with-heterogeneity'>16. Personalized Observation Normalization for Federated Reinforcement Learning in Simulation Environments with Heterogeneity</a><a class='toc-h3' href='#17-igada-iot-iot-sensor-energy-optimization-in-wireless-sensor-networks-driven-by-automatic-data-augmentation'>17. IGADA-IoT: IoT Sensor Energy Optimization in Wireless Sensor Networks Driven by Automatic Data Augmentation</a><a class='toc-h3' href='#18-nvidia-dynamo-snapshot-fast-startup-for-inference-workloads-on-kubernetes'>18. NVIDIA Dynamo Snapshot: Fast Startup for Inference Workloads on Kubernetes</a><a class='toc-h3' href='#19-nvidia-blackwell-sets-stac-ai-record-for-llm-inference-in-finance'>19. NVIDIA Blackwell Sets STAC-AI Record for LLM Inference in Finance</a><a class='toc-h3' href='#20-itbench-aa-frontier-models-score-below-50-on-the-first-benchmark-for-agentic-enterprise-it-tasks-by-artificial-analysis-and-ibm'>20. ITBench-AA: Frontier Models Score Below 50% on the First Benchmark for Agentic Enterprise IT Tasks — by Artificial Analysis and IBM</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-05-28-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-05-28'>RichLens Candidate Feed — 2026-05-28</h1>
+<ul>
+<li>Discovered candidates: 130</li>
+<li>Added to queue: 20</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-rag-coding-enhancing-llm-medical-coding-with-structured-external-knowledge'>1. RAG-Coding: Enhancing LLM Medical Coding with Structured External Knowledge</h3>
+<ul>
+<li>ID: <code>RL-695f7dfaf7</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.27377</li>
+<li>Score: <code>0.95</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='2-oralagent-integrating-reasoning-tools-and-knowledge-for-interactive-dental-image-analysis'>2. OralAgent: Integrating Reasoning, Tools, and Knowledge for Interactive Dental Image Analysis</h3>
+<ul>
+<li>ID: <code>RL-5e686b9e7e</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.27378</li>
+<li>Score: <code>0.95</code></li>
+<li>Why: Matches topics: knowledge management, personal AI workflow, RAG, retrieval</li>
+</ul>
+<h3 id='3-warp-s-big-bet-on-building-open-source-with-gpt-5-5'>3. Warp’s big bet on building open source with GPT-5.5</h3>
+<ul>
+<li>ID: <code>RL-b36c91942c</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/warp</li>
+<li>Score: <code>0.83</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='4-i-think-anthropic-and-openai-have-found-product-market-fit'>4. I think Anthropic and OpenAI have found product-market fit</h3>
+<ul>
+<li>ID: <code>RL-9fe3c254d5</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/May/27/product-market-fit/#atom-everything</li>
+<li>Score: <code>0.77</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='5-e-3-agent-an-executable-and-evolving-agent-for-resource-management-of-edge-generative-inference'>5. $E^3$-Agent: An Executable and Evolving Agent for Resource Management of Edge Generative Inference</h3>
+<ul>
+<li>ID: <code>RL-ec0f413f72</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.27428</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: knowledge management, LLM evaluation, inference, Obsidian knowledge management</li>
+</ul>
+<h3 id='6-sqlite-agents-md'>6. sqlite AGENTS.md</h3>
+<ul>
+<li>ID: <code>RL-48184a94e9</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/May/27/sqlite-agents/#atom-everything</li>
+<li>Score: <code>0.65</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='7-the-latest-updates-to-google-pay'>7. The latest updates to Google Pay</h3>
+<ul>
+<li>ID: <code>RL-771b57aebb</code></li>
+<li>Source: Google Developers Blog / <code>rss</code></li>
+<li>URL: https://developers.googleblog.com/the-latest-updates-to-google-pay/</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, coding agents</li>
+</ul>
+<h3 id='8-soro-a-lightweight-foundation-model-and-chatbot-for-tajik'>8. Soro: A Lightweight Foundation Model and Chatbot for Tajik</h3>
+<ul>
+<li>ID: <code>RL-a324ec3c04</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.27379</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: knowledge management, LLM evaluation, Obsidian knowledge management</li>
+</ul>
+<h3 id='9-dynaschedbench-calibrated-dynamic-scheduling-benchmarks-and-observability-paradox-in-llm-based-scheduling-agents'>9. DynaSchedBench: Calibrated Dynamic Scheduling Benchmarks and Observability Paradox in LLM-based Scheduling Agents</h3>
+<ul>
+<li>ID: <code>RL-783423cb28</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.27566</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, coding agents, LLM evaluation</li>
+</ul>
+<h3 id='10-why-llms-fail-at-causal-discovery-and-how-interventional-agents-escape'>10. Why LLMs Fail at Causal Discovery and How Interventional Agents Escape</h3>
+<ul>
+<li>ID: <code>RL-5474a49d35</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.27567</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, coding agents</li>
+</ul>
+<h3 id='11-icg-improving-cover-image-generation-via-mllm-based-prompting-and-personalized-preference-alignment'>11. ICG: Improving Cover Image Generation via MLLM-based Prompting and Personalized Preference Alignment</h3>
+<ul>
+<li>ID: <code>RL-5543b059e7</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.27374</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: embeddings, multimodal AI, AI product strategy</li>
+</ul>
+<h3 id='12-lco-llm-based-constraint-optimization-for-safer-agentic-llms-in-real-world-tasks'>12. LCO: LLM-based Constraint Optimization for Safer Agentic LLMs in Real-world Tasks</h3>
+<ul>
+<li>ID: <code>RL-0af5595590</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.27375</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, coding agents</li>
+</ul>
+<h3 id='13-tackling-multimodal-learning-challenges-with-mixture-of-expert-a-survey'>13. Tackling Multimodal Learning Challenges with Mixture-of-Expert: A Survey</h3>
+<ul>
+<li>ID: <code>RL-bff9766777</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.27431</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: knowledge management, multimodal AI, Obsidian knowledge management</li>
+</ul>
+<h3 id='14-ainews-cognition-raises-1b-in-26b-series-d'>14. [AINews] Cognition raises $1B in $26B Series D</h3>
+<ul>
+<li>ID: <code>RL-ae8600009f</code></li>
+<li>Source: Latent Space / <code>rss</code></li>
+<li>URL: https://www.latent.space/p/ainews-cognition-raises-1b-in-26b</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='15-building-self-improving-tax-agents-with-codex'>15. Building self-improving tax agents with Codex</h3>
+<ul>
+<li>ID: <code>RL-9da64821c6</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/building-self-improving-tax-agents-with-codex</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='16-personalized-observation-normalization-for-federated-reinforcement-learning-in-simulation-environments-with-heterogeneity'>16. Personalized Observation Normalization for Federated Reinforcement Learning in Simulation Environments with Heterogeneity</h3>
+<ul>
+<li>ID: <code>RL-0638f4a1f3</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.27385</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='17-igada-iot-iot-sensor-energy-optimization-in-wireless-sensor-networks-driven-by-automatic-data-augmentation'>17. IGADA-IoT: IoT Sensor Energy Optimization in Wireless Sensor Networks Driven by Automatic Data Augmentation</h3>
+<ul>
+<li>ID: <code>RL-090c7fe6eb</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2605.27397</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: LLM evaluation, AI product strategy</li>
+</ul>
+<h3 id='18-nvidia-dynamo-snapshot-fast-startup-for-inference-workloads-on-kubernetes'>18. NVIDIA Dynamo Snapshot: Fast Startup for Inference Workloads on Kubernetes</h3>
+<ul>
+<li>ID: <code>RL-272d62567a</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/nvidia-dynamo-snapshot-fast-startup-for-inference-workloads-on-kubernetes/</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='19-nvidia-blackwell-sets-stac-ai-record-for-llm-inference-in-finance'>19. NVIDIA Blackwell Sets STAC-AI Record for LLM Inference in Finance</h3>
+<ul>
+<li>ID: <code>RL-b94d48b9b0</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/nvidia-blackwell-sets-stac-ai-record-for-llm-inference-in-finance/</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='20-itbench-aa-frontier-models-score-below-50-on-the-first-benchmark-for-agentic-enterprise-it-tasks-by-artificial-analysis-and-ibm'>20. ITBench-AA: Frontier Models Score Below 50% on the First Benchmark for Agentic Enterprise IT Tasks — by Artificial Analysis and IBM</h3>
+<ul>
+<li>ID: <code>RL-885b9f75e7</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/ibm-research/itbench-aa</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: agentic coding</li>
+</ul></main></div>
+</body></html>
