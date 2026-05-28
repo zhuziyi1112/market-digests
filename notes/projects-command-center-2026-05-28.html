@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects Command Center</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-05-28 12:48</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#projects-command-center'>Projects Command Center</a><a class='toc-h2' href='#daily-triage-10-minutes'>Daily Triage — 10 minutes</a><a class='toc-h3' href='#1-pick-today-s-focus'>1. Pick Today&#x27;s Focus</a><a class='toc-h3' href='#2-not-today'>2. Not Today</a><a class='toc-h3' href='#3-end-of-day-review-5-minutes'>3. End-of-Day Review — 5 minutes</a><a class='toc-h2' href='#related-dashboards'>Related Dashboards</a><a class='toc-h2' href='#project-map'>Project Map</a><a class='toc-h2' href='#active-projects'>Active Projects</a><a class='toc-h2' href='#waiting-blocked'>Waiting / Blocked</a><a class='toc-h2' href='#due-soon'>Due Soon</a><a class='toc-h2' href='#recently-touched-project-notes'>Recently Touched Project Notes</a><a class='toc-h2' href='#operating-rules'>Operating Rules</a><a class='toc-h2' href='#suggested-project-frontmatter'>Suggested Project Frontmatter</a><a class='toc-h2' href='#discord-reminder'>Discord Reminder</a></nav><main><div class="meta">Source: 99_System/Dashboards/Projects Command Center.md</div><h1 id='projects-command-center'>Projects Command Center</h1>
+<blockquote>
+<p>[!TIP] Daily rule</p>
+<p>每天不要管理所有项目，只管理<strong>今天的承诺</strong>。同时 active 项目最多 3 个；其它项目应该是 <code>waiting</code> / <code>paused</code> / <code>later</code> / <code>done</code>。</p>
+</blockquote>
+<h2 id='daily-triage-10-minutes'>Daily Triage — 10 minutes</h2>
+<h3 id='1-pick-today-s-focus'>1. Pick Today's Focus</h3>
+<ul class='checklist'>
+<li><input type='checkbox' disabled > <strong>Must Win:</strong> 今天结束前必须完成的一件事：</li>
+<li><input type='checkbox' disabled > <strong>Project Focus 1:</strong></li>
+<li><input type='checkbox' disabled > <strong>Project Focus 2:</strong></li>
+<li><input type='checkbox' disabled > <strong>Project Focus 3:</strong></li>
+</ul>
+<h3 id='2-not-today'>2. Not Today</h3>
+<p>今天明确不碰，避免注意力泄漏：</p>
+<h3 id='3-end-of-day-review-5-minutes'>3. End-of-Day Review — 5 minutes</h3>
+<ul>
+<li><strong>Done:</strong></li>
+<li><strong>Blocked:</strong></li>
+<li><strong>Tomorrow Candidate:</strong></li>
+</ul>
+<hr>
+<h2 id='related-dashboards'>Related Dashboards</h2>
+<ul>
+<li>Main cockpit: RichProd Command Center</li>
+<li>rich-todo: Dashboards/rich-todo</li>
+</ul>
+<h2 id='project-map'>Project Map</h2>
+<div class='table-wrap'><table><thead><tr><th>Project</th><th>Open</th><th>Status</th><th>Next Action</th></tr></thead><tbody><tr><td>RichLens / rich-prod knowledge system</td><td>Dashboards/RichLens Dashboard</td><td>active</td><td>检查 Failure Queue 和 Curation Queue，各处理/标记 1 个最重要 item</td></tr><tr><td>rich-ai-research</td><td>rich-ai-research/README</td><td>active</td><td>完成 1 个 synthesis 输出：top 3 AI investment signals + 证据链接</td></tr><tr><td>rich-interview</td><td>rich-interview/00-Home/MOC</td><td>active</td><td>回答 3 题，并把 1 个错题回流到错题本</td></tr><tr><td>rich-communication</td><td>rich-communication/00-英语每日训练 Dashboard</td><td>active</td><td>完成当天 15 分钟 speaking drill，并记录 1 个表达问题</td></tr><tr><td>rich-alpha</td><td>rich-alpha/rich-alpha MOC</td><td>active</td><td>检查 watchlist / daily digest，只升级一个最强信号为 thesis</td></tr><tr><td>Automation / Jobs</td><td>Dashboards/Automation Command Center</td><td>active</td><td>检查 Automation Health warnings，确认 Hermes/n8n/launchd 是否正常</td></tr></tbody></table></div>
+<hr>
+<h2 id='active-projects'>Active Projects</h2>
+<p>```dataview</p>
+<p>TABLE WITHOUT ID file.link AS Project, priority AS Priority, due AS Due, next_action AS "Next Action", updated AS Updated</p>
+<p>FROM "rich-prod/20_Projects" OR "rich-prod/99_System/Dashboards"</p>
+<p>WHERE type = "project" AND status = "active"</p>
+<p>SORT priority ASC, due ASC, file.mtime DESC</p>
+<p>```</p>
+<h2 id='waiting-blocked'>Waiting / Blocked</h2>
+<p>```dataview</p>
+<p>TABLE WITHOUT ID file.link AS Project, waiting_for AS "Waiting For", next_check AS "Next Check", next_action AS "Next Action"</p>
+<p>FROM "rich-prod/20_Projects"</p>
+<p>WHERE type = "project" AND (status = "waiting" OR status = "blocked")</p>
+<p>SORT next_check ASC, file.mtime DESC</p>
+<p>```</p>
+<h2 id='due-soon'>Due Soon</h2>
+<p>```dataview</p>
+<p>TABLE WITHOUT ID file.link AS Project, due AS Due, priority AS Priority, next_action AS "Next Action"</p>
+<p>FROM "rich-prod/20_Projects"</p>
+<p>WHERE type = "project" AND status != "done" AND status != "archived" AND due</p>
+<p>SORT due ASC</p>
+<p>LIMIT 10</p>
+<p>```</p>
+<h2 id='recently-touched-project-notes'>Recently Touched Project Notes</h2>
+<p>```dataview</p>
+<p>TABLE WITHOUT ID file.link AS Note, file.mtime AS Updated</p>
+<p>FROM "rich-prod/20_Projects"</p>
+<p>WHERE file.name != "Projects Command Center"</p>
+<p>SORT file.mtime DESC</p>
+<p>LIMIT 12</p>
+<p>```</p>
+<hr>
+<h2 id='operating-rules'>Operating Rules</h2>
+<ol>
+<li><strong>Active ≤ 3:</strong> 如果 active 超过 3 个，先暂停/等待/归档一部分。</li>
+<li><strong>每个项目只需要一个 <code>next_action</code>:</strong> 下一步必须是 15–60 分钟内能执行的动作。</li>
+<li><strong>Morning pick, evening close:</strong> 早上选 1–3 个 focus，晚上只记录 done / blocked / tomorrow candidate。</li>
+<li><strong>新想法先进 inbox:</strong> 不要打断当天 focus。</li>
+<li><strong>Dashboard 负责决策，不负责堆任务:</strong> 项目页保留 context；任务页/queue 保留执行细节。</li>
+</ol>
+<h2 id='suggested-project-frontmatter'>Suggested Project Frontmatter</h2>
+<p>```yaml</p>
+<hr>
+<p>type: project</p>
+<p>status: active # active | waiting | blocked | paused | done | archived</p>
+<p>priority: P1</p>
+<p>next_action: "今天可以完成的一步具体动作"</p>
+<p>due: 2026-05-01</p>
+<p>waiting_for:</p>
+<p>next_check:</p>
+<p>updated: 2026-04-27</p>
+<hr>
+<p>```</p>
+<h2 id='discord-reminder'>Discord Reminder</h2>
+<p>每日 Discord 项目提醒脚本：Scripts/project_daily_reminder.py</p>
+<p>配置与启用说明：Guides/Discord Project Daily Reminder Setup</p>
+<p>Project Registry: Config/project_registry.json</p></main></div>
+</body></html>
