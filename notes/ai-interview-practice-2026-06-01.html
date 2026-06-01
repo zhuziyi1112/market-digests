@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 面试每日问答 - 2026-06-01</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-06-01 09:14</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#ai-面试每日问答-2026-06-01'>AI 面试每日问答 - 2026-06-01</a><a class='toc-h2' href='#今日目标'>今日目标</a><a class='toc-h2' href='#new-questions'>New Questions</a><a class='toc-h3' href='#q085-agent-memory-如何评估-如何测试-recall-precision-stale-memory-over-recall-和-privacy-leakage'>Q085｜Agent memory 如何评估？如何测试 recall precision、stale memory、over-recall 和 privacy leakage？</a><a class='toc-h3' href='#q086-如何设计一个可靠的-browser-agent-runtime-dom-视觉-structured-actions-recovery-safety-gate-如何取舍'>Q086｜如何设计一个可靠的 browser agent runtime？DOM、视觉、structured actions、recovery、safety gate 如何取舍？</a><a class='toc-h3' href='#q091-vllm-serving-runtime-升级时-如何做-compatibility-benchmark-canary-和-rollback'>Q091｜vLLM / serving runtime 升级时，如何做 compatibility、benchmark、canary 和 rollback？</a><a class='toc-h2' href='#review-questions'>Review Questions</a><a class='toc-h3' href='#from-yesterday'>From yesterday</a><a class='toc-h3' href='#from-3-days-ago'>From 3 days ago</a><a class='toc-h3' href='#from-7-days-ago'>From 7 days ago</a><a class='toc-h3' href='#from-30-days-ago'>From 30 days ago</a><a class='toc-h2' href='#english-speaking-drill'>English speaking drill</a><a class='toc-h3' href='#recording-self-check'>Recording / self-check</a><a class='toc-h2' href='#今日错题-weak-points'>今日错题 / Weak Points</a><a class='toc-h2' href='#明日复习候选'>明日复习候选</a></nav><main><div class="meta">Source: 20_Projects/rich-interview/30-Practice-OS/daily-sheets/2026-06-01.md</div><h1 id='ai-面试每日问答-2026-06-01'>AI 面试每日问答 - 2026-06-01</h1>
+<h2 id='今日目标'>今日目标</h2>
+<ul>
+<li>Focus：Safety + Governance + LLMOps</li>
+<li>Output goal：用英文讲清楚 3 个核心 tradeoff，每题 45-60 秒。</li>
+<li>Rule：中文理解要完整；英文回答要短、清楚、有结构。</li>
+</ul>
+<h2 id='new-questions'>New Questions</h2>
+<h3 id='q085-agent-memory-如何评估-如何测试-recall-precision-stale-memory-over-recall-和-privacy-leakage'>Q085｜Agent memory 如何评估？如何测试 recall precision、stale memory、over-recall 和 privacy leakage？</h3>
+<p>topic:: Memory Eval</p>
+<p>level:: Senior</p>
+<p>type:: Eval / Safety</p>
+<p>source:: 16 高频面试题库</p>
+<p>related:: 40_Wiki/AIEngineering/Agent Memory System, 20_Projects/rich-interview/10-Knowledge/10-Evaluation-Observability, 20_Projects/rich-interview/10-Knowledge/13-Safety-Security-Governance</p>
+<p>status:: weak</p>
+<p>last_reviewed:: 2026-06-01</p>
+<p>next_review:: 2026-06-02</p>
+<h4 id='中文理解'>中文理解</h4>
+<ul>
+<li>先用自己的话解释，再回到对应主题笔记补全标准答案。</li>
+</ul>
+<h4 id='english-concise-bullets'>English concise bullets</h4>
+<ul>
+<li>Definition: _待填写：一句话定义_</li>
+<li>Mechanism: _待填写：核心机制 / architecture_</li>
+<li>Tradeoff: _待填写：主要取舍 / production concern_</li>
+</ul>
+<h4 id='45-sec-interview-answer'>45-sec interview answer</h4>
+<blockquote>
+<p>_待填写：练习后写 45-60 秒英文答案。_</p>
+</blockquote>
+<h4 id='follow-up-questions'>Follow-up questions</h4>
+<ul>
+<li>What is the main tradeoff?</li>
+<li>How would you evaluate it in production?</li>
+<li>What can fail and how would you debug it?</li>
+</ul>
+<h4 id='我的回答记录'>我的回答记录</h4>
+<ul>
+<li>Round 1：</li>
+<li>卡住点：</li>
+<li>改进句：</li>
+</ul>
+<h3 id='q086-如何设计一个可靠的-browser-agent-runtime-dom-视觉-structured-actions-recovery-safety-gate-如何取舍'>Q086｜如何设计一个可靠的 browser agent runtime？DOM、视觉、structured actions、recovery、safety gate 如何取舍？</h3>
+<p>topic:: Browser Agents</p>
+<p>level:: Senior</p>
+<p>type:: System Design</p>
+<p>source:: 16 高频面试题库</p>
+<p>related:: 40_Wiki/AIEngineering/Browser Agent Runtime, 20_Projects/rich-interview/10-Knowledge/08-Agents-Tools-Function-Calling, 20_Projects/rich-interview/10-Knowledge/13-Safety-Security-Governance</p>
+<p>status:: weak</p>
+<p>last_reviewed:: 2026-06-01</p>
+<p>next_review:: 2026-06-02</p>
+<h4 id='中文理解'>中文理解</h4>
+<ul>
+<li><strong>短答</strong>：不要只让 LLM 看截图乱点；应使用 DOM/accessibility tree + structured actions + optional visual fallback + trace + recovery loop。</li>
+</ul>
+<h4 id='english-concise-bullets'>English concise bullets</h4>
+<ul>
+<li>Definition: _待填写：一句话定义_</li>
+<li>Mechanism: _待填写：核心机制 / architecture_</li>
+<li>Tradeoff: _待填写：主要取舍 / production concern_</li>
+</ul>
+<h4 id='45-sec-interview-answer'>45-sec interview answer</h4>
+<blockquote>
+<p>_待填写：练习后写 45-60 秒英文答案。_</p>
+</blockquote>
+<h4 id='follow-up-questions'>Follow-up questions</h4>
+<ul>
+<li>What is the main tradeoff?</li>
+<li>How would you evaluate it in production?</li>
+<li>What can fail and how would you debug it?</li>
+</ul>
+<h4 id='我的回答记录'>我的回答记录</h4>
+<ul>
+<li>Round 1：</li>
+<li>卡住点：</li>
+<li>改进句：</li>
+</ul>
+<h3 id='q091-vllm-serving-runtime-升级时-如何做-compatibility-benchmark-canary-和-rollback'>Q091｜vLLM / serving runtime 升级时，如何做 compatibility、benchmark、canary 和 rollback？</h3>
+<p>topic:: Serving</p>
+<p>level:: Senior</p>
+<p>type:: Production</p>
+<p>source:: 16 高频面试题库</p>
+<p>related:: 20_Projects/rich-interview/10-Knowledge/12-Inference-Serving, 20_Projects/rich-interview/10-Knowledge/14-MLOps-LLMOps</p>
+<p>status:: weak</p>
+<p>last_reviewed:: 2026-06-01</p>
+<p>next_review:: 2026-06-02</p>
+<h4 id='中文理解'>中文理解</h4>
+<ul>
+<li><strong>短答</strong>：把 vLLM/TGI/runtime 升级当成 controlled migration，而不是 library bump。</li>
+</ul>
+<h4 id='english-concise-bullets'>English concise bullets</h4>
+<ul>
+<li>Definition: _待填写：一句话定义_</li>
+<li>Mechanism: _待填写：核心机制 / architecture_</li>
+<li>Tradeoff: _待填写：主要取舍 / production concern_</li>
+</ul>
+<h4 id='45-sec-interview-answer'>45-sec interview answer</h4>
+<blockquote>
+<p>_待填写：练习后写 45-60 秒英文答案。_</p>
+</blockquote>
+<h4 id='follow-up-questions'>Follow-up questions</h4>
+<ul>
+<li>What is the main tradeoff?</li>
+<li>How would you evaluate it in production?</li>
+<li>What can fail and how would you debug it?</li>
+</ul>
+<h4 id='我的回答记录'>我的回答记录</h4>
+<ul>
+<li>Round 1：</li>
+<li>卡住点：</li>
+<li>改进句：</li>
+</ul>
+<h2 id='review-questions'>Review Questions</h2>
+<h3 id='from-yesterday'>From yesterday</h3>
+<ul class='checklist'>
+<li><input type='checkbox' disabled > Review weak questions from 2026-05-31</li>
+</ul>
+<h3 id='from-3-days-ago'>From 3 days ago</h3>
+<ul class='checklist'>
+<li><input type='checkbox' disabled > Review weak questions from 2026-05-29</li>
+</ul>
+<h3 id='from-7-days-ago'>From 7 days ago</h3>
+<ul class='checklist'>
+<li><input type='checkbox' disabled > Review weak questions from 2026-05-25</li>
+</ul>
+<h3 id='from-30-days-ago'>From 30 days ago</h3>
+<ul class='checklist'>
+<li><input type='checkbox' disabled > Review weak questions from 2026-05-02</li>
+</ul>
+<h2 id='english-speaking-drill'>English speaking drill</h2>
+<blockquote>
+<p>Pick one question above and answer in English within 60 seconds.</p>
+</blockquote>
+<h3 id='recording-self-check'>Recording / self-check</h3>
+<ul class='checklist'>
+<li><input type='checkbox' disabled > I gave a short definition first.</li>
+<li><input type='checkbox' disabled > I explained mechanism / architecture.</li>
+<li><input type='checkbox' disabled > I mentioned tradeoffs.</li>
+<li><input type='checkbox' disabled > I mentioned production concerns: eval / latency / cost / safety / monitoring.</li>
+<li><input type='checkbox' disabled > I gave or connected to a project example.</li>
+</ul>
+<h2 id='今日错题-weak-points'>今日错题 / Weak Points</h2>
+<ul>
+<li>_暂无；练习后记录卡住点。_</li>
+</ul>
+<h2 id='明日复习候选'>明日复习候选</h2>
+<ul>
+<li>_暂无；练习后选择 1-3 个 weak questions。_</li>
+</ul></main></div>
+</body></html>
