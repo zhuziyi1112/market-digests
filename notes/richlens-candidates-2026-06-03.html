@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-06-03</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-06-03 13:54</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-06-03'>RichLens Candidate Feed — 2026-06-03</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-github-s-plan-for-agents-kyle-daigle-github'>1. GitHub&#x27;s plan for Agents — Kyle Daigle, GitHub</a><a class='toc-h3' href='#2-codex-is-becoming-a-productivity-tool-for-everyone'>2. Codex is becoming a productivity tool for everyone</a><a class='toc-h3' href='#3-build-personal-ai-agents-on-windows-pcs-with-new-tools-from-microsoft-and-nvidia'>3. Build Personal AI Agents on Windows PCs with New Tools from Microsoft and NVIDIA</a><a class='toc-h3' href='#4-deploy-agentic-ready-ai-at-the-edge-with-memory-efficiency-in-nvidia-jetpack-7-2'>4. Deploy Agentic-Ready AI at the Edge with Memory Efficiency in NVIDIA JetPack 7.2</a><a class='toc-h3' href='#5-introducing-rubrics-build-agents-that-evaluate-and-correct-their-work'>5. Introducing Rubrics: Build Agents that Evaluate and Correct Their Work</a><a class='toc-h3' href='#6-designing-efficient-verifiers-for-legal-agents'>6. Designing Efficient Verifiers for Legal Agents</a><a class='toc-h3' href='#7-the-agent-development-lifecycle-build-test-deploy-monitor-ai-agents-langchain'>7. The Agent Development Lifecycle: Build, Test, Deploy &amp; Monitor AI Agents | LangChain</a><a class='toc-h3' href='#8-uber-caps-usage-of-ai-tools-like-claude-code-to-manage-costs'>8. Uber Caps Usage of AI Tools Like Claude Code to Manage Costs</a><a class='toc-h3' href='#9-aura-action-gated-memory-for-robot-policies-at-constant-vram'>9. AURA: Action-Gated Memory for Robot Policies at Constant VRAM</a><a class='toc-h3' href='#10-human-in-the-loop-contextual-bandits-for-short-term-rental-dynamic-pricing-structural-equivalence-of-historical-warm-up-and-approval-gated-live-learning'>10. Human-in-the-Loop Contextual Bandits for Short-Term Rental Dynamic Pricing: Structural Equivalence of Historical Warm-Up and Approval-Gated Live Learning</a><a class='toc-h3' href='#11-deploy-self-evolving-agents-for-faster-more-secure-research-with-a-hermes-agent-and-nvidia-nemoclaw'>11. Deploy Self-Evolving Agents for Faster, More Secure Research with a Hermes Agent and NVIDIA NemoClaw</a><a class='toc-h3' href='#12-run-local-ai-agents-with-faster-models-and-multi-node-clustering-on-nvidia-dgx-spark'>12. Run Local AI Agents with Faster Models and Multi-Node Clustering on NVIDIA DGX Spark</a><a class='toc-h3' href='#13-holo3-1-fast-local-computer-use-agents'>13. Holo3.1: Fast &amp; Local Computer Use Agents</a><a class='toc-h3' href='#14-visual-graph-scaffolds-for-structural-reasoning-in-large-language-models'>14. Visual Graph Scaffolds for Structural Reasoning in Large Language Models</a><a class='toc-h3' href='#15-behaviorbench-modeling-real-world-user-decisions-from-behavioral-traces'>15. BehaviorBench: Modeling Real-World User Decisions from Behavioral Traces</a><a class='toc-h3' href='#16-idiomx-a-multilingual-benchmark-for-idiom-understanding-retrieval-and-interpretation'>16. IdiomX A Multilingual Benchmark for Idiom Understanding, Retrieval, and Interpretation</a><a class='toc-h3' href='#17-assessing-region-level-eeg-contributions-to-cognitive-workload-prediction'>17. Assessing Region-Level EEG Contributions to Cognitive Workload Prediction</a><a class='toc-h3' href='#18-codex-for-every-role-tool-and-workflow'>18. Codex for every role, tool, and workflow</a><a class='toc-h3' href='#19-copilot-sdk-is-now-generally-available'>19. Copilot SDK is now generally available</a><a class='toc-h3' href='#20-evaluating-transformer-and-lstm-frameworks-for-prediction-in-ungauged-basins'>20. Evaluating Transformer and LSTM Frameworks for Prediction in Ungauged Basins</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-06-03-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-06-03'>RichLens Candidate Feed — 2026-06-03</h1>
+<ul>
+<li>Discovered candidates: 130</li>
+<li>Added to queue: 20</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-github-s-plan-for-agents-kyle-daigle-github'>1. GitHub's plan for Agents — Kyle Daigle, GitHub</h3>
+<ul>
+<li>ID: <code>RL-b9a6d55062</code></li>
+<li>Source: Latent Space / <code>rss</code></li>
+<li>URL: https://www.latent.space/p/github</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='2-codex-is-becoming-a-productivity-tool-for-everyone'>2. Codex is becoming a productivity tool for everyone</h3>
+<ul>
+<li>ID: <code>RL-8c810ea5d0</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/codex-for-knowledge-work</li>
+<li>Score: <code>0.71</code></li>
+<li>Why: Matches topics: knowledge management, personal AI workflow, Obsidian knowledge management</li>
+</ul>
+<h3 id='3-build-personal-ai-agents-on-windows-pcs-with-new-tools-from-microsoft-and-nvidia'>3. Build Personal AI Agents on Windows PCs with New Tools from Microsoft and NVIDIA</h3>
+<ul>
+<li>ID: <code>RL-fc876ff793</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/build-personal-ai-agents-on-windows-pcs-with-new-tools-from-microsoft-and-nvidia/</li>
+<li>Score: <code>0.71</code></li>
+<li>Why: Matches topics: AI agents, coding agents, personal AI workflow</li>
+</ul>
+<h3 id='4-deploy-agentic-ready-ai-at-the-edge-with-memory-efficiency-in-nvidia-jetpack-7-2'>4. Deploy Agentic-Ready AI at the Edge with Memory Efficiency in NVIDIA JetPack 7.2</h3>
+<ul>
+<li>ID: <code>RL-e09d0dcbbe</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/deploy-agentic-ready-ai-at-the-edge-with-memory-efficiency-in-nvidia-jetpack-7-2/</li>
+<li>Score: <code>0.71</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, coding agents</li>
+</ul>
+<h3 id='5-introducing-rubrics-build-agents-that-evaluate-and-correct-their-work'>5. Introducing Rubrics: Build Agents that Evaluate and Correct Their Work</h3>
+<ul>
+<li>ID: <code>RL-d78ac9bd5f</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/introducing-rubrics-for-deepagents</li>
+<li>Score: <code>0.71</code></li>
+<li>Why: Matches topics: AI agents, coding agents, LLM evaluation</li>
+</ul>
+<h3 id='6-designing-efficient-verifiers-for-legal-agents'>6. Designing Efficient Verifiers for Legal Agents</h3>
+<ul>
+<li>ID: <code>RL-1b153e4bc3</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/designing-efficient-verifiers-for-legal-agents</li>
+<li>Score: <code>0.71</code></li>
+<li>Why: Matches topics: AI agents, coding agents, LLM evaluation</li>
+</ul>
+<h3 id='7-the-agent-development-lifecycle-build-test-deploy-monitor-ai-agents-langchain'>7. The Agent Development Lifecycle: Build, Test, Deploy &amp; Monitor AI Agents | LangChain</h3>
+<ul>
+<li>ID: <code>RL-f3294fb990</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/the-agent-development-lifecycle</li>
+<li>Score: <code>0.71</code></li>
+<li>Why: Matches topics: AI agents, coding agents, evals</li>
+</ul>
+<h3 id='8-uber-caps-usage-of-ai-tools-like-claude-code-to-manage-costs'>8. Uber Caps Usage of AI Tools Like Claude Code to Manage Costs</h3>
+<ul>
+<li>ID: <code>RL-29c7b211e5</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/Jun/3/uber-caps-usage/#atom-everything</li>
+<li>Score: <code>0.65</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='9-aura-action-gated-memory-for-robot-policies-at-constant-vram'>9. AURA: Action-Gated Memory for Robot Policies at Constant VRAM</h3>
+<ul>
+<li>ID: <code>RL-cda844a5bb</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.02775</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, coding agents, inference</li>
+</ul>
+<h3 id='10-human-in-the-loop-contextual-bandits-for-short-term-rental-dynamic-pricing-structural-equivalence-of-historical-warm-up-and-approval-gated-live-learning'>10. Human-in-the-Loop Contextual Bandits for Short-Term Rental Dynamic Pricing: Structural Equivalence of Historical Warm-Up and Approval-Gated Live Learning</h3>
+<ul>
+<li>ID: <code>RL-994e02273e</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.02595</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, coding agents, AI product strategy</li>
+</ul>
+<h3 id='11-deploy-self-evolving-agents-for-faster-more-secure-research-with-a-hermes-agent-and-nvidia-nemoclaw'>11. Deploy Self-Evolving Agents for Faster, More Secure Research with a Hermes Agent and NVIDIA NemoClaw</h3>
+<ul>
+<li>ID: <code>RL-519494b212</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/deploy-self-evolving-agents-for-faster-more-secure-research-with-a-hermes-agent-and-nvidia-nemoclaw/</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='12-run-local-ai-agents-with-faster-models-and-multi-node-clustering-on-nvidia-dgx-spark'>12. Run Local AI Agents with Faster Models and Multi-Node Clustering on NVIDIA DGX Spark</h3>
+<ul>
+<li>ID: <code>RL-30d1dae4fb</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/run-local-ai-agents-with-faster-models-and-multi-node-clustering-on-nvidia-dgx-spark/</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='13-holo3-1-fast-local-computer-use-agents'>13. Holo3.1: Fast &amp; Local Computer Use Agents</h3>
+<ul>
+<li>ID: <code>RL-440b7646f5</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/Hcompany/holo31</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='14-visual-graph-scaffolds-for-structural-reasoning-in-large-language-models'>14. Visual Graph Scaffolds for Structural Reasoning in Large Language Models</h3>
+<ul>
+<li>ID: <code>RL-2156fa8788</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.02673</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: knowledge management, Obsidian knowledge management</li>
+</ul>
+<h3 id='15-behaviorbench-modeling-real-world-user-decisions-from-behavioral-traces'>15. BehaviorBench: Modeling Real-World User Decisions from Behavioral Traces</h3>
+<ul>
+<li>ID: <code>RL-b2bf756188</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.02798</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: LLM evaluation, retrieval</li>
+</ul>
+<h3 id='16-idiomx-a-multilingual-benchmark-for-idiom-understanding-retrieval-and-interpretation'>16. IdiomX A Multilingual Benchmark for Idiom Understanding, Retrieval, and Interpretation</h3>
+<ul>
+<li>ID: <code>RL-64487a70c9</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.02584</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: LLM evaluation, retrieval</li>
+</ul>
+<h3 id='17-assessing-region-level-eeg-contributions-to-cognitive-workload-prediction'>17. Assessing Region-Level EEG Contributions to Cognitive Workload Prediction</h3>
+<ul>
+<li>ID: <code>RL-79776102a1</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.02598</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: LLM evaluation, AI product strategy</li>
+</ul>
+<h3 id='18-codex-for-every-role-tool-and-workflow'>18. Codex for every role, tool, and workflow</h3>
+<ul>
+<li>ID: <code>RL-597005b444</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/codex-for-every-role-tool-workflow</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: personal AI workflow</li>
+</ul>
+<h3 id='19-copilot-sdk-is-now-generally-available'>19. Copilot SDK is now generally available</h3>
+<ul>
+<li>ID: <code>RL-e5889d6d09</code></li>
+<li>Source: GitHub Changelog / <code>rss</code></li>
+<li>URL: https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: agentic coding</li>
+</ul>
+<h3 id='20-evaluating-transformer-and-lstm-frameworks-for-prediction-in-ungauged-basins'>20. Evaluating Transformer and LSTM Frameworks for Prediction in Ungauged Basins</h3>
+<ul>
+<li>ID: <code>RL-110b88cf00</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.02791</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: inference</li>
+</ul></main></div>
+</body></html>
