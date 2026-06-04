@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-06-04</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-06-04 12:33</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-06-04'>RichLens Candidate Feed — 2026-06-04</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-bringing-gemma-4-12b-to-your-laptop-unlocking-local-agentic-workflows-with-google-ai-edge'>1. Bringing Gemma 4 12B to your Laptop: Unlocking Local, Agentic Workflows with Google AI Edge</a><a class='toc-h3' href='#2-consensus-is-strategically-insufficient-reasoning-trace-disagreement-as-a-knowledge-representation-signal'>2. Consensus is Strategically Insufficient: Reasoning-Trace Disagreement as a Knowledge-Representation Signal</a><a class='toc-h3' href='#3-toward-pre-deployment-assurance-for-enterprise-ai-agents-ontology-grounded-simulation-and-trust-certification'>3. Toward Pre-Deployment Assurance for Enterprise AI Agents: Ontology-Grounded Simulation and Trust Certification</a><a class='toc-h3' href='#4-smac-talk-a-natural-language-extension-of-the-starcraft-multi-agent-challenge-for-large-language-models'>4. SMAC-Talk: A Natural Language Extension of the StarCraft Multi-Agent Challenge for Large Language Models</a><a class='toc-h3' href='#5-salimory-orchestrating-cognitive-memory-for-conversational-agents'>5. SaliMory: Orchestrating Cognitive Memory for Conversational Agents</a><a class='toc-h3' href='#6-how-endava-is-redesigning-software-delivery-around-ai-agents'>6. How Endava is redesigning software delivery around AI agents</a><a class='toc-h3' href='#7-nvidia-nemotron-3-ultra-powers-faster-more-efficient-reasoning-for-long-running-agents'>7. NVIDIA Nemotron 3 Ultra Powers Faster, More Efficient Reasoning for Long-Running Agents</a><a class='toc-h3' href='#8-model-neutrality-why-avoiding-ai-vendor-lock-in-matters'>8. Model Neutrality: Why Avoiding AI Vendor Lock-In Matters</a><a class='toc-h3' href='#9-how-to-build-a-custom-agent-harness'>9. How to Build a Custom Agent Harness</a><a class='toc-h3' href='#10-github-copilot-in-visual-studio-code-may-releases'>10. GitHub Copilot in Visual Studio Code, May releases</a><a class='toc-h3' href='#11-discourse-role-labels-as-presentation-time-variables-for-context-use-in-language-models'>11. Discourse-Role Labels as Presentation-Time Variables for Context Use in Language Models</a><a class='toc-h3' href='#12-when-retrieval-doesn-t-help-a-large-scale-study-of-biomedical-rag'>12. When Retrieval Doesn&#x27;t Help: A Large-Scale Study of Biomedical RAG</a><a class='toc-h3' href='#13-position-deployed-reinforcement-learning-should-be-continual'>13. Position: Deployed Reinforcement Learning should be Continual</a><a class='toc-h3' href='#14-introducing-new-capabilities-to-gpt-rosalind'>14. Introducing new capabilities to GPT-Rosalind</a><a class='toc-h3' href='#15-gemma-4-12b-the-developer-guide'>15. Gemma 4 12B: The Developer Guide</a><a class='toc-h3' href='#16-stumbling-into-ai-emotional-dependence-how-routine-ai-interactions-reshape-human-connection'>16. Stumbling Into AI Emotional Dependence: How Routine AI Interactions Reshape Human Connection</a><a class='toc-h3' href='#17-polaris-guiding-small-models-to-write-long-stories'>17. POLARIS: Guiding Small Models to Write Long Stories</a><a class='toc-h3' href='#18-computational-conceptual-history-of-scientific-concepts-from-early-digital-methods-to-llms'>18. Computational conceptual history of scientific concepts: From early digital methods to LLMs</a><a class='toc-h3' href='#19-early-detection-of-alzheimer-s-disease-using-explainable-machine-learning-on-clinical-biomarkers-a-multi-class-classification-study-using-the-alzheimer-s-disease-neuroimaging-initiative-adni-dataset'>19. Early Detection of Alzheimer&#x27;s Disease Using Explainable Machine Learning on Clinical Biomarkers: A Multi-Class Classification Study Using the Alzheimer&#x27;s Disease Neuroimaging Initiative (ADNI) Dataset</a><a class='toc-h3' href='#20-do-transformers-need-three-projections-systematic-study-of-qkv-variants'>20. Do Transformers Need Three Projections? Systematic Study of QKV Variants</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-06-04-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-06-04'>RichLens Candidate Feed — 2026-06-04</h1>
+<ul>
+<li>Discovered candidates: 129</li>
+<li>Added to queue: 20</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-bringing-gemma-4-12b-to-your-laptop-unlocking-local-agentic-workflows-with-google-ai-edge'>1. Bringing Gemma 4 12B to your Laptop: Unlocking Local, Agentic Workflows with Google AI Edge</h3>
+<ul>
+<li>ID: <code>RL-3d9531329a</code></li>
+<li>Source: Google Developers Blog / <code>rss</code></li>
+<li>URL: https://developers.googleblog.com/bringing-gemma-4-12b-to-your-laptop-unlocking-local-agentic-workflows-with-google-ai-edge/</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, coding agents, multimodal AI</li>
+</ul>
+<h3 id='2-consensus-is-strategically-insufficient-reasoning-trace-disagreement-as-a-knowledge-representation-signal'>2. Consensus is Strategically Insufficient: Reasoning-Trace Disagreement as a Knowledge-Representation Signal</h3>
+<ul>
+<li>ID: <code>RL-732b55d1cd</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.04223</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: AI agents, coding agents, knowledge management, Obsidian knowledge management</li>
+</ul>
+<h3 id='3-toward-pre-deployment-assurance-for-enterprise-ai-agents-ontology-grounded-simulation-and-trust-certification'>3. Toward Pre-Deployment Assurance for Enterprise AI Agents: Ontology-Grounded Simulation and Trust Certification</h3>
+<ul>
+<li>ID: <code>RL-4fa69667b6</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.04037</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, coding agents, retrieval</li>
+</ul>
+<h3 id='4-smac-talk-a-natural-language-extension-of-the-starcraft-multi-agent-challenge-for-large-language-models'>4. SMAC-Talk: A Natural Language Extension of the StarCraft Multi-Agent Challenge for Large Language Models</h3>
+<ul>
+<li>ID: <code>RL-48ceabbf1e</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.04202</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, coding agents, LLM evaluation</li>
+</ul>
+<h3 id='5-salimory-orchestrating-cognitive-memory-for-conversational-agents'>5. SaliMory: Orchestrating Cognitive Memory for Conversational Agents</h3>
+<ul>
+<li>ID: <code>RL-4d7525f479</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.04120</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, coding agents, retrieval</li>
+</ul>
+<h3 id='6-how-endava-is-redesigning-software-delivery-around-ai-agents'>6. How Endava is redesigning software delivery around AI agents</h3>
+<ul>
+<li>ID: <code>RL-d0841d29a3</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/endava-frontiers</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='7-nvidia-nemotron-3-ultra-powers-faster-more-efficient-reasoning-for-long-running-agents'>7. NVIDIA Nemotron 3 Ultra Powers Faster, More Efficient Reasoning for Long-Running Agents</h3>
+<ul>
+<li>ID: <code>RL-041bd0289a</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/nvidia-nemotron-3-ultra-powers-faster-more-efficient-reasoning-for-long-running-agents/</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='8-model-neutrality-why-avoiding-ai-vendor-lock-in-matters'>8. Model Neutrality: Why Avoiding AI Vendor Lock-In Matters</h3>
+<ul>
+<li>ID: <code>RL-c886e8f3cb</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/model-neutrality</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='9-how-to-build-a-custom-agent-harness'>9. How to Build a Custom Agent Harness</h3>
+<ul>
+<li>ID: <code>RL-ef5ca8bf8d</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/how-to-build-a-custom-agent-harness</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='10-github-copilot-in-visual-studio-code-may-releases'>10. GitHub Copilot in Visual Studio Code, May releases</h3>
+<ul>
+<li>ID: <code>RL-8fd5da2c4b</code></li>
+<li>Source: GitHub Changelog / <code>rss</code></li>
+<li>URL: https://github.blog/changelog/2026-06-03-github-copilot-in-visual-studio-code-may-releases</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='11-discourse-role-labels-as-presentation-time-variables-for-context-use-in-language-models'>11. Discourse-Role Labels as Presentation-Time Variables for Context Use in Language Models</h3>
+<ul>
+<li>ID: <code>RL-51e2741be2</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.04109</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: LLM evaluation, RAG</li>
+</ul>
+<h3 id='12-when-retrieval-doesn-t-help-a-large-scale-study-of-biomedical-rag'>12. When Retrieval Doesn't Help: A Large-Scale Study of Biomedical RAG</h3>
+<ul>
+<li>ID: <code>RL-2e4802c67c</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.04127</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: RAG, retrieval</li>
+</ul>
+<h3 id='13-position-deployed-reinforcement-learning-should-be-continual'>13. Position: Deployed Reinforcement Learning should be Continual</h3>
+<ul>
+<li>ID: <code>RL-dcd3215d3a</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.04029</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='14-introducing-new-capabilities-to-gpt-rosalind'>14. Introducing new capabilities to GPT-Rosalind</h3>
+<ul>
+<li>ID: <code>RL-bfb45dcad6</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: personal AI workflow</li>
+</ul>
+<h3 id='15-gemma-4-12b-the-developer-guide'>15. Gemma 4 12B: The Developer Guide</h3>
+<ul>
+<li>ID: <code>RL-21e9804dc1</code></li>
+<li>Source: Google Developers Blog / <code>rss</code></li>
+<li>URL: https://developers.googleblog.com/gemma-4-12b-the-developer-guide/</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: multimodal AI</li>
+</ul>
+<h3 id='16-stumbling-into-ai-emotional-dependence-how-routine-ai-interactions-reshape-human-connection'>16. Stumbling Into AI Emotional Dependence: How Routine AI Interactions Reshape Human Connection</h3>
+<ul>
+<li>ID: <code>RL-9a74ca8f97</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.04150</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: personal AI workflow</li>
+</ul>
+<h3 id='17-polaris-guiding-small-models-to-write-long-stories'>17. POLARIS: Guiding Small Models to Write Long Stories</h3>
+<ul>
+<li>ID: <code>RL-e8db32c04d</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.04095</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='18-computational-conceptual-history-of-scientific-concepts-from-early-digital-methods-to-llms'>18. Computational conceptual history of scientific concepts: From early digital methods to LLMs</h3>
+<ul>
+<li>ID: <code>RL-ce84542eaa</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.04118</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='19-early-detection-of-alzheimer-s-disease-using-explainable-machine-learning-on-clinical-biomarkers-a-multi-class-classification-study-using-the-alzheimer-s-disease-neuroimaging-initiative-adni-dataset'>19. Early Detection of Alzheimer's Disease Using Explainable Machine Learning on Clinical Biomarkers: A Multi-Class Classification Study Using the Alzheimer's Disease Neuroimaging Initiative (ADNI) Dataset</h3>
+<ul>
+<li>ID: <code>RL-4df7fc6624</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.03995</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: multimodal AI</li>
+</ul>
+<h3 id='20-do-transformers-need-three-projections-systematic-study-of-qkv-variants'>20. Do Transformers Need Three Projections? Systematic Study of QKV Variants</h3>
+<ul>
+<li>ID: <code>RL-eb2e116706</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.04032</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: inference</li>
+</ul></main></div>
+</body></html>
