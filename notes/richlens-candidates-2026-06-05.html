@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-06-05</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-06-05 13:30</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-06-05'>RichLens Candidate Feed — 2026-06-05</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-fault-tolerance-in-langgraph-retries-timeouts-and-error-handlers'>1. Fault Tolerance in LangGraph: Retries, Timeouts and Error Handlers</a><a class='toc-h3' href='#2-ai-enthusiasts-are-in-a-race-against-time-ai-skeptics-are-in-a-race-against-entropy'>2. AI enthusiasts are in a race against time, AI skeptics are in a race against entropy</a><a class='toc-h3' href='#3-improving-heart-focused-medical-question-answering-in-llms-via-variance-aware-rubric-rewards-with-grpo'>3. Improving Heart-Focused Medical Question Answering in LLMs via Variance-Aware Rubric Rewards with GRPO</a><a class='toc-h3' href='#4-pycc-id-a-package-for-hypothesis-driven-equation-discovery-with-structural-identifiability'>4. PyCC.id: A package for hypothesis-driven equation discovery with structural identifiability</a><a class='toc-h3' href='#5-nemotron-3-5-content-safety-customizable-multimodal-safety-for-global-enterprise-ai'>5. Nemotron 3.5 Content Safety: Customizable Multimodal Safety for Global Enterprise AI</a><a class='toc-h3' href='#6-predict-and-reconstruct-joint-objectives-for-self-supervised-language-representation-learning'>6. Predict and Reconstruct: Joint Objectives for Self-Supervised Language Representation Learning</a><a class='toc-h3' href='#7-generic-triple-latent-compression-with-gated-associative-retrieval'>7. Generic Triple-Latent Compression with Gated Associative Retrieval</a><a class='toc-h3' href='#8-peft-of-slm-for-telecommunications-customer-support-a-comparative-study-of-lora-configurations-with-energy-consumption-analysis'>8. PEFT of SLM for Telecommunications Customer Support: A Comparative Study of LoRA Configurations with Energy Consumption Analysis</a><a class='toc-h3' href='#9-the-evaluation-blind-spot-a-stereological-theory-of-benchmark-coverage-for-large-language-models'>9. The Evaluation Blind Spot: A Stereological Theory of Benchmark Coverage for Large Language Models</a><a class='toc-h3' href='#10-staged-factorial-screening-for-budget-constrained-micro-pretraining'>10. Staged Factorial Screening for Budget-Constrained Micro-Pretraining</a><a class='toc-h3' href='#11-reality-the-final-eval-lukas-petersson-and-axel-backlund-of-andon-labs'>11. Reality: The Final Eval — Lukas Petersson and Axel Backlund of Andon Labs</a><a class='toc-h3' href='#12-dreaming-better-memory-for-a-more-helpful-chatgpt'>12. Dreaming: Better memory for a more helpful ChatGPT</a><a class='toc-h3' href='#13-biodefense-in-the-intelligence-age'>13. Biodefense in the Intelligence Age</a><a class='toc-h3' href='#14-how-wasmer-used-codex-to-build-a-node-js-runtime-for-the-edge'>14. How Wasmer used Codex to build a Node.js runtime for the edge</a><a class='toc-h3' href='#15-5-ways-google-search-can-level-up-your-thrift-and-vintage-shopping'>15. 5 ways Google Search can level up your thrift and vintage shopping</a><a class='toc-h3' href='#16-how-we-used-gemini-to-build-google-i-o-2026'>16. How we used Gemini to build Google I/O 2026</a><a class='toc-h3' href='#17-eva-bench-data-2-0-3-domains-121-tools-213-scenarios'>17. EVA-Bench Data 2.0: 3 Domains, 121 Tools, 213 Scenarios</a><a class='toc-h3' href='#18-designing-the-hf-cli-as-an-agent-optimized-way-to-work-with-the-hub'>18. Designing the hf CLI as an agent-optimized way to work with the Hub</a><a class='toc-h3' href='#19-direct-preference-optimization-beyond-chatbots'>19. Direct Preference Optimization Beyond Chatbots</a><a class='toc-h3' href='#20-adding-mcp-tools-to-reachy-mini'>20. Adding MCP Tools to Reachy Mini</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-06-05-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-06-05'>RichLens Candidate Feed — 2026-06-05</h1>
+<ul>
+<li>Discovered candidates: 124</li>
+<li>Added to queue: 20</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-fault-tolerance-in-langgraph-retries-timeouts-and-error-handlers'>1. Fault Tolerance in LangGraph: Retries, Timeouts and Error Handlers</h3>
+<ul>
+<li>ID: <code>RL-800b7b91de</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/fault-tolerance-in-langgraph</li>
+<li>Score: <code>0.71</code></li>
+<li>Why: Matches topics: AI agents, coding agents, personal AI workflow</li>
+</ul>
+<h3 id='2-ai-enthusiasts-are-in-a-race-against-time-ai-skeptics-are-in-a-race-against-entropy'>2. AI enthusiasts are in a race against time, AI skeptics are in a race against entropy</h3>
+<ul>
+<li>ID: <code>RL-a3f95e297c</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/Jun/4/ai-enthusiasts-ai-skeptics/#atom-everything</li>
+<li>Score: <code>0.53</code></li>
+<li>Why: Matches topics: agentic coding, knowledge management, Obsidian knowledge management; source fatigue -0.18</li>
+</ul>
+<h3 id='3-improving-heart-focused-medical-question-answering-in-llms-via-variance-aware-rubric-rewards-with-grpo'>3. Improving Heart-Focused Medical Question Answering in LLMs via Variance-Aware Rubric Rewards with GRPO</h3>
+<ul>
+<li>ID: <code>RL-cec3264aa2</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.05174</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: inference, AI product strategy</li>
+</ul>
+<h3 id='4-pycc-id-a-package-for-hypothesis-driven-equation-discovery-with-structural-identifiability'>4. PyCC.id: A package for hypothesis-driven equation discovery with structural identifiability</h3>
+<ul>
+<li>ID: <code>RL-d29b76c4a5</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.05191</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: knowledge management, Obsidian knowledge management</li>
+</ul>
+<h3 id='5-nemotron-3-5-content-safety-customizable-multimodal-safety-for-global-enterprise-ai'>5. Nemotron 3.5 Content Safety: Customizable Multimodal Safety for Global Enterprise AI</h3>
+<ul>
+<li>ID: <code>RL-3c2e7a73ef</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/nvidia/nemotron-3-5-content-safety</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: multimodal AI</li>
+</ul>
+<h3 id='6-predict-and-reconstruct-joint-objectives-for-self-supervised-language-representation-learning'>6. Predict and Reconstruct: Joint Objectives for Self-Supervised Language Representation Learning</h3>
+<ul>
+<li>ID: <code>RL-c1e3459bd3</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.05173</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: embeddings</li>
+</ul>
+<h3 id='7-generic-triple-latent-compression-with-gated-associative-retrieval'>7. Generic Triple-Latent Compression with Gated Associative Retrieval</h3>
+<ul>
+<li>ID: <code>RL-a7e89adc00</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.05175</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: retrieval</li>
+</ul>
+<h3 id='8-peft-of-slm-for-telecommunications-customer-support-a-comparative-study-of-lora-configurations-with-energy-consumption-analysis'>8. PEFT of SLM for Telecommunications Customer Support: A Comparative Study of LoRA Configurations with Energy Consumption Analysis</h3>
+<ul>
+<li>ID: <code>RL-efd6199528</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.05176</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='9-the-evaluation-blind-spot-a-stereological-theory-of-benchmark-coverage-for-large-language-models'>9. The Evaluation Blind Spot: A Stereological Theory of Benchmark Coverage for Large Language Models</h3>
+<ul>
+<li>ID: <code>RL-e149dca2a3</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.05169</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='10-staged-factorial-screening-for-budget-constrained-micro-pretraining'>10. Staged Factorial Screening for Budget-Constrained Micro-Pretraining</h3>
+<ul>
+<li>ID: <code>RL-74f335cb75</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.05186</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: personal AI workflow</li>
+</ul>
+<h3 id='11-reality-the-final-eval-lukas-petersson-and-axel-backlund-of-andon-labs'>11. Reality: The Final Eval — Lukas Petersson and Axel Backlund of Andon Labs</h3>
+<ul>
+<li>ID: <code>RL-8ec3bd7b96</code></li>
+<li>Source: Latent Space / <code>rss</code></li>
+<li>URL: https://www.latent.space/p/andon</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: evals</li>
+</ul>
+<h3 id='12-dreaming-better-memory-for-a-more-helpful-chatgpt'>12. Dreaming: Better memory for a more helpful ChatGPT</h3>
+<ul>
+<li>ID: <code>RL-58a72a3a66</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/chatgpt-memory-dreaming</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='13-biodefense-in-the-intelligence-age'>13. Biodefense in the Intelligence Age</h3>
+<ul>
+<li>ID: <code>RL-dbb39445d0</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/biodefense-in-the-intelligence-age</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='14-how-wasmer-used-codex-to-build-a-node-js-runtime-for-the-edge'>14. How Wasmer used Codex to build a Node.js runtime for the edge</h3>
+<ul>
+<li>ID: <code>RL-8929ed18db</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/wasmer</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='15-5-ways-google-search-can-level-up-your-thrift-and-vintage-shopping'>15. 5 ways Google Search can level up your thrift and vintage shopping</h3>
+<ul>
+<li>ID: <code>RL-76912b853c</code></li>
+<li>Source: Google AI Blog / <code>rss</code></li>
+<li>URL: https://blog.google/products-and-platforms/products/search/thrifting-tips/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='16-how-we-used-gemini-to-build-google-i-o-2026'>16. How we used Gemini to build Google I/O 2026</h3>
+<ul>
+<li>ID: <code>RL-4e4360776d</code></li>
+<li>Source: Google AI Blog / <code>rss</code></li>
+<li>URL: https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='17-eva-bench-data-2-0-3-domains-121-tools-213-scenarios'>17. EVA-Bench Data 2.0: 3 Domains, 121 Tools, 213 Scenarios</h3>
+<ul>
+<li>ID: <code>RL-d9c42ca0bc</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/ServiceNow-AI/eva-bench-data</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='18-designing-the-hf-cli-as-an-agent-optimized-way-to-work-with-the-hub'>18. Designing the hf CLI as an agent-optimized way to work with the Hub</h3>
+<ul>
+<li>ID: <code>RL-431ad766ff</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/hf-cli-for-agents</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='19-direct-preference-optimization-beyond-chatbots'>19. Direct Preference Optimization Beyond Chatbots</h3>
+<ul>
+<li>ID: <code>RL-bc0be78cdc</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='20-adding-mcp-tools-to-reachy-mini'>20. Adding MCP Tools to Reachy Mini</h3>
+<ul>
+<li>ID: <code>RL-799726310b</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/adding-mcp-tools-to-reachy-mini</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul></main></div>
+</body></html>
