@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-06-10</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-06-10 14:23</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-06-10'>RichLens Candidate Feed — 2026-06-10</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-claude-fable-5-is-generally-available-for-github-copilot'>1. Claude Fable 5 is generally available for GitHub Copilot</a><a class='toc-h3' href='#2-if-claude-fable-stops-helping-you-you-ll-never-know'>2. If Claude Fable stops helping you, you&#x27;ll never know</a><a class='toc-h3' href='#3-initial-impressions-of-claude-fable-5'>3. Initial impressions of Claude Fable 5</a><a class='toc-h3' href='#4-setting-a-custom-price-for-a-model-in-agentsview'>4. Setting a custom price for a model in AgentsView</a><a class='toc-h3' href='#5-deployment-time-memorization-in-foundation-model-agents'>5. Deployment-Time Memorization in Foundation-Model Agents</a><a class='toc-h3' href='#6-delivering-lifecycle-control-for-ai-infrastructure-at-scale-with-nvidia-dgx-spark-enterprise-manageability'>6. Delivering Lifecycle Control for AI Infrastructure at Scale with NVIDIA DGX Spark Enterprise Manageability</a><a class='toc-h3' href='#7-accelerating-federated-learning-research-with-ai-agents-and-nvidia-flare-auto-fl'>7. Accelerating Federated Learning Research with AI Agents and NVIDIA FLARE Auto-FL</a><a class='toc-h3' href='#8-can-voice-agents-handle-bilingual-customers-benchmarking-frontier-asr-on-code-switched-speech'>8. Can Voice Agents Handle Bilingual Customers? Benchmarking Frontier ASR on Code-Switched Speech</a><a class='toc-h3' href='#9-from-one-off-prompts-to-workflows-how-to-use-custom-agents-in-github-copilot-cli'>9. From one-off prompts to workflows: How to use custom agents in GitHub Copilot CLI</a><a class='toc-h3' href='#10-business-world-model'>10. Business World Model</a><a class='toc-h3' href='#11-from-senses-to-decisions-the-information-flow-of-auditory-and-visual-perception-in-multimodal-llms'>11. From Senses to Decisions: The Information Flow of Auditory and Visual Perception in Multimodal LLMs</a><a class='toc-h3' href='#12-how-engineers-at-nextdoor-use-codex-to-build-without-limits'>12. How engineers at Nextdoor use Codex to build without limits</a><a class='toc-h3' href='#13-introducing-gemma-4-12b-a-unified-encoder-free-multimodal-model'>13. Introducing Gemma 4 12B: a unified, encoder-free multimodal model</a><a class='toc-h3' href='#14-model-quantization-turn-fp8-checkpoints-into-high-performance-inference-engines-with-nvidia-tensorrt'>14. Model Quantization: Turn FP8 Checkpoints into High-Performance Inference Engines with NVIDIA TensorRT</a><a class='toc-h3' href='#15-the-open-source-community-is-backing-openenv-for-agentic-rl'>15. The Open Source Community is backing OpenEnv for Agentic RL</a><a class='toc-h3' href='#16-lua-ex-sandboxed-lua-5-3-on-the-beam-built-for-ai-agents-lua-ex'>16. Lua.ex: Sandboxed Lua 5.3 on the Beam, Built for AI Agents · Lua.ex</a><a class='toc-h3' href='#17-predictive-assistance-and-the-temporal-dynamics-of-exploratory-compression'>17. Predictive Assistance and the Temporal Dynamics of Exploratory Compression</a><a class='toc-h3' href='#18-synib-informational-bottleneck-for-maximizing-synergy-in-multimodal-learning'>18. SynIB: Informational Bottleneck for Maximizing Synergy in Multimodal Learning</a><a class='toc-h3' href='#19-mitigating-manifold-departure-uncertainty-aware-subspace-rectification-for-trustworthy-mllm-decoding'>19. Mitigating Manifold Departure: Uncertainty-Aware Subspace Rectification for Trustworthy MLLM Decoding</a><a class='toc-h3' href='#20-from-data-to-decisions-how-lseg-is-scaling-trusted-ai'>20. From data to decisions: how LSEG is scaling trusted AI</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-06-10-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-06-10'>RichLens Candidate Feed — 2026-06-10</h1>
+<ul>
+<li>Discovered candidates: 115</li>
+<li>Added to queue: 20</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-claude-fable-5-is-generally-available-for-github-copilot'>1. Claude Fable 5 is generally available for GitHub Copilot</h3>
+<ul>
+<li>ID: <code>RL-bac512f09e</code></li>
+<li>Source: GitHub Changelog / <code>rss</code></li>
+<li>URL: https://github.blog/changelog/2026-06-09-claude-fable-5-is-generally-available-for-github-copilot</li>
+<li>Score: <code>0.85</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents, knowledge management</li>
+</ul>
+<h3 id='2-if-claude-fable-stops-helping-you-you-ll-never-know'>2. If Claude Fable stops helping you, you'll never know</h3>
+<ul>
+<li>ID: <code>RL-06c62bed53</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/Jun/10/if-claude-fable-stops-helping-you/#atom-everything</li>
+<li>Score: <code>0.77</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents, AI infrastructure; source fatigue -0.18</li>
+</ul>
+<h3 id='3-initial-impressions-of-claude-fable-5'>3. Initial impressions of Claude Fable 5</h3>
+<ul>
+<li>ID: <code>RL-ff0a8f0275</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/Jun/9/claude-fable-5/#atom-everything</li>
+<li>Score: <code>0.77</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='4-setting-a-custom-price-for-a-model-in-agentsview'>4. Setting a custom price for a model in AgentsView</h3>
+<ul>
+<li>ID: <code>RL-000f1726d4</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/Jun/9/agentsview-custom-model-price/#atom-everything</li>
+<li>Score: <code>0.65</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='5-deployment-time-memorization-in-foundation-model-agents'>5. Deployment-Time Memorization in Foundation-Model Agents</h3>
+<ul>
+<li>ID: <code>RL-2bac3f878c</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.10062</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, coding agents, retrieval</li>
+</ul>
+<h3 id='6-delivering-lifecycle-control-for-ai-infrastructure-at-scale-with-nvidia-dgx-spark-enterprise-manageability'>6. Delivering Lifecycle Control for AI Infrastructure at Scale with NVIDIA DGX Spark Enterprise Manageability</h3>
+<ul>
+<li>ID: <code>RL-afc02b5a9d</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/delivering-lifecycle-control-for-ai-infrastructure-at-scale-with-nvidia-dgx-spark-enterprise-manageability/</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI infrastructure, investment AI infrastructure</li>
+</ul>
+<h3 id='7-accelerating-federated-learning-research-with-ai-agents-and-nvidia-flare-auto-fl'>7. Accelerating Federated Learning Research with AI Agents and NVIDIA FLARE Auto-FL</h3>
+<ul>
+<li>ID: <code>RL-56307b1afc</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/accelerating-federated-learning-research-with-ai-agents-and-nvidia-flare-auto-fl/</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='8-can-voice-agents-handle-bilingual-customers-benchmarking-frontier-asr-on-code-switched-speech'>8. Can Voice Agents Handle Bilingual Customers? Benchmarking Frontier ASR on Code-Switched Speech</h3>
+<ul>
+<li>ID: <code>RL-7a24901e21</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/ServiceNow-AI/code-switching</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='9-from-one-off-prompts-to-workflows-how-to-use-custom-agents-in-github-copilot-cli'>9. From one-off prompts to workflows: How to use custom agents in GitHub Copilot CLI</h3>
+<ul>
+<li>ID: <code>RL-35bb172e88</code></li>
+<li>Source: GitHub AI and ML Blog / <code>rss</code></li>
+<li>URL: https://github.blog/ai-and-ml/github-copilot/from-one-off-prompts-to-workflows-how-to-use-custom-agents-in-github-copilot-cli/</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='10-business-world-model'>10. Business World Model</h3>
+<ul>
+<li>ID: <code>RL-1e1c0a8f29</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.10044</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='11-from-senses-to-decisions-the-information-flow-of-auditory-and-visual-perception-in-multimodal-llms'>11. From Senses to Decisions: The Information Flow of Auditory and Visual Perception in Multimodal LLMs</h3>
+<ul>
+<li>ID: <code>RL-ed5f470aa1</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.10147</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: inference, multimodal AI</li>
+</ul>
+<h3 id='12-how-engineers-at-nextdoor-use-codex-to-build-without-limits'>12. How engineers at Nextdoor use Codex to build without limits</h3>
+<ul>
+<li>ID: <code>RL-d484de5576</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/nextdoor</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: AI product strategy</li>
+</ul>
+<h3 id='13-introducing-gemma-4-12b-a-unified-encoder-free-multimodal-model'>13. Introducing Gemma 4 12B: a unified, encoder-free multimodal model</h3>
+<ul>
+<li>ID: <code>RL-9be096effc</code></li>
+<li>Source: Google DeepMind Blog / <code>rss</code></li>
+<li>URL: https://deepmind.google/blog/introducing-gemma-4-12b-a-unified-encoder-free-multimodal-model/</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: multimodal AI</li>
+</ul>
+<h3 id='14-model-quantization-turn-fp8-checkpoints-into-high-performance-inference-engines-with-nvidia-tensorrt'>14. Model Quantization: Turn FP8 Checkpoints into High-Performance Inference Engines with NVIDIA TensorRT</h3>
+<ul>
+<li>ID: <code>RL-5d3581a1b2</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/model-quantization-turn-fp8-checkpoints-into-high-performance-inference-engines-with-nvidia-tensorrt/</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='15-the-open-source-community-is-backing-openenv-for-agentic-rl'>15. The Open Source Community is backing OpenEnv for Agentic RL</h3>
+<ul>
+<li>ID: <code>RL-fbaf22fcf6</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/openenv-agentic-rl</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: agentic coding</li>
+</ul>
+<h3 id='16-lua-ex-sandboxed-lua-5-3-on-the-beam-built-for-ai-agents-lua-ex'>16. Lua.ex: Sandboxed Lua 5.3 on the Beam, Built for AI Agents · Lua.ex</h3>
+<ul>
+<li>ID: <code>RL-2aae7512c8</code></li>
+<li>Source: Hacker News AI Search / <code>rss</code></li>
+<li>URL: https://deflua.com/</li>
+<li>Score: <code>0.39</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='17-predictive-assistance-and-the-temporal-dynamics-of-exploratory-compression'>17. Predictive Assistance and the Temporal Dynamics of Exploratory Compression</h3>
+<ul>
+<li>ID: <code>RL-b15643cd04</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.10094</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: AI product strategy</li>
+</ul>
+<h3 id='18-synib-informational-bottleneck-for-maximizing-synergy-in-multimodal-learning'>18. SynIB: Informational Bottleneck for Maximizing Synergy in Multimodal Learning</h3>
+<ul>
+<li>ID: <code>RL-7cbb9ea847</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.09853</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: multimodal AI</li>
+</ul>
+<h3 id='19-mitigating-manifold-departure-uncertainty-aware-subspace-rectification-for-trustworthy-mllm-decoding'>19. Mitigating Manifold Departure: Uncertainty-Aware Subspace Rectification for Trustworthy MLLM Decoding</h3>
+<ul>
+<li>ID: <code>RL-1b59f697e2</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.09859</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: multimodal AI</li>
+</ul>
+<h3 id='20-from-data-to-decisions-how-lseg-is-scaling-trusted-ai'>20. From data to decisions: how LSEG is scaling trusted AI</h3>
+<ul>
+<li>ID: <code>RL-2be94cf799</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/lseg</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul></main></div>
+</body></html>
