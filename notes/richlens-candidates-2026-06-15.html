@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-06-15</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-06-15 13:28</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-06-15'>RichLens Candidate Feed — 2026-06-15</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-benchmarking-web-agent-safety-under-e-commerce-deceptive-interfaces'>1. Benchmarking Web Agent Safety under E-commerce Deceptive Interfaces</a><a class='toc-h3' href='#2-the-culture-funnel-you-can-t-align-what-isn-t-in-the-data'>2. The Culture Funnel: You Can&#x27;t Align What isn&#x27;t in the Data</a><a class='toc-h3' href='#3-can-editing-1-neuron-fix-repetition-loops-in-llms'>3. Can Editing 1 Neuron Fix Repetition Loops in LLMs?</a><a class='toc-h3' href='#4-qias-2026-overview-of-the-shared-task-on-islamic-inheritance-reasoning'>4. QIAS 2026: Overview of the Shared Task on Islamic Inheritance Reasoning</a><a class='toc-h3' href='#5-import-ai-461-alignment-is-not-on-track-frontiercode-and-synthetic-research-interns'>5. Import AI 461: &quot;Alignment is not on track&quot;; FrontierCode; and synthetic research interns</a><a class='toc-h3' href='#6-why-ai-hasn-t-replaced-software-engineers-and-won-t'>6. Why AI hasn’t replaced software engineers, and won’t</a><a class='toc-h3' href='#7-the-coin-flip-judge-reliability-and-bias-in-llm-as-a-judge-evaluation'>7. The Coin Flip Judge? Reliability and Bias in LLM-as-a-Judge Evaluation</a><a class='toc-h3' href='#8-which-models-perform-better-in-inheritance-reasoning'>8. Which Models Perform Better in Inheritance Reasoning?</a><a class='toc-h3' href='#9-efficient-on-device-diffusion-llm-inference-with-mobile-npu'>9. Efficient On-Device Diffusion LLM Inference with Mobile NPU</a><a class='toc-h3' href='#10-a-fully-gpu-based-workflow-for-building-physics-emulators-of-hypersonic-flows'>10. A fully GPU-based workflow for building physics emulators of hypersonic flows</a><a class='toc-h3' href='#11-introducing-the-openai-partner-network'>11. Introducing the OpenAI Partner Network</a><a class='toc-h3' href='#12-pretrained-to-imagine-fine-tuned-to-act-the-rise-of-world-action-models'>12. Pretrained to Imagine, Fine-Tuned to Act: The Rise of World-Action Models</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-06-15-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-06-15'>RichLens Candidate Feed — 2026-06-15</h1>
+<ul>
+<li>Discovered candidates: 110</li>
+<li>Added to queue: 12</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-benchmarking-web-agent-safety-under-e-commerce-deceptive-interfaces'>1. Benchmarking Web Agent Safety under E-commerce Deceptive Interfaces</h3>
+<ul>
+<li>ID: <code>RL-49635cb5e9</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.13686</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: AI agents, coding agents, LLM evaluation, multimodal AI</li>
+</ul>
+<h3 id='2-the-culture-funnel-you-can-t-align-what-isn-t-in-the-data'>2. The Culture Funnel: You Can't Align What isn't in the Data</h3>
+<ul>
+<li>ID: <code>RL-1e1e879c30</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.13808</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: knowledge management, inference, Obsidian knowledge management</li>
+</ul>
+<h3 id='3-can-editing-1-neuron-fix-repetition-loops-in-llms'>3. Can Editing 1 Neuron Fix Repetition Loops in LLMs?</h3>
+<ul>
+<li>ID: <code>RL-90a1b6ec00</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.13705</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: knowledge management, inference, Obsidian knowledge management</li>
+</ul>
+<h3 id='4-qias-2026-overview-of-the-shared-task-on-islamic-inheritance-reasoning'>4. QIAS 2026: Overview of the Shared Task on Islamic Inheritance Reasoning</h3>
+<ul>
+<li>ID: <code>RL-b841dbb0b7</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.13756</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: LLM evaluation, retrieval</li>
+</ul>
+<h3 id='5-import-ai-461-alignment-is-not-on-track-frontiercode-and-synthetic-research-interns'>5. Import AI 461: "Alignment is not on track"; FrontierCode; and synthetic research interns</h3>
+<ul>
+<li>ID: <code>RL-048eb6ac49</code></li>
+<li>Source: Import AI / <code>rss</code></li>
+<li>URL: https://importai.substack.com/p/import-ai-461-alignment-is-not-on</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='6-why-ai-hasn-t-replaced-software-engineers-and-won-t'>6. Why AI hasn’t replaced software engineers, and won’t</h3>
+<ul>
+<li>ID: <code>RL-9136fde9b3</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/Jun/14/why-ai-hasnt-replaced-software-engineers/#atom-everything</li>
+<li>Score: <code>0.41</code></li>
+<li>Why: Matches topics: AI agents, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='7-the-coin-flip-judge-reliability-and-bias-in-llm-as-a-judge-evaluation'>7. The Coin Flip Judge? Reliability and Bias in LLM-as-a-Judge Evaluation</h3>
+<ul>
+<li>ID: <code>RL-e6eeff8be2</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.13685</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='8-which-models-perform-better-in-inheritance-reasoning'>8. Which Models Perform Better in Inheritance Reasoning?</h3>
+<ul>
+<li>ID: <code>RL-c2c52c18f5</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.13751</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: AI product strategy</li>
+</ul>
+<h3 id='9-efficient-on-device-diffusion-llm-inference-with-mobile-npu'>9. Efficient On-Device Diffusion LLM Inference with Mobile NPU</h3>
+<ul>
+<li>ID: <code>RL-56f6a622da</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.13740</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='10-a-fully-gpu-based-workflow-for-building-physics-emulators-of-hypersonic-flows'>10. A fully GPU-based workflow for building physics emulators of hypersonic flows</h3>
+<ul>
+<li>ID: <code>RL-68034943b3</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.13742</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: personal AI workflow</li>
+</ul>
+<h3 id='11-introducing-the-openai-partner-network'>11. Introducing the OpenAI Partner Network</h3>
+<ul>
+<li>ID: <code>RL-888bd1de6f</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/introducing-openai-partner-network</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='12-pretrained-to-imagine-fine-tuned-to-act-the-rise-of-world-action-models'>12. Pretrained to Imagine, Fine-Tuned to Act: The Rise of World-Action Models</h3>
+<ul>
+<li>ID: <code>RL-906fad4eba</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/pretrained-to-imagine-fine-tuned-to-act-the-rise-of-world-action-models/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul></main></div>
+</body></html>
