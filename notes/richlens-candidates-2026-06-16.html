@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-06-16</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-06-16 10:37</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-06-16'>RichLens Candidate Feed — 2026-06-16</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-dr-dci-scaling-direct-corpus-interaction-via-dynamic-workspace-expansion'>1. Dr-DCI: Scaling Direct Corpus Interaction via Dynamic Workspace Expansion</a><a class='toc-h3' href='#2-how-langchain-made-coding-agent-spend-predictable'>2. How LangChain Made Coding Agent Spend Predictable</a><a class='toc-h3' href='#3-show-hn-arxiv-scholar-an-open-source-rag-system-for-ai-research-papers'>3. Show HN: ArXiv Scholar – An Open-Source RAG System for AI Research Papers</a><a class='toc-h3' href='#4-prologmcp-a-standardized-prolog-tool-interface-for-llm-agents'>4. PrologMCP: A Standardized Prolog Tool Interface for LLM Agents</a><a class='toc-h3' href='#5-phoneharness-harnessing-phone-use-agents-through-mixed-gui-cli-and-tool-actions'>5. PhoneHarness: Harnessing Phone-Use Agents through Mixed GUI, CLI, and Tool Actions</a><a class='toc-h3' href='#6-grasp-gradient-aligned-sequential-parameter-transfer-for-memory-efficient-multi-source-learning'>6. GRASP: Gradient-Aligned Sequential Parameter Transfer for Memory-Efficient Multi-Source Learning</a><a class='toc-h3' href='#7-the-fable-5-export-controls-harm-us-cyber-defense'>7. The Fable 5 Export Controls Harm US Cyber Defense</a><a class='toc-h3' href='#8-trust-between-ai-agents-measuring-formation-breakage-and-recovery-with-implications-for-governing-multi-agent-systems'>8. Trust Between AI Agents: Measuring Formation, Breakage, and Recovery, with Implications for Governing Multi-Agent Systems</a><a class='toc-h3' href='#9-we-re-strengthening-our-presence-in-alabama-through-new-investments-and-community-support'>9. We’re strengthening our presence in Alabama through new investments and community support.</a><a class='toc-h3' href='#10-build-and-deploy-a-rag-app-with-pinecone-serverless'>10. Build and deploy a RAG app with Pinecone Serverless</a><a class='toc-h3' href='#11-qpilots-efficient-test-time-q-steering-for-flow-policies'>11. QPILOTS: Efficient Test-Time Q-Steering for Flow Policies</a><a class='toc-h3' href='#12-fine-tuning-biological-foundation-models-with-lora-using-nvidia-bionemo-recipes'>12. Fine-Tuning Biological Foundation Models with LoRA Using NVIDIA BioNeMo Recipes</a><a class='toc-h3' href='#13-boosting-moe-training-throughput-with-advanced-fusion-kernels'>13. Boosting MoE Training Throughput with Advanced Fusion Kernels</a><a class='toc-h3' href='#14-building-a-100x-cheaper-trace-judge-with-fireworks'>14. Building a 100x Cheaper Trace Judge with Fireworks</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-06-16-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-06-16'>RichLens Candidate Feed — 2026-06-16</h1>
+<ul>
+<li>Discovered candidates: 125</li>
+<li>Added to queue: 14</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-dr-dci-scaling-direct-corpus-interaction-via-dynamic-workspace-expansion'>1. Dr-DCI: Scaling Direct Corpus Interaction via Dynamic Workspace Expansion</h3>
+<ul>
+<li>ID: <code>RL-5313cfc573</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.14885</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, coding agents, retrieval</li>
+</ul>
+<h3 id='2-how-langchain-made-coding-agent-spend-predictable'>2. How LangChain Made Coding Agent Spend Predictable</h3>
+<ul>
+<li>ID: <code>RL-3156db4a62</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/how-we-made-coding-agent-spend-predictable</li>
+<li>Score: <code>0.71</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='3-show-hn-arxiv-scholar-an-open-source-rag-system-for-ai-research-papers'>3. Show HN: ArXiv Scholar – An Open-Source RAG System for AI Research Papers</h3>
+<ul>
+<li>ID: <code>RL-0a716b79c8</code></li>
+<li>Source: Hacker News AI Search / <code>rss</code></li>
+<li>URL: https://github.com/Ethereal-Agents/arxiv-scholar</li>
+<li>Score: <code>0.63</code></li>
+<li>Why: Matches topics: AI agents, coding agents, RAG, retrieval</li>
+</ul>
+<h3 id='4-prologmcp-a-standardized-prolog-tool-interface-for-llm-agents'>4. PrologMCP: A Standardized Prolog Tool Interface for LLM Agents</h3>
+<ul>
+<li>ID: <code>RL-add346ec4e</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.14935</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, coding agents, inference</li>
+</ul>
+<h3 id='5-phoneharness-harnessing-phone-use-agents-through-mixed-gui-cli-and-tool-actions'>5. PhoneHarness: Harnessing Phone-Use Agents through Mixed GUI, CLI, and Tool Actions</h3>
+<ul>
+<li>ID: <code>RL-6196b7d23d</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.14832</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, coding agents, LLM evaluation</li>
+</ul>
+<h3 id='6-grasp-gradient-aligned-sequential-parameter-transfer-for-memory-efficient-multi-source-learning'>6. GRASP: Gradient-Aligned Sequential Parameter Transfer for Memory-Efficient Multi-Source Learning</h3>
+<ul>
+<li>ID: <code>RL-10aca70109</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.14900</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: knowledge management, inference, Obsidian knowledge management</li>
+</ul>
+<h3 id='7-the-fable-5-export-controls-harm-us-cyber-defense'>7. The Fable 5 Export Controls Harm US Cyber Defense</h3>
+<ul>
+<li>ID: <code>RL-03b53f7c47</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/Jun/16/fable-5-export-controls/#atom-everything</li>
+<li>Score: <code>0.53</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='8-trust-between-ai-agents-measuring-formation-breakage-and-recovery-with-implications-for-governing-multi-agent-systems'>8. Trust Between AI Agents: Measuring Formation, Breakage, and Recovery, with Implications for Governing Multi-Agent Systems</h3>
+<ul>
+<li>ID: <code>RL-18d51e81a9</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.14923</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='9-we-re-strengthening-our-presence-in-alabama-through-new-investments-and-community-support'>9. We’re strengthening our presence in Alabama through new investments and community support.</h3>
+<ul>
+<li>ID: <code>RL-f06c5186a4</code></li>
+<li>Source: Google AI Blog / <code>rss</code></li>
+<li>URL: https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: investment AI infrastructure</li>
+</ul>
+<h3 id='10-build-and-deploy-a-rag-app-with-pinecone-serverless'>10. Build and deploy a RAG app with Pinecone Serverless</h3>
+<ul>
+<li>ID: <code>RL-b4b54ba0bd</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/pinecone-serverless</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: RAG</li>
+</ul>
+<h3 id='11-qpilots-efficient-test-time-q-steering-for-flow-policies'>11. QPILOTS: Efficient Test-Time Q-Steering for Flow Policies</h3>
+<ul>
+<li>ID: <code>RL-ad6a4f4f68</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.14801</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='12-fine-tuning-biological-foundation-models-with-lora-using-nvidia-bionemo-recipes'>12. Fine-Tuning Biological Foundation Models with LoRA Using NVIDIA BioNeMo Recipes</h3>
+<ul>
+<li>ID: <code>RL-dfbcfd405c</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/fine-tuning-biological-foundation-models-with-lora-using-nvidia-bionemo-recipes/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='13-boosting-moe-training-throughput-with-advanced-fusion-kernels'>13. Boosting MoE Training Throughput with Advanced Fusion Kernels</h3>
+<ul>
+<li>ID: <code>RL-8f1fb804d3</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/boosting-moe-training-throughput-with-advanced-fusion-kernels/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='14-building-a-100x-cheaper-trace-judge-with-fireworks'>14. Building a 100x Cheaper Trace Judge with Fireworks</h3>
+<ul>
+<li>ID: <code>RL-4b39249e0b</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/building-a-100x-cheaper-trace-judge-with-fireworks</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul></main></div>
+</body></html>
