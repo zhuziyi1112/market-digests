@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-06-17</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-06-17 12:01</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-06-17'>RichLens Candidate Feed — 2026-06-17</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-show-hn-ferrix-ai-agentic-product-management-platform'>1. Show HN: Ferrix AI – Agentic Product Management Platform</a><a class='toc-h3' href='#2-building-ai-agents-for-ar-glasses-and-xr-devices-with-nvidia-xr-ai'>2. Building AI Agents for AR Glasses and XR Devices with NVIDIA XR AI</a><a class='toc-h3' href='#3-sharing-langsmith-benchmarks'>3. Sharing LangSmith Benchmarks</a><a class='toc-h3' href='#4-when-rules-learn-a-self-evolving-agent-for-legal-case-retrieval'>4. When Rules Learn: A Self-Evolving Agent for Legal Case Retrieval</a><a class='toc-h3' href='#5-introducing-open-swe-an-open-source-asynchronous-coding-agent'>5. Introducing Open SWE: An Open-Source Asynchronous Coding Agent</a><a class='toc-h3' href='#6-quoting-georgi-gerganov'>6. Quoting Georgi Gerganov</a><a class='toc-h3' href='#7-correct-when-paired-wrong-when-split-decoupling-and-editing-modality-specific-neurons-in-mllms'>7. Correct When Paired, Wrong When Split: Decoupling and Editing Modality-Specific Neurons in MLLMs</a><a class='toc-h3' href='#8-ainews-glm-5-2-the-top-frontend-coding-model-in-the-world-indexshare-for-speculative-decoding'>8. [AINews] GLM-5.2: the top Frontend Coding model in the world, IndexShare for Speculative Decoding</a><a class='toc-h3' href='#9-from-the-hugging-face-hub-to-robot-hardware-with-strands-agents-and-lerobot'>9. From the Hugging Face Hub to robot hardware with Strands Agents and LeRobot</a><a class='toc-h3' href='#10-monte-carlo-building-data-ai-observability-agents-with-langgraph-and-langsmith'>10. Monte Carlo: Building Data + AI Observability Agents with LangGraph and LangSmith</a><a class='toc-h3' href='#11-langsmith-redesigned-product-homepage-and-resource-tags-for-better-organization'>11. LangSmith: Redesigned product homepage and Resource Tags for better organization</a><a class='toc-h3' href='#12-beyond-parallel-sampling-diverse-query-initialization-for-agentic-search'>12. Beyond Parallel Sampling: Diverse Query Initialization for Agentic Search</a><a class='toc-h3' href='#13-nothing-from-something-can-a-language-model-discover-0'>13. Nothing from Something: Can a Language Model Discover 0?</a><a class='toc-h3' href='#14-memslides-a-hierarchical-memory-driven-agent-framework-for-personalized-slide-generation-with-multi-turn-local-revision'>14. MemSlides: A Hierarchical Memory Driven Agent Framework for Personalized Slide Generation with Multi-turn Local Revision</a><a class='toc-h3' href='#15-repselect-robust-llm-unlearning-via-representation-selectivity'>15. RepSelect: Robust LLM Unlearning via Representation Selectivity</a><a class='toc-h3' href='#16-from-parasocial-scripts-to-dyadic-persistence-in-autonomous-ai-agent-communities'>16. From Parasocial Scripts to Dyadic Persistence in Autonomous AI-Agent Communities</a><a class='toc-h3' href='#17-predicting-model-behavior-before-release-by-simulating-deployment'>17. Predicting model behavior before release by simulating deployment</a><a class='toc-h3' href='#18-how-factory-used-langsmith-to-automate-their-feedback-loop-and-improve-iteration-speed-by-2x'>18. How Factory used LangSmith to automate their feedback loop and improve iteration speed by 2x</a><a class='toc-h3' href='#19-show-hn-mira-open-source-and-self-hosted-ai-code-reviewer'>19. Show HN: Mira – Open-source and self-hosted AI code reviewer</a><a class='toc-h3' href='#20-unlocking-the-power-of-the-tpu-stack-introducing-our-new-developer-hub'>20. Unlocking the Power of the TPU Stack: Introducing our new Developer Hub</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-06-17-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-06-17'>RichLens Candidate Feed — 2026-06-17</h1>
+<ul>
+<li>Discovered candidates: 120</li>
+<li>Added to queue: 20</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-show-hn-ferrix-ai-agentic-product-management-platform'>1. Show HN: Ferrix AI – Agentic Product Management Platform</h3>
+<ul>
+<li>ID: <code>RL-20970c5040</code></li>
+<li>Source: Hacker News AI Search / <code>rss</code></li>
+<li>URL: https://ferrix.ai/</li>
+<li>Score: <code>0.95</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, coding agents, knowledge management</li>
+</ul>
+<h3 id='2-building-ai-agents-for-ar-glasses-and-xr-devices-with-nvidia-xr-ai'>2. Building AI Agents for AR Glasses and XR Devices with NVIDIA XR AI</h3>
+<ul>
+<li>ID: <code>RL-93852572ca</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/building-ai-agents-for-ar-glasses-and-xr-devices-with-nvidia-xr-ai/</li>
+<li>Score: <code>0.83</code></li>
+<li>Why: Matches topics: AI agents, coding agents, AI infrastructure, investment AI infrastructure</li>
+</ul>
+<h3 id='3-sharing-langsmith-benchmarks'>3. Sharing LangSmith Benchmarks</h3>
+<ul>
+<li>ID: <code>RL-127def8a78</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/public-langsmith-benchmarks</li>
+<li>Score: <code>0.83</code></li>
+<li>Why: Matches topics: AI agents, coding agents, LLM evaluation, RAG</li>
+</ul>
+<h3 id='4-when-rules-learn-a-self-evolving-agent-for-legal-case-retrieval'>4. When Rules Learn: A Self-Evolving Agent for Legal Case Retrieval</h3>
+<ul>
+<li>ID: <code>RL-631070f66b</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.17220</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: knowledge management, LLM evaluation, retrieval, Obsidian knowledge management</li>
+</ul>
+<h3 id='5-introducing-open-swe-an-open-source-asynchronous-coding-agent'>5. Introducing Open SWE: An Open-Source Asynchronous Coding Agent</h3>
+<ul>
+<li>ID: <code>RL-eb76b5bca8</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/introducing-open-swe-an-open-source-asynchronous-coding-agent</li>
+<li>Score: <code>0.71</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='6-quoting-georgi-gerganov'>6. Quoting Georgi Gerganov</h3>
+<ul>
+<li>ID: <code>RL-4f8de568a5</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/Jun/16/georgi-gerganov/#atom-everything</li>
+<li>Score: <code>0.65</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='7-correct-when-paired-wrong-when-split-decoupling-and-editing-modality-specific-neurons-in-mllms'>7. Correct When Paired, Wrong When Split: Decoupling and Editing Modality-Specific Neurons in MLLMs</h3>
+<ul>
+<li>ID: <code>RL-a47ed68247</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.17057</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: knowledge management, multimodal AI, Obsidian knowledge management</li>
+</ul>
+<h3 id='8-ainews-glm-5-2-the-top-frontend-coding-model-in-the-world-indexshare-for-speculative-decoding'>8. [AINews] GLM-5.2: the top Frontend Coding model in the world, IndexShare for Speculative Decoding</h3>
+<ul>
+<li>ID: <code>RL-b1ce34688b</code></li>
+<li>Source: Latent Space / <code>rss</code></li>
+<li>URL: https://www.latent.space/p/ainews-glm-52-the-top-frontend-coding</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='9-from-the-hugging-face-hub-to-robot-hardware-with-strands-agents-and-lerobot'>9. From the Hugging Face Hub to robot hardware with Strands Agents and LeRobot</h3>
+<ul>
+<li>ID: <code>RL-c7b6e0d15e</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/amazon/strands-lerobot-hub-to-hardware</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='10-monte-carlo-building-data-ai-observability-agents-with-langgraph-and-langsmith'>10. Monte Carlo: Building Data + AI Observability Agents with LangGraph and LangSmith</h3>
+<ul>
+<li>ID: <code>RL-ec6ea76704</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/customers-monte-carlo</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='11-langsmith-redesigned-product-homepage-and-resource-tags-for-better-organization'>11. LangSmith: Redesigned product homepage and Resource Tags for better organization</h3>
+<ul>
+<li>ID: <code>RL-ec051086ba</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/langsmith-homepage-redesign-and-resource-tags</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: LLM evaluation, AI product strategy</li>
+</ul>
+<h3 id='12-beyond-parallel-sampling-diverse-query-initialization-for-agentic-search'>12. Beyond Parallel Sampling: Diverse Query Initialization for Agentic Search</h3>
+<ul>
+<li>ID: <code>RL-4bf86145c7</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.17209</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: agentic coding, retrieval</li>
+</ul>
+<h3 id='13-nothing-from-something-can-a-language-model-discover-0'>13. Nothing from Something: Can a Language Model Discover 0?</h3>
+<ul>
+<li>ID: <code>RL-0bc35f1f86</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.17289</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: knowledge management, Obsidian knowledge management</li>
+</ul>
+<h3 id='14-memslides-a-hierarchical-memory-driven-agent-framework-for-personalized-slide-generation-with-multi-turn-local-revision'>14. MemSlides: A Hierarchical Memory Driven Agent Framework for Personalized Slide Generation with Multi-turn Local Revision</h3>
+<ul>
+<li>ID: <code>RL-f58002d143</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.17162</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='15-repselect-robust-llm-unlearning-via-representation-selectivity'>15. RepSelect: Robust LLM Unlearning via Representation Selectivity</h3>
+<ul>
+<li>ID: <code>RL-7c25689891</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.17168</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: knowledge management, Obsidian knowledge management</li>
+</ul>
+<h3 id='16-from-parasocial-scripts-to-dyadic-persistence-in-autonomous-ai-agent-communities'>16. From Parasocial Scripts to Dyadic Persistence in Autonomous AI-Agent Communities</h3>
+<ul>
+<li>ID: <code>RL-da51dc6de3</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.17174</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='17-predicting-model-behavior-before-release-by-simulating-deployment'>17. Predicting model behavior before release by simulating deployment</h3>
+<ul>
+<li>ID: <code>RL-b387731f4f</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/deployment-simulation</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='18-how-factory-used-langsmith-to-automate-their-feedback-loop-and-improve-iteration-speed-by-2x'>18. How Factory used LangSmith to automate their feedback loop and improve iteration speed by 2x</h3>
+<ul>
+<li>ID: <code>RL-63bf7ee9aa</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/customers-factory</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: AI product strategy</li>
+</ul>
+<h3 id='19-show-hn-mira-open-source-and-self-hosted-ai-code-reviewer'>19. Show HN: Mira – Open-source and self-hosted AI code reviewer</h3>
+<ul>
+<li>ID: <code>RL-cb01f999e0</code></li>
+<li>Source: Hacker News AI Search / <code>rss</code></li>
+<li>URL: https://github.com/miracodeai/mira</li>
+<li>Score: <code>0.39</code></li>
+<li>Why: Matches topics: AI infrastructure, investment AI infrastructure</li>
+</ul>
+<h3 id='20-unlocking-the-power-of-the-tpu-stack-introducing-our-new-developer-hub'>20. Unlocking the Power of the TPU Stack: Introducing our new Developer Hub</h3>
+<ul>
+<li>ID: <code>RL-6567ff6917</code></li>
+<li>Source: Google Developers Blog / <code>rss</code></li>
+<li>URL: https://developers.googleblog.com/unlocking-the-power-of-the-tpu-stack-introducing-our-new-developer-hub/</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: inference</li>
+</ul></main></div>
+</body></html>
