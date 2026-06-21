@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-06-21</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-06-21 18:53</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-06-21'>RichLens Candidate Feed — 2026-06-21</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-compass-guardrails-and-a-hard-budget-cap-for-ai-coding-agents'>1. Compass – guardrails and a hard budget cap for AI coding agents</a><a class='toc-h3' href='#2-show-hn-egc-mcp-server-that-gives-ai-coding-tools-memory-across-sessions'>2. Show HN: EGC - MCP server that gives AI coding tools memory across sessions</a><a class='toc-h3' href='#3-temporary-cloudflare-accounts-for-ai-agents'>3. Temporary Cloudflare Accounts for AI agents</a><a class='toc-h3' href='#4-ainews-midjourney-medical-scan-your-organs-like-you-step-on-a-scale'>4. [AINews] Midjourney Medical: scan your organs like you step on a scale</a><a class='toc-h3' href='#5-new-usage-analytics-and-updated-spend-controls-for-enterprises'>5. New usage analytics and updated spend controls for enterprises</a><a class='toc-h3' href='#6-improving-health-intelligence-in-chatgpt'>6. Improving health intelligence in ChatGPT</a><a class='toc-h3' href='#7-using-ai-to-help-physicians-diagnose-rare-genetic-diseases-affecting-children'>7. Using AI to help physicians diagnose rare genetic diseases affecting children</a><a class='toc-h3' href='#8-a-near-autonomous-ai-chemist-improves-a-challenging-reaction-in-medicinal-chemistry'>8. A near-autonomous AI chemist improves a challenging reaction in medicinal chemistry</a><a class='toc-h3' href='#9-introducing-lifescibench'>9. Introducing LifeSciBench</a><a class='toc-h3' href='#10-unlocking-uk-house-building-with-ai-accelerated-planning'>10. Unlocking UK house-building with AI-accelerated planning</a><a class='toc-h3' href='#11-build-your-own-transaction-foundation-model-for-financial-intelligence'>11. Build Your Own Transaction Foundation Model for Financial Intelligence</a><a class='toc-h3' href='#12-build-on-device-ai-companions-with-the-nvidia-ace-game-agent-sdk-and-unreal-engine-5-plugins'>12. Build On-Device AI Companions with the NVIDIA ACE Game Agent SDK and Unreal Engine 5 Plugins</a><a class='toc-h3' href='#13-how-to-optimize-transformer-based-models-for-low-precision-training'>13. How to Optimize Transformer-Based Models for Low-Precision Training</a><a class='toc-h3' href='#14-nvidia-blackwell-tops-mlperf-training-6-0-with-industry-leading-scale-and-performance'>14. NVIDIA Blackwell Tops MLPerf Training 6.0 with Industry-Leading Scale and Performance</a><a class='toc-h3' href='#15-mosaicleaks-can-your-research-agent-keep-a-secret'>15. MosaicLeaks: Can your research agent keep a secret?</a><a class='toc-h3' href='#16-beyond-lora-can-you-beat-the-most-popular-fine-tuning-technique'>16. Beyond LoRA: Can you beat the most popular fine-tuning technique?</a><a class='toc-h3' href='#17-molmomotion-language-guided-3d-motion-forecasting'>17. MolmoMotion: Language-guided 3D motion forecasting</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-06-21-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-06-21'>RichLens Candidate Feed — 2026-06-21</h1>
+<ul>
+<li>Discovered candidates: 110</li>
+<li>Added to queue: 17</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-compass-guardrails-and-a-hard-budget-cap-for-ai-coding-agents'>1. Compass – guardrails and a hard budget cap for AI coding agents</h3>
+<ul>
+<li>ID: <code>RL-bc3be5babf</code></li>
+<li>Source: Hacker News AI Search / <code>rss</code></li>
+<li>URL: https://github.com/dshakes/compass</li>
+<li>Score: <code>0.63</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='2-show-hn-egc-mcp-server-that-gives-ai-coding-tools-memory-across-sessions'>2. Show HN: EGC - MCP server that gives AI coding tools memory across sessions</h3>
+<ul>
+<li>ID: <code>RL-0601df44aa</code></li>
+<li>Source: Hacker News AI Search / <code>rss</code></li>
+<li>URL: https://github.com/Fmarzochi/EGC</li>
+<li>Score: <code>0.51</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='3-temporary-cloudflare-accounts-for-ai-agents'>3. Temporary Cloudflare Accounts for AI agents</h3>
+<ul>
+<li>ID: <code>RL-9feea51014</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/Jun/21/temporary-cloudflare-accounts/#atom-everything</li>
+<li>Score: <code>0.41</code></li>
+<li>Why: Matches topics: AI agents, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='4-ainews-midjourney-medical-scan-your-organs-like-you-step-on-a-scale'>4. [AINews] Midjourney Medical: scan your organs like you step on a scale</h3>
+<ul>
+<li>ID: <code>RL-c7a02626e6</code></li>
+<li>Source: Latent Space / <code>rss</code></li>
+<li>URL: https://www.latent.space/p/ainews-midjourney-medical-scan-your</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: AI product strategy</li>
+</ul>
+<h3 id='5-new-usage-analytics-and-updated-spend-controls-for-enterprises'>5. New usage analytics and updated spend controls for enterprises</h3>
+<ul>
+<li>ID: <code>RL-217d8a1a56</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/chatgpt-enterprise-spend-controls</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='6-improving-health-intelligence-in-chatgpt'>6. Improving health intelligence in ChatGPT</h3>
+<ul>
+<li>ID: <code>RL-3338356751</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/improving-health-intelligence-in-chatgpt</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='7-using-ai-to-help-physicians-diagnose-rare-genetic-diseases-affecting-children'>7. Using AI to help physicians diagnose rare genetic diseases affecting children</h3>
+<ul>
+<li>ID: <code>RL-2155d7cb8c</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/diagnose-rare-childhood-diseases</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='8-a-near-autonomous-ai-chemist-improves-a-challenging-reaction-in-medicinal-chemistry'>8. A near-autonomous AI chemist improves a challenging reaction in medicinal chemistry</h3>
+<ul>
+<li>ID: <code>RL-1a8cd099cf</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/ai-chemist-improves-reaction</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='9-introducing-lifescibench'>9. Introducing LifeSciBench</h3>
+<ul>
+<li>ID: <code>RL-0088b66458</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/introducing-life-sci-bench</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='10-unlocking-uk-house-building-with-ai-accelerated-planning'>10. Unlocking UK house-building with AI-accelerated planning</h3>
+<ul>
+<li>ID: <code>RL-12ceb5f0dc</code></li>
+<li>Source: Google DeepMind Blog / <code>rss</code></li>
+<li>URL: https://deepmind.google/blog/unlocking-uk-house-building-with-ai-accelerated-planning/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='11-build-your-own-transaction-foundation-model-for-financial-intelligence'>11. Build Your Own Transaction Foundation Model for Financial Intelligence</h3>
+<ul>
+<li>ID: <code>RL-b6834d9a06</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/build-your-own-transaction-foundation-model-for-financial-intelligence/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='12-build-on-device-ai-companions-with-the-nvidia-ace-game-agent-sdk-and-unreal-engine-5-plugins'>12. Build On-Device AI Companions with the NVIDIA ACE Game Agent SDK and Unreal Engine 5 Plugins</h3>
+<ul>
+<li>ID: <code>RL-edafe63b61</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/build-on-device-ai-companions-with-the-nvidia-ace-game-agent-sdk-and-unreal-engine-5-plugins/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='13-how-to-optimize-transformer-based-models-for-low-precision-training'>13. How to Optimize Transformer-Based Models for Low-Precision Training</h3>
+<ul>
+<li>ID: <code>RL-072610f165</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/how-to-optimize-transformer-based-models-for-low-precision-training/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='14-nvidia-blackwell-tops-mlperf-training-6-0-with-industry-leading-scale-and-performance'>14. NVIDIA Blackwell Tops MLPerf Training 6.0 with Industry-Leading Scale and Performance</h3>
+<ul>
+<li>ID: <code>RL-a45cc370ec</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/nvidia-blackwell-tops-mlperf-training-6-0-with-industry-leading-scale-and-performance/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='15-mosaicleaks-can-your-research-agent-keep-a-secret'>15. MosaicLeaks: Can your research agent keep a secret?</h3>
+<ul>
+<li>ID: <code>RL-e9b8182dcf</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/ServiceNow/mosaicleaks</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='16-beyond-lora-can-you-beat-the-most-popular-fine-tuning-technique'>16. Beyond LoRA: Can you beat the most popular fine-tuning technique?</h3>
+<ul>
+<li>ID: <code>RL-dc672d0086</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/peft-beyond-lora</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='17-molmomotion-language-guided-3d-motion-forecasting'>17. MolmoMotion: Language-guided 3D motion forecasting</h3>
+<ul>
+<li>ID: <code>RL-07c125a38d</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/allenai/molmomotion</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul></main></div>
+</body></html>
