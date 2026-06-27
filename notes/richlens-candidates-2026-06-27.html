@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-06-27</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-06-27 10:11</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-06-27'>RichLens Candidate Feed — 2026-06-27</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-agentic-analysis-for-agentic-infrastructure-an-llm-powered-pipeline-for-comparative-governance-of-dao-and-corporate-ai-protocols'>1. Agentic Analysis for Agentic Infrastructure: An LLM-Powered Pipeline for Comparative Governance of DAO and Corporate AI Protocols</a><a class='toc-h3' href='#2-deploy-a-production-ready-nvidia-ai-q-blueprint-on-oracle-cloud-infrastructure'>2. Deploy a Production-Ready NVIDIA AI-Q Blueprint on Oracle Cloud Infrastructure</a><a class='toc-h3' href='#3-measuring-what-matters-with-jules'>3. Measuring What Matters with Jules</a><a class='toc-h3' href='#4-algoevolve-llm-driven-meta-evolution-of-algorithmic-trading-programs'>4. AlgoEvolve: LLM-driven Meta-evolution of Algorithmic Trading Programs</a><a class='toc-h3' href='#5-previewing-gpt-5-6-sol-a-next-generation-model'>5. Previewing GPT-5.6 Sol: a next-generation model</a><a class='toc-h3' href='#6-mai-code-1-flash-for-copilot-business-and-copilot-enterprise'>6. MAI-Code-1-Flash for Copilot Business and Copilot Enterprise</a><a class='toc-h3' href='#7-life-after-benchmark-saturation-a-case-study-of-core-bench'>7. Life After Benchmark Saturation: A Case Study of CORE-Bench</a><a class='toc-h3' href='#8-how-agents-are-transforming-work'>8. How agents are transforming work</a><a class='toc-h3' href='#9-june-2026-langchain-newsletter-fleet-on-call-copilot-deep-agents-rubrics-and-more'>9. June 2026: LangChain Newsletter — Fleet On-Call Copilot, Deep Agents Rubrics, and More</a><a class='toc-h3' href='#10-prompt-caching-with-deep-agents'>10. Prompt Caching with Deep Agents</a><a class='toc-h3' href='#11-why-the-best-ai-agents-are-simple-sierra-s-zack-reneau-wedeen-on-the-max-agency-podcast'>11. Why the Best AI Agents Are Simple: Sierra’s Zack Reneau-Wedeen on the Max Agency Podcast</a><a class='toc-h3' href='#12-incident-report-cve-2026-lgtm'>12. Incident Report: CVE-2026-LGTM</a><a class='toc-h3' href='#13-ainews-claude-tag-multiplayer-proactive-persistent-agents-in-slack'>13. [AINews] Claude Tag: Multiplayer, Proactive, Persistent Agents in Slack</a><a class='toc-h3' href='#14-glm-5-2-is-the-step-change-for-open-agents'>14. GLM-5.2 is the step change for open agents</a><a class='toc-h3' href='#15-openai-and-broadcom-unveil-llm-optimized-inference-chip'>15. OpenAI and Broadcom unveil LLM-optimized inference chip</a><a class='toc-h3' href='#16-helping-build-shared-standards-for-advanced-ai'>16. Helping build shared standards for advanced AI</a><a class='toc-h3' href='#17-scaling-ai-inference-across-multiple-gpus-using-nvidia-tensorrt-with-multi-device-inference-support'>17. Scaling AI Inference Across Multiple GPUs Using NVIDIA TensorRT with Multi-Device Inference Support</a><a class='toc-h3' href='#18-build-real-agentic-apps-using-cuga-two-dozen-working-examples-on-a-lightweight-harness'>18. Build real agentic apps using CUGA: two dozen working examples on a lightweight harness</a><a class='toc-h3' href='#19-quoting-dean-w-ball'>19. Quoting Dean W. Ball</a><a class='toc-h3' href='#20-what-happened-after-2-000-people-tried-to-hack-my-ai-assistant'>20. What happened after 2,000 people tried to hack my AI assistant</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-06-27-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-06-27'>RichLens Candidate Feed — 2026-06-27</h1>
+<ul>
+<li>Discovered candidates: 110</li>
+<li>Added to queue: 20</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-agentic-analysis-for-agentic-infrastructure-an-llm-powered-pipeline-for-comparative-governance-of-dao-and-corporate-ai-protocols'>1. Agentic Analysis for Agentic Infrastructure: An LLM-Powered Pipeline for Comparative Governance of DAO and Corporate AI Protocols</h3>
+<ul>
+<li>ID: <code>RL-26c010b1b6</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.26203</li>
+<li>Score: <code>0.85</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents, AI infrastructure</li>
+</ul>
+<h3 id='2-deploy-a-production-ready-nvidia-ai-q-blueprint-on-oracle-cloud-infrastructure'>2. Deploy a Production-Ready NVIDIA AI-Q Blueprint on Oracle Cloud Infrastructure</h3>
+<ul>
+<li>ID: <code>RL-62e151e413</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/deploy-a-production-ready-nvidia-ai-q-blueprint-on-oracle-cloud-infrastructure/</li>
+<li>Score: <code>0.83</code></li>
+<li>Why: Matches topics: AI agents, coding agents, AI infrastructure, investment AI infrastructure</li>
+</ul>
+<h3 id='3-measuring-what-matters-with-jules'>3. Measuring What Matters with Jules</h3>
+<ul>
+<li>ID: <code>RL-fcc18d382c</code></li>
+<li>Source: Google Developers Blog / <code>rss</code></li>
+<li>URL: https://developers.googleblog.com/measuring-what-matters-with-jules/</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='4-algoevolve-llm-driven-meta-evolution-of-algorithmic-trading-programs'>4. AlgoEvolve: LLM-driven Meta-evolution of Algorithmic Trading Programs</h3>
+<ul>
+<li>ID: <code>RL-e81732c698</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.26173</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents, AI product strategy</li>
+</ul>
+<h3 id='5-previewing-gpt-5-6-sol-a-next-generation-model'>5. Previewing GPT-5.6 Sol: a next-generation model</h3>
+<ul>
+<li>ID: <code>RL-adbd50c1b1</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/previewing-gpt-5-6-sol</li>
+<li>Score: <code>0.71</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='6-mai-code-1-flash-for-copilot-business-and-copilot-enterprise'>6. MAI-Code-1-Flash for Copilot Business and Copilot Enterprise</h3>
+<ul>
+<li>ID: <code>RL-8d74ffd519</code></li>
+<li>Source: GitHub Changelog / <code>rss</code></li>
+<li>URL: https://github.blog/changelog/2026-06-26-mai-code-1-flash-for-copilot-business-and-copilot-enterprise</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='7-life-after-benchmark-saturation-a-case-study-of-core-bench'>7. Life After Benchmark Saturation: A Case Study of CORE-Bench</h3>
+<ul>
+<li>ID: <code>RL-58656fa3e3</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2606.26158</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: AI agents, coding agents, LLM evaluation</li>
+</ul>
+<h3 id='8-how-agents-are-transforming-work'>8. How agents are transforming work</h3>
+<ul>
+<li>ID: <code>RL-2b6976f96b</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/how-agents-are-transforming-work</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='9-june-2026-langchain-newsletter-fleet-on-call-copilot-deep-agents-rubrics-and-more'>9. June 2026: LangChain Newsletter — Fleet On-Call Copilot, Deep Agents Rubrics, and More</h3>
+<ul>
+<li>ID: <code>RL-64348e1b3c</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/june-2026-langchain-newsletter</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='10-prompt-caching-with-deep-agents'>10. Prompt Caching with Deep Agents</h3>
+<ul>
+<li>ID: <code>RL-09d526a19e</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/deep-agents-prompt-caching</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='11-why-the-best-ai-agents-are-simple-sierra-s-zack-reneau-wedeen-on-the-max-agency-podcast'>11. Why the Best AI Agents Are Simple: Sierra’s Zack Reneau-Wedeen on the Max Agency Podcast</h3>
+<ul>
+<li>ID: <code>RL-4ac40a7dd2</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/why-the-best-agents-are-simpler-than-you-think-sierra-max-agency-podcast</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='12-incident-report-cve-2026-lgtm'>12. Incident Report: CVE-2026-LGTM</h3>
+<ul>
+<li>ID: <code>RL-61a73fa670</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/Jun/26/incident-report/#atom-everything</li>
+<li>Score: <code>0.53</code></li>
+<li>Why: Matches topics: AI agents, coding agents, inference; source fatigue -0.18</li>
+</ul>
+<h3 id='13-ainews-claude-tag-multiplayer-proactive-persistent-agents-in-slack'>13. [AINews] Claude Tag: Multiplayer, Proactive, Persistent Agents in Slack</h3>
+<ul>
+<li>ID: <code>RL-c96e26a559</code></li>
+<li>Source: Latent Space / <code>rss</code></li>
+<li>URL: https://www.latent.space/p/ainews-claude-tag-multiplayer-proactive</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='14-glm-5-2-is-the-step-change-for-open-agents'>14. GLM-5.2 is the step change for open agents</h3>
+<ul>
+<li>ID: <code>RL-b291141d2b</code></li>
+<li>Source: Interconnects / <code>rss</code></li>
+<li>URL: https://www.interconnects.ai/p/glm-52-is-the-step-change-for-open</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='15-openai-and-broadcom-unveil-llm-optimized-inference-chip'>15. OpenAI and Broadcom unveil LLM-optimized inference chip</h3>
+<ul>
+<li>ID: <code>RL-1a015f5dfa</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/openai-broadcom-jalapeno-inference-chip</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='16-helping-build-shared-standards-for-advanced-ai'>16. Helping build shared standards for advanced AI</h3>
+<ul>
+<li>ID: <code>RL-6507bbb397</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/helping-build-shared-standards-for-advanced-ai</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='17-scaling-ai-inference-across-multiple-gpus-using-nvidia-tensorrt-with-multi-device-inference-support'>17. Scaling AI Inference Across Multiple GPUs Using NVIDIA TensorRT with Multi-Device Inference Support</h3>
+<ul>
+<li>ID: <code>RL-776aa2a118</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/scaling-ai-inference-across-multiple-gpus-using-nvidia-tensorrt-with-multi-device-inference-support/</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='18-build-real-agentic-apps-using-cuga-two-dozen-working-examples-on-a-lightweight-harness'>18. Build real agentic apps using CUGA: two dozen working examples on a lightweight harness</h3>
+<ul>
+<li>ID: <code>RL-f0c4ab4675</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/ibm-research/cuga-apps</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: agentic coding</li>
+</ul>
+<h3 id='19-quoting-dean-w-ball'>19. Quoting Dean W. Ball</h3>
+<ul>
+<li>ID: <code>RL-89fa739484</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/Jun/26/dean-w-ball/#atom-everything</li>
+<li>Score: <code>0.41</code></li>
+<li>Why: Matches topics: AI infrastructure, investment AI infrastructure; source fatigue -0.18</li>
+</ul>
+<h3 id='20-what-happened-after-2-000-people-tried-to-hack-my-ai-assistant'>20. What happened after 2,000 people tried to hack my AI assistant</h3>
+<ul>
+<li>ID: <code>RL-20e226947a</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/Jun/26/hack-my-ai-assistant/#atom-everything</li>
+<li>Score: <code>0.41</code></li>
+<li>Why: Matches topics: AI agents, coding agents; source fatigue -0.18</li>
+</ul></main></div>
+</body></html>
