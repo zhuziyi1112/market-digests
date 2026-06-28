@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-06-28</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-06-28 12:49</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-06-28'>RichLens Candidate Feed — 2026-06-28</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-evaluating-performance-and-efficiency-of-the-github-copilot-agentic-harness-across-models-and-tasks'>1. Evaluating performance and efficiency of the GitHub Copilot agentic harness across models and tasks</a><a class='toc-h3' href='#2-how-gpt-5-helped-immunologist-derya-unutmaz-solve-a-3-year-old-mystery'>2. How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery</a><a class='toc-h3' href='#3-introducing-computer-use-in-gemini-3-5-flash'>3. Introducing computer use in Gemini 3.5 Flash</a><a class='toc-h3' href='#4-our-latest-google-finance-upgrades-including-a-new-app'>4. Our latest Google Finance upgrades, including a new app</a><a class='toc-h3' href='#5-creating-the-nvidia-nemotron-3-ultra-nvfp4-checkpoint-with-nvidia-model-optimizer'>5. Creating the NVIDIA Nemotron 3 Ultra NVFP4 Checkpoint with NVIDIA Model Optimizer</a><a class='toc-h3' href='#6-streamlining-resource-binding-with-end-to-end-support-for-vulkan-descriptor-heaps'>6. Streamlining Resource Binding with End-to-End Support for Vulkan Descriptor Heaps</a><a class='toc-h3' href='#7-q-a-how-krafton-built-pubg-ally-a-co-playable-character-powered-by-nvidia-ace'>7. Q&amp;A: How KRAFTON Built PUBG Ally, a Co-Playable Character Powered by NVIDIA ACE</a><a class='toc-h3' href='#8-run-a-vllm-server-on-hf-jobs-in-one-command'>8. Run a vLLM Server on HF Jobs in One Command</a><a class='toc-h3' href='#9-which-tokens-does-a-hybrid-model-predict-better'>9. Which tokens does a hybrid model predict better?</a><a class='toc-h3' href='#10-accelerating-transformers-fine-tuning-with-nvidia-nemo-automodel'>10. Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel</a><a class='toc-h3' href='#11-introducing-the-ffasr-leaderboard-benchmarking-asr-in-the-real-world'>11. Introducing the FFASR Leaderboard: Benchmarking ASR in the Real World</a><a class='toc-h3' href='#12-how-we-built-smithdb-s-inverted-index-for-full-text-search'>12. How we built SmithDB’s inverted index for full-text search</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-06-28-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-06-28'>RichLens Candidate Feed — 2026-06-28</h1>
+<ul>
+<li>Discovered candidates: 90</li>
+<li>Added to queue: 12</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-evaluating-performance-and-efficiency-of-the-github-copilot-agentic-harness-across-models-and-tasks'>1. Evaluating performance and efficiency of the GitHub Copilot agentic harness across models and tasks</h3>
+<ul>
+<li>ID: <code>RL-bdecf2cfb4</code></li>
+<li>Source: GitHub AI and ML Blog / <code>rss</code></li>
+<li>URL: https://github.blog/ai-and-ml/github-copilot/evaluating-performance-and-efficiency-of-the-github-copilot-agentic-harness-across-models-and-tasks/</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: agentic coding</li>
+</ul>
+<h3 id='2-how-gpt-5-helped-immunologist-derya-unutmaz-solve-a-3-year-old-mystery'>2. How GPT-5 helped immunologist Derya Unutmaz solve a 3-year-old mystery</h3>
+<ul>
+<li>ID: <code>RL-7c36fb32c6</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/gpt-5-immunology-mystery</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='3-introducing-computer-use-in-gemini-3-5-flash'>3. Introducing computer use in Gemini 3.5 Flash</h3>
+<ul>
+<li>ID: <code>RL-0ce8c6adc2</code></li>
+<li>Source: Google DeepMind Blog / <code>rss</code></li>
+<li>URL: https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='4-our-latest-google-finance-upgrades-including-a-new-app'>4. Our latest Google Finance upgrades, including a new app</h3>
+<ul>
+<li>ID: <code>RL-4f514f0a2b</code></li>
+<li>Source: Google AI Blog / <code>rss</code></li>
+<li>URL: https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='5-creating-the-nvidia-nemotron-3-ultra-nvfp4-checkpoint-with-nvidia-model-optimizer'>5. Creating the NVIDIA Nemotron 3 Ultra NVFP4 Checkpoint with NVIDIA Model Optimizer</h3>
+<ul>
+<li>ID: <code>RL-615a54d846</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/creating-the-nvidia-nemotron-3-ultra-nvfp4-checkpoint-with-nvidia-model-optimizer/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='6-streamlining-resource-binding-with-end-to-end-support-for-vulkan-descriptor-heaps'>6. Streamlining Resource Binding with End-to-End Support for Vulkan Descriptor Heaps</h3>
+<ul>
+<li>ID: <code>RL-5d2277747d</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/streamlining-resource-binding-with-end-to-end-support-for-vulkan-descriptor-heaps/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='7-q-a-how-krafton-built-pubg-ally-a-co-playable-character-powered-by-nvidia-ace'>7. Q&amp;A: How KRAFTON Built PUBG Ally, a Co-Playable Character Powered by NVIDIA ACE</h3>
+<ul>
+<li>ID: <code>RL-ee327f32e6</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/how-krafton-built-pubg-ally-a-co-playable-character-powered-by-nvidia-ace/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='8-run-a-vllm-server-on-hf-jobs-in-one-command'>8. Run a vLLM Server on HF Jobs in One Command</h3>
+<ul>
+<li>ID: <code>RL-7f1a19cb84</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/vllm-jobs</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='9-which-tokens-does-a-hybrid-model-predict-better'>9. Which tokens does a hybrid model predict better?</h3>
+<ul>
+<li>ID: <code>RL-04bd48744b</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/allenai/hybrid-token-prediction</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='10-accelerating-transformers-fine-tuning-with-nvidia-nemo-automodel'>10. Accelerating Transformers Fine-Tuning with NVIDIA NeMo AutoModel</h3>
+<ul>
+<li>ID: <code>RL-9662972e68</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/nvidia/accelerating-fine-tuning-nvidia-nemo-automodel</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='11-introducing-the-ffasr-leaderboard-benchmarking-asr-in-the-real-world'>11. Introducing the FFASR Leaderboard: Benchmarking ASR in the Real World</h3>
+<ul>
+<li>ID: <code>RL-c8f3104266</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/ffasr-leaderboard</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='12-how-we-built-smithdb-s-inverted-index-for-full-text-search'>12. How we built SmithDB’s inverted index for full-text search</h3>
+<ul>
+<li>ID: <code>RL-dca4e9912b</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/full-text-search-in-smithdb-constructing-and-querying-our-inverted-index-pt-2</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul></main></div>
+</body></html>
