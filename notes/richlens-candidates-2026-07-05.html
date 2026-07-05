@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-07-05</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-07-05 09:38</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-07-05'>RichLens Candidate Feed — 2026-07-05</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-sqlite-utils-4-0rc2-mostly-written-by-claude-fable-for-about-149-25'>1. sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)</a><a class='toc-h3' href='#2-better-models-worse-tools'>2. Better Models: Worse Tools</a><a class='toc-h3' href='#3-optimizing-a-neural-reconstruction-pipeline-using-nvidia-nsight-developer-tools'>3. Optimizing a Neural Reconstruction Pipeline Using NVIDIA Nsight Developer Tools</a><a class='toc-h3' href='#4-hugging-face-and-cerebras-bring-gemma-4-to-real-time-voice-ai'>4. Hugging Face and Cerebras bring Gemma 4 to real-time voice AI</a><a class='toc-h3' href='#5-why-specialization-is-inevitable'>5. Why Specialization Is Inevitable</a><a class='toc-h3' href='#6-featuring-every-eval-ever-results-on-hugging-face-model-pages'>6. Featuring Every Eval Ever Results on Hugging Face Model Pages</a><a class='toc-h3' href='#7-discoformer-one-transformer-for-density-and-score-across-distributions'>7. DiScoFormer: One transformer for density and score, across distributions</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-07-05-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-07-05'>RichLens Candidate Feed — 2026-07-05</h1>
+<ul>
+<li>Discovered candidates: 104</li>
+<li>Added to queue: 7</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-sqlite-utils-4-0rc2-mostly-written-by-claude-fable-for-about-149-25'>1. sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)</h3>
+<ul>
+<li>ID: <code>RL-3a3f83543d</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-everything</li>
+<li>Score: <code>0.65</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='2-better-models-worse-tools'>2. Better Models: Worse Tools</h3>
+<ul>
+<li>ID: <code>RL-63516e892d</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/Jul/4/better-models-worse-tools/#atom-everything</li>
+<li>Score: <code>0.65</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='3-optimizing-a-neural-reconstruction-pipeline-using-nvidia-nsight-developer-tools'>3. Optimizing a Neural Reconstruction Pipeline Using NVIDIA Nsight Developer Tools</h3>
+<ul>
+<li>ID: <code>RL-b44e26b2d1</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/optimizing-a-neural-reconstruction-pipeline-using-nvidia-nsight-developer-tools/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='4-hugging-face-and-cerebras-bring-gemma-4-to-real-time-voice-ai'>4. Hugging Face and Cerebras bring Gemma 4 to real-time voice AI</h3>
+<ul>
+<li>ID: <code>RL-b7f49b2bc1</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/cerebras-gemma4-voice-ai</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='5-why-specialization-is-inevitable'>5. Why Specialization Is Inevitable</h3>
+<ul>
+<li>ID: <code>RL-d7f8db1c66</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/Dharma-AI/why-specialization-is-inevitable</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='6-featuring-every-eval-ever-results-on-hugging-face-model-pages'>6. Featuring Every Eval Ever Results on Hugging Face Model Pages</h3>
+<ul>
+<li>ID: <code>RL-3f0a56fa70</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/eee-community-evals</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='7-discoformer-one-transformer-for-density-and-score-across-distributions'>7. DiScoFormer: One transformer for density and score, across distributions</h3>
+<ul>
+<li>ID: <code>RL-91d16542fa</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/allenai/discoformer</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul></main></div>
+</body></html>
