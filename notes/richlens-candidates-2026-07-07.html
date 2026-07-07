@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-07-07</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-07-07 12:07</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-07-07'>RichLens Candidate Feed — 2026-07-07</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-iflytek-embodied-omni-technical-report'>1. iFLYTEK-Embodied-Omni Technical Report</a><a class='toc-h3' href='#2-swarmresearch-orchestrating-coding-agents-for-open-ended-discovery'>2. SwarmResearch: Orchestrating Coding Agents for Open-Ended Discovery</a><a class='toc-h3' href='#3-enhancing-goodput-in-large-scale-llm-training-with-nonuniform-tensor-parallelism'>3. Enhancing Goodput in Large-Scale LLM Training with Nonuniform Tensor Parallelism</a><a class='toc-h3' href='#4-we-terminated-a-tpu-mid-training-and-it-recovered-in-seconds-introduction-to-elastic-training-with-maxtext'>4. We terminated a TPU mid-training and it recovered in seconds: Introduction to elastic training with MaxText</a><a class='toc-h3' href='#5-ask-in-the-dark-uncertainty-gated-llm-assistance-under-partial-observability'>5. ASK in the Dark: Uncertainty-Gated LLM Assistance under Partial Observability</a><a class='toc-h3' href='#6-improving-llms-via-validator-to-generator-alignment'>6. Improving LLMs via Validator-to-Generator Alignment</a><a class='toc-h3' href='#7-gemma-4-technical-report'>7. Gemma 4 Technical Report</a><a class='toc-h3' href='#8-federated-learning-for-object-detection-enabling-collaborative-drone-learning-without-centralizing-data'>8. Federated Learning for Object Detection: Enabling Collaborative Drone Learning Without Centralizing Data</a><a class='toc-h3' href='#9-prx-part-4-our-data-strategy'>9. PRX Part 4: Our Data Strategy</a><a class='toc-h3' href='#10-automated-data-readiness-for-scientific-ai'>10. Automated Data Readiness for Scientific AI</a><a class='toc-h3' href='#11-echoes-of-unrest-a-multimodal-nlp-framework-for-early-warning-of-fake-news-and-violence-driven-mob-activity'>11. Echoes of Unrest: A Multimodal NLP Framework for Early Warning of Fake News and Violence-Driven Mob Activity</a><a class='toc-h3' href='#12-luxsqa-ask-me-in-luxembourgish-with-tts-augmented-spoken-question-answering'>12. LuxSQA: Ask Me in Luxembourgish with TTS-Augmented Spoken Question Answering</a><a class='toc-h3' href='#13-auditing-the-audit-five-failure-modes-in-benchmark-validity-audits'>13. Auditing the Audit: Five Failure Modes in Benchmark-Validity Audits</a><a class='toc-h3' href='#14-evaluating-time-series-foundation-models-for-electricity-price-forecasting-contamination-risk-distributional-shifts-and-covariate-dependence'>14. Evaluating Time Series Foundation Models for Electricity Price Forecasting: Contamination Risk, Distributional Shifts, and Covariate Dependence</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-07-07-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-07-07'>RichLens Candidate Feed — 2026-07-07</h1>
+<ul>
+<li>Discovered candidates: 109</li>
+<li>Added to queue: 14</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-iflytek-embodied-omni-technical-report'>1. iFLYTEK-Embodied-Omni Technical Report</h3>
+<ul>
+<li>ID: <code>RL-75ce61c86b</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.02542</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: AI agents, coding agents, multimodal AI, AI product strategy</li>
+</ul>
+<h3 id='2-swarmresearch-orchestrating-coding-agents-for-open-ended-discovery'>2. SwarmResearch: Orchestrating Coding Agents for Open-Ended Discovery</h3>
+<ul>
+<li>ID: <code>RL-85059b43d5</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.02807</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='3-enhancing-goodput-in-large-scale-llm-training-with-nonuniform-tensor-parallelism'>3. Enhancing Goodput in Large-Scale LLM Training with Nonuniform Tensor Parallelism</h3>
+<ul>
+<li>ID: <code>RL-1ffa0f213e</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/enhancing-goodput-in-large-scale-llm-training-with-nonuniform-tensor-parallelism/</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI infrastructure, investment AI infrastructure</li>
+</ul>
+<h3 id='4-we-terminated-a-tpu-mid-training-and-it-recovered-in-seconds-introduction-to-elastic-training-with-maxtext'>4. We terminated a TPU mid-training and it recovered in seconds: Introduction to elastic training with MaxText</h3>
+<ul>
+<li>ID: <code>RL-069ff7a9ce</code></li>
+<li>Source: Google Developers Blog / <code>rss</code></li>
+<li>URL: https://developers.googleblog.com/we-terminated-a-tpu-mid-training-and-it-recovered-in-seconds-introduction-to-elastic-training-with-maxtext/</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: AI infrastructure, investment AI infrastructure</li>
+</ul>
+<h3 id='5-ask-in-the-dark-uncertainty-gated-llm-assistance-under-partial-observability'>5. ASK in the Dark: Uncertainty-Gated LLM Assistance under Partial Observability</h3>
+<ul>
+<li>ID: <code>RL-3b7f789479</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.02686</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='6-improving-llms-via-validator-to-generator-alignment'>6. Improving LLMs via Validator-to-Generator Alignment</h3>
+<ul>
+<li>ID: <code>RL-1f00d7a671</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.02668</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='7-gemma-4-technical-report'>7. Gemma 4 Technical Report</h3>
+<ul>
+<li>ID: <code>RL-55faf6954a</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.02770</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: inference, multimodal AI</li>
+</ul>
+<h3 id='8-federated-learning-for-object-detection-enabling-collaborative-drone-learning-without-centralizing-data'>8. Federated Learning for Object Detection: Enabling Collaborative Drone Learning Without Centralizing Data</h3>
+<ul>
+<li>ID: <code>RL-13e4a70ce6</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.02636</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: AI infrastructure, investment AI infrastructure</li>
+</ul>
+<h3 id='9-prx-part-4-our-data-strategy'>9. PRX Part 4: Our Data Strategy</h3>
+<ul>
+<li>ID: <code>RL-088a18b234</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/Photoroom/prx-part4-data</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: AI product strategy</li>
+</ul>
+<h3 id='10-automated-data-readiness-for-scientific-ai'>10. Automated Data Readiness for Scientific AI</h3>
+<ul>
+<li>ID: <code>RL-a069fa9d21</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.02771</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: model serving</li>
+</ul>
+<h3 id='11-echoes-of-unrest-a-multimodal-nlp-framework-for-early-warning-of-fake-news-and-violence-driven-mob-activity'>11. Echoes of Unrest: A Multimodal NLP Framework for Early Warning of Fake News and Violence-Driven Mob Activity</h3>
+<ul>
+<li>ID: <code>RL-5b5a6750bc</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.02734</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: multimodal AI</li>
+</ul>
+<h3 id='12-luxsqa-ask-me-in-luxembourgish-with-tts-augmented-spoken-question-answering'>12. LuxSQA: Ask Me in Luxembourgish with TTS-Augmented Spoken Question Answering</h3>
+<ul>
+<li>ID: <code>RL-716a281b76</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.02763</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='13-auditing-the-audit-five-failure-modes-in-benchmark-validity-audits'>13. Auditing the Audit: Five Failure Modes in Benchmark-Validity Audits</h3>
+<ul>
+<li>ID: <code>RL-af6fa0986d</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.02586</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='14-evaluating-time-series-foundation-models-for-electricity-price-forecasting-contamination-risk-distributional-shifts-and-covariate-dependence'>14. Evaluating Time Series Foundation Models for Electricity Price Forecasting: Contamination Risk, Distributional Shifts, and Covariate Dependence</h3>
+<ul>
+<li>ID: <code>RL-a9816e5824</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.02623</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul></main></div>
+</body></html>
