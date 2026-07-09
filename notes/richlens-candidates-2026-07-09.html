@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-07-09</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-07-09 09:50</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-07-09'>RichLens Candidate Feed — 2026-07-09</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-agentlens-production-assessed-trajectory-reviews-for-coding-agent-evaluation'>1. AgentLens: Production-Assessed Trajectory Reviews for Coding Agent Evaluation</a><a class='toc-h3' href='#2-rewriting-bun-in-rust'>2. Rewriting Bun in Rust</a><a class='toc-h3' href='#3-audio-sentiment-analysis-via-distillation-and-cross-modal-integration-of-generated-multilingual-transcripts'>3. Audio Sentiment Analysis via Distillation and Cross-Modal Integration of Generated Multilingual Transcripts</a><a class='toc-h3' href='#4-separating-signal-from-noise-in-coding-evaluations'>4. Separating signal from noise in coding evaluations</a><a class='toc-h3' href='#5-create-a-langchain-deep-agents-harness-profile-for-nvidia-nemotron-3-ultra-to-improve-performance'>5. Create a LangChain Deep Agents Harness Profile for NVIDIA Nemotron 3 Ultra to Improve Performance</a><a class='toc-h3' href='#6-improving-agents-is-a-data-mining-problem'>6. Improving Agents is a Data Mining Problem</a><a class='toc-h3' href='#7-healthier-llms-retrieval-augmented-generation-for-public-health-question-answering'>7. Healthier LLMs: Retrieval-Augmented Generation for Public Health Question Answering</a><a class='toc-h3' href='#8-expanding-managed-agents-in-gemini-api-background-tasks-remote-mcp-and-more'>8. Expanding Managed Agents in Gemini API: background tasks, remote MCP and more</a><a class='toc-h3' href='#9-building-an-analysis-ai-agent-for-industrial-alarm-management-with-nvidia-nemotron'>9. Building an Analysis AI Agent for Industrial Alarm Management with NVIDIA Nemotron</a><a class='toc-h3' href='#10-deep-agents-code-on-nvidia-nemoclaw'>10. Deep Agents Code on NVIDIA NemoClaw</a><a class='toc-h3' href='#11-langchain-and-nvidia-launch-nemoclaw-deep-agents-blueprint'>11. LangChain and NVIDIA Launch NemoClaw Deep Agents Blueprint</a><a class='toc-h3' href='#12-sqlite-utils-4-0-now-with-database-schema-migrations'>12. sqlite-utils 4.0, now with database schema migrations</a><a class='toc-h3' href='#13-deploy-managed-copilot-settings-via-mdm-in-vs-code-and-cli'>13. Deploy managed Copilot settings via MDM in VS Code and CLI</a><a class='toc-h3' href='#14-automating-cross-repo-documentation-with-github-agentic-workflows'>14. Automating cross-repo documentation with GitHub Agentic Workflows</a><a class='toc-h3' href='#15-cost-effective-agent-harnesses-for-abstract-reasoning-and-generalization-on-arc-agi-1'>15. Cost-Effective Agent Harnesses for Abstract Reasoning and Generalization on ARC-AGI-1</a><a class='toc-h3' href='#16-llms-silently-correct-african-american-english-auditing-and-mitigating-dialect-bias-via-activation-steering'>16. LLMs Silently Correct African American English: Auditing and Mitigating Dialect Bias via Activation Steering</a><a class='toc-h3' href='#17-deep-reinforcement-learning-for-reliability-based-bi-objective-portfolio-optimization'>17. Deep Reinforcement Learning for Reliability Based Bi-Objective Portfolio Optimization</a><a class='toc-h3' href='#18-why-ai-infrastructure-must-evolve-for-agent-experience-akshat-bubna-modal-cto'>18. Why AI Infrastructure must evolve for Agent Experience — Akshat Bubna, Modal CTO</a><a class='toc-h3' href='#19-how-schneider-electric-built-their-llmops-foundations-with-langsmith'>19. How Schneider Electric Built Their LLMOps Foundations With LangSmith</a><a class='toc-h3' href='#20-introducing-gpt-live'>20. Introducing GPT‑Live</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-07-09-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-07-09'>RichLens Candidate Feed — 2026-07-09</h1>
+<ul>
+<li>Discovered candidates: 110</li>
+<li>Added to queue: 20</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-agentlens-production-assessed-trajectory-reviews-for-coding-agent-evaluation'>1. AgentLens: Production-Assessed Trajectory Reviews for Coding Agent Evaluation</h3>
+<ul>
+<li>ID: <code>RL-58c10b15c7</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.06624</li>
+<li>Score: <code>0.95</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='2-rewriting-bun-in-rust'>2. Rewriting Bun in Rust</h3>
+<ul>
+<li>ID: <code>RL-d9be8582f0</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/Jul/8/rewriting-bun-in-rust/#atom-everything</li>
+<li>Score: <code>0.77</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, AI coding, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='3-audio-sentiment-analysis-via-distillation-and-cross-modal-integration-of-generated-multilingual-transcripts'>3. Audio Sentiment Analysis via Distillation and Cross-Modal Integration of Generated Multilingual Transcripts</h3>
+<ul>
+<li>ID: <code>RL-9b816ae911</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.06611</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: knowledge management, inference, multimodal AI, Obsidian knowledge management</li>
+</ul>
+<h3 id='4-separating-signal-from-noise-in-coding-evaluations'>4. Separating signal from noise in coding evaluations</h3>
+<ul>
+<li>ID: <code>RL-eaad4cbcfa</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/separating-signal-from-noise-coding-evaluations</li>
+<li>Score: <code>0.71</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents</li>
+</ul>
+<h3 id='5-create-a-langchain-deep-agents-harness-profile-for-nvidia-nemotron-3-ultra-to-improve-performance'>5. Create a LangChain Deep Agents Harness Profile for NVIDIA Nemotron 3 Ultra to Improve Performance</h3>
+<ul>
+<li>ID: <code>RL-7a6312e1ff</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/create-a-langchain-deep-agents-harness-profile-for-nvidia-nemotron-3-ultra-to-improve-performance/</li>
+<li>Score: <code>0.71</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, coding agents</li>
+</ul>
+<h3 id='6-improving-agents-is-a-data-mining-problem'>6. Improving Agents is a Data Mining Problem</h3>
+<ul>
+<li>ID: <code>RL-4be9833ab1</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/improving-agents-is-a-data-mining-problem</li>
+<li>Score: <code>0.71</code></li>
+<li>Why: Matches topics: AI agents, coding agents, evals</li>
+</ul>
+<h3 id='7-healthier-llms-retrieval-augmented-generation-for-public-health-question-answering'>7. Healthier LLMs: Retrieval-Augmented Generation for Public Health Question Answering</h3>
+<ul>
+<li>ID: <code>RL-1af9dcb116</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.06641</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: LLM evaluation, RAG, retrieval</li>
+</ul>
+<h3 id='8-expanding-managed-agents-in-gemini-api-background-tasks-remote-mcp-and-more'>8. Expanding Managed Agents in Gemini API: background tasks, remote MCP and more</h3>
+<ul>
+<li>ID: <code>RL-73fd78c484</code></li>
+<li>Source: Google AI Blog / <code>rss</code></li>
+<li>URL: https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='9-building-an-analysis-ai-agent-for-industrial-alarm-management-with-nvidia-nemotron'>9. Building an Analysis AI Agent for Industrial Alarm Management with NVIDIA Nemotron</h3>
+<ul>
+<li>ID: <code>RL-29284e6972</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/building-an-analysis-ai-agent-for-industrial-alarm-management-with-nvidia-nemotron/</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: knowledge management, Obsidian knowledge management</li>
+</ul>
+<h3 id='10-deep-agents-code-on-nvidia-nemoclaw'>10. Deep Agents Code on NVIDIA NemoClaw</h3>
+<ul>
+<li>ID: <code>RL-290a25d322</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/deep-agents-code-on-nemoclaw-a-governed-blueprint-for-your-most-sensitive-code</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='11-langchain-and-nvidia-launch-nemoclaw-deep-agents-blueprint'>11. LangChain and NVIDIA Launch NemoClaw Deep Agents Blueprint</h3>
+<ul>
+<li>ID: <code>RL-0028959ce6</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/langchain-and-nvidia-launch-the-nemoclaw-deep-agents-blueprint</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='12-sqlite-utils-4-0-now-with-database-schema-migrations'>12. sqlite-utils 4.0, now with database schema migrations</h3>
+<ul>
+<li>ID: <code>RL-5432189dc8</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/Jul/7/sqlite-utils-4/#atom-everything</li>
+<li>Score: <code>0.53</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents; source fatigue -0.18</li>
+</ul>
+<h3 id='13-deploy-managed-copilot-settings-via-mdm-in-vs-code-and-cli'>13. Deploy managed Copilot settings via MDM in VS Code and CLI</h3>
+<ul>
+<li>ID: <code>RL-702ce39ddd</code></li>
+<li>Source: GitHub Changelog / <code>rss</code></li>
+<li>URL: https://github.blog/changelog/2026-07-08-deploy-managed-copilot-settings-via-mdm-in-vs-code-and-cli</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: knowledge management, Obsidian knowledge management</li>
+</ul>
+<h3 id='14-automating-cross-repo-documentation-with-github-agentic-workflows'>14. Automating cross-repo documentation with GitHub Agentic Workflows</h3>
+<ul>
+<li>ID: <code>RL-7eb481eef0</code></li>
+<li>Source: GitHub AI and ML Blog / <code>rss</code></li>
+<li>URL: https://github.blog/ai-and-ml/github-copilot/automating-cross-repo-documentation-with-github-agentic-workflows/</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: agentic coding, AI product strategy</li>
+</ul>
+<h3 id='15-cost-effective-agent-harnesses-for-abstract-reasoning-and-generalization-on-arc-agi-1'>15. Cost-Effective Agent Harnesses for Abstract Reasoning and Generalization on ARC-AGI-1</h3>
+<ul>
+<li>ID: <code>RL-0ad3031f2f</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.06764</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: agentic coding, LLM evaluation</li>
+</ul>
+<h3 id='16-llms-silently-correct-african-american-english-auditing-and-mitigating-dialect-bias-via-activation-steering'>16. LLMs Silently Correct African American English: Auditing and Mitigating Dialect Bias via Activation Steering</h3>
+<ul>
+<li>ID: <code>RL-fc48261d34</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.06845</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: knowledge management, Obsidian knowledge management</li>
+</ul>
+<h3 id='17-deep-reinforcement-learning-for-reliability-based-bi-objective-portfolio-optimization'>17. Deep Reinforcement Learning for Reliability Based Bi-Objective Portfolio Optimization</h3>
+<ul>
+<li>ID: <code>RL-c7c1841818</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.06610</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: AI product strategy, investment AI infrastructure</li>
+</ul>
+<h3 id='18-why-ai-infrastructure-must-evolve-for-agent-experience-akshat-bubna-modal-cto'>18. Why AI Infrastructure must evolve for Agent Experience — Akshat Bubna, Modal CTO</h3>
+<ul>
+<li>ID: <code>RL-a8ed1f4deb</code></li>
+<li>Source: Latent Space / <code>rss</code></li>
+<li>URL: https://www.latent.space/p/modal2026</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: AI infrastructure, investment AI infrastructure</li>
+</ul>
+<h3 id='19-how-schneider-electric-built-their-llmops-foundations-with-langsmith'>19. How Schneider Electric Built Their LLMOps Foundations With LangSmith</h3>
+<ul>
+<li>ID: <code>RL-33263d765f</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/how-schneider-electric-built-their-llmops-foundations-at-enterprise-scale-with-langsmith</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='20-introducing-gpt-live'>20. Introducing GPT‑Live</h3>
+<ul>
+<li>ID: <code>RL-ea0729cfed</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/Jul/8/introducing-gptlive/#atom-everything</li>
+<li>Score: <code>0.41</code></li>
+<li>Why: Matches topics: knowledge management, Obsidian knowledge management; source fatigue -0.18</li>
+</ul></main></div>
+</body></html>
