@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-07-11</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-07-11 12:24</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-07-11'>RichLens Candidate Feed — 2026-07-11</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-openwiki-brains-proactive-memory-for-ai-agents'>1. OpenWiki Brains: Proactive Memory for AI Agents</a><a class='toc-h3' href='#2-reducing-high-bandwidth-memory-bottlenecks-in-jax-based-llm-training-with-host-offloading'>2. Reducing High-Bandwidth Memory Bottlenecks in JAX-Based LLM Training with Host Offloading</a><a class='toc-h3' href='#3-kernel-fusion-in-nvidia-cuda-optimizing-memory-traffic-and-launch-overhead'>3. Kernel Fusion in NVIDIA CUDA: Optimizing Memory Traffic and Launch Overhead</a><a class='toc-h3' href='#4-ai-model-co-design-hardware-friendly-llm-design'>4. AI Model Co-Design: Hardware-Friendly LLM Design</a><a class='toc-h3' href='#5-profiling-in-pytorch-part-3-attention-is-all-you-profile'>5. Profiling in PyTorch (Part 3): Attention is all you profile</a><a class='toc-h3' href='#6-native-speed-vllm-transformers-modeling-backend'>6. Native-speed vLLM transformers modeling backend</a><a class='toc-h3' href='#7-from-hugging-face-to-amazon-sagemaker-studio-in-one-click'>7. From Hugging Face to Amazon SageMaker Studio in one click</a><a class='toc-h3' href='#8-hugging-face-models-on-foundry-managed-compute'>8. Hugging Face Models on Foundry Managed Compute</a><a class='toc-h3' href='#9-tuning-the-harness-not-the-model-a-nemotron-3-ultra-playbook'>9. Tuning the harness, not the model: a Nemotron 3 Ultra playbook</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-07-11-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-07-11'>RichLens Candidate Feed — 2026-07-11</h1>
+<ul>
+<li>Discovered candidates: 104</li>
+<li>Added to queue: 9</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-openwiki-brains-proactive-memory-for-ai-agents'>1. OpenWiki Brains: Proactive Memory for AI Agents</h3>
+<ul>
+<li>ID: <code>RL-2407bfb68b</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/introducing-openwiki-brains-general-purpose-wiki-memory-for-agents</li>
+<li>Score: <code>0.59</code></li>
+<li>Why: Matches topics: AI agents, coding agents</li>
+</ul>
+<h3 id='2-reducing-high-bandwidth-memory-bottlenecks-in-jax-based-llm-training-with-host-offloading'>2. Reducing High-Bandwidth Memory Bottlenecks in JAX-Based LLM Training with Host Offloading</h3>
+<ul>
+<li>ID: <code>RL-6531d131dc</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/reducing-high-bandwidth-memory-bottlenecks-in-jax-based-llm-training-with-host-offloading/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='3-kernel-fusion-in-nvidia-cuda-optimizing-memory-traffic-and-launch-overhead'>3. Kernel Fusion in NVIDIA CUDA: Optimizing Memory Traffic and Launch Overhead</h3>
+<ul>
+<li>ID: <code>RL-d0054e50ea</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/kernel-fusion-in-nvidia-cuda-optimizing-memory-traffic-and-launch-overhead/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='4-ai-model-co-design-hardware-friendly-llm-design'>4. AI Model Co-Design: Hardware-Friendly LLM Design</h3>
+<ul>
+<li>ID: <code>RL-9e4abf2f9d</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/ai-model-co-design-hardware-friendly-llm-design/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='5-profiling-in-pytorch-part-3-attention-is-all-you-profile'>5. Profiling in PyTorch (Part 3): Attention is all you profile</h3>
+<ul>
+<li>ID: <code>RL-145fbd552c</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/torch-attention-profile</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='6-native-speed-vllm-transformers-modeling-backend'>6. Native-speed vLLM transformers modeling backend</h3>
+<ul>
+<li>ID: <code>RL-f2a3364a10</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/native-speed-vllm-transformers-backend</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='7-from-hugging-face-to-amazon-sagemaker-studio-in-one-click'>7. From Hugging Face to Amazon SageMaker Studio in one click</h3>
+<ul>
+<li>ID: <code>RL-ca9a2a21da</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/amazon/one-click-to-sagemaker-studio</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='8-hugging-face-models-on-foundry-managed-compute'>8. Hugging Face Models on Foundry Managed Compute</h3>
+<ul>
+<li>ID: <code>RL-024a3808c0</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/microsoft/foundry-managed-compute</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='9-tuning-the-harness-not-the-model-a-nemotron-3-ultra-playbook'>9. Tuning the harness, not the model: a Nemotron 3 Ultra playbook</h3>
+<ul>
+<li>ID: <code>RL-e6bc4973a2</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/tuning-the-harness-not-the-model-a-nemotron-3-ultra-playbook</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul></main></div>
+</body></html>
