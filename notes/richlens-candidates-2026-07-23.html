@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RichLens Candidate Feed — 2026-07-23</title>
+<style>
+:root { color-scheme: light dark; --bg:#f5f7fb; --card:#fff; --text:#111827; --muted:#667085; --line:#e5e7eb; --accent:#2563eb; --shadow:0 20px 50px rgba(15,23,42,.10); }
+@media (prefers-color-scheme: dark) { :root { --bg:#090e1a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --line:#263244; --accent:#60a5fa; --shadow:0 20px 50px rgba(0,0,0,.35); } }
+* { box-sizing:border-box; } body { margin:0; background:radial-gradient(circle at top left, rgba(37,99,235,.14), transparent 28rem), var(--bg); color:var(--text); font:16px/1.68 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC","PingFang SC",Arial,sans-serif; }
+.top { position:sticky; top:0; z-index:10; backdrop-filter:blur(16px); background:color-mix(in srgb, var(--bg) 84%, transparent); border-bottom:1px solid var(--line); } .topin { max-width:1120px; margin:0 auto; padding:10px 18px; display:flex; justify-content:space-between; gap:12px; align-items:center; } .brand { font-weight:850; } .meta { color:var(--muted); font-size:13px; }
+.page { max-width:1120px; margin:0 auto; padding:18px; display:grid; grid-template-columns:240px minmax(0,1fr); gap:18px; } nav { position:sticky; top:58px; align-self:start; max-height:calc(100vh - 78px); overflow:auto; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; box-shadow:var(--shadow); } nav a { display:block; color:var(--text); text-decoration:none; padding:7px 8px; border-radius:10px; } nav a:hover { color:var(--accent); background:rgba(37,99,235,.08); } .toc-h3 { padding-left:18px; color:var(--muted); font-size:14px; }
+main { min-width:0; background:var(--card); border:1px solid var(--line); border-radius:22px; padding:28px; box-shadow:var(--shadow); } h1 { margin:0 0 10px; font-size:34px; line-height:1.16; letter-spacing:-.035em; } h2 { margin-top:34px; padding-top:16px; border-top:1px solid var(--line); font-size:25px; } h3 { margin-top:24px; font-size:20px; } a { color:var(--accent); } code { background:rgba(127,127,127,.14); border-radius:6px; padding:1px 6px; } blockquote { margin:16px 0; padding:12px 15px; border-left:4px solid var(--accent); background:rgba(37,99,235,.08); border-radius:12px; color:var(--muted); } li { margin:7px 0; }
+.table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:16px; margin:16px 0; } table { width:100%; border-collapse:collapse; min-width:720px; } th,td { padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; } th { text-align:left; color:var(--muted); background:rgba(37,99,235,.10); } .checklist { list-style:none; padding-left:0; } .checklist li { padding:9px 11px; border:1px solid var(--line); border-radius:12px; background:rgba(127,127,127,.05); }
+@media (max-width:840px) { .page { display:block; padding:12px; } nav { position:relative; top:0; max-height:none; margin-bottom:12px; box-shadow:none; } nav .toc-h3 { display:none; } main { padding:17px; border-radius:18px; } h1 { font-size:28px; } h2 { font-size:22px; } body { font-size:15.5px; } }
+</style></head><body>
+<div class="top"><div class="topin"><div class="brand">📄 rich-prod Note</div><div class="meta">Rendered 2026-07-23 21:10</div></div></div>
+<div class="page"><nav><div class="meta">Contents</div><a class='toc-h1' href='#richlens-candidate-feed-2026-07-23'>RichLens Candidate Feed — 2026-07-23</a><a class='toc-h2' href='#candidates'>Candidates</a><a class='toc-h3' href='#1-openai-s-accidental-cyberattack-against-hugging-face-is-science-fiction-that-happened'>1. OpenAI’s accidental cyberattack against Hugging Face is science fiction that happened</a><a class='toc-h3' href='#2-copilot-vs-raw-api-access-what-are-you-actually-paying-for'>2. Copilot vs. raw API access: What are you actually paying for?</a><a class='toc-h3' href='#3-show-hn-mwe-mcp-self-hosted-memory-for-ai-agents-that-knows-who-may-know-what'>3. Show HN: Mwe-MCP – self-hosted memory for AI agents that knows who may know what</a><a class='toc-h3' href='#4-benchmarking-confidential-gpu-inference-on-nvidia-h100-under-intel-tdx'>4. Benchmarking Confidential GPU Inference on NVIDIA H100 under Intel TDX</a><a class='toc-h3' href='#5-scaling-laws-for-hypernetwork-based-knowledge-injection-in-large-language-models'>5. Scaling Laws for Hypernetwork-Based Knowledge Injection in Large Language Models</a><a class='toc-h3' href='#6-bringing-nunchaku-4-bit-diffusion-inference-to-diffusers'>6. Bringing Nunchaku 4-bit Diffusion Inference to Diffusers</a><a class='toc-h3' href='#7-eval-engineering-skill-build-evals-from-repo-context-and-traces'>7. Eval Engineering Skill: Build Evals From Repo Context and Traces</a><a class='toc-h3' href='#8-amd-to-launch-next-generation-of-ai-infrastructure-to-challenge-nvidia'>8. AMD to launch next generation of AI infrastructure to challenge Nvidia</a><a class='toc-h3' href='#9-fineserve-a-fine-grained-dataset-and-characterization-of-global-llm-serving-workloads'>9. FineServe: A Fine-Grained Dataset and Characterization of Global LLM Serving Workloads</a><a class='toc-h3' href='#10-hybrid-lstm-graph-neural-framework-for-robust-financial-fraud-detection-and-adversarial-resilience'>10. Hybrid LSTM-Graph Neural Framework for Robust Financial Fraud Detection and Adversarial Resilience</a><a class='toc-h3' href='#11-formulaspin-self-play-fine-tuning-for-natural-language-to-spreadsheet-formula-generation'>11. FormulaSPIN: Self-Play Fine-Tuning for Natural Language to Spreadsheet Formula Generation</a><a class='toc-h3' href='#12-stateful-guardrails-for-multi-turn-llm-systems-a-conversational-risk-accumulation-framework'>12. Stateful Guardrails for Multi-Turn LLM Systems: A Conversational Risk Accumulation Framework</a><a class='toc-h3' href='#13-when-reasoning-narrows-the-move-diversity-collapse-in-llm-game-play'>13. When Reasoning Narrows the Move: Diversity Collapse in LLM Game Play</a><a class='toc-h3' href='#14-on-the-computational-complexity-of-structural-generalization'>14. On the Computational Complexity of Structural Generalization</a><a class='toc-h3' href='#15-cruisebench-a-real-flight-aligned-n-cmapss-benchmark-for-engine-rul-prediction'>15. CruiseBench: A Real-Flight-Aligned N-CMAPSS Benchmark for Engine RUL Prediction</a><a class='toc-h3' href='#16-how-news-organizations-are-using-ai-to-advance-their-vital-missions'>16. How news organizations are using AI to advance their vital missions</a><a class='toc-h3' href='#17-advancing-the-next-era-of-national-science'>17. Advancing the next era of national science</a><a class='toc-h3' href='#18-ntt-data-group-cuts-incident-analysis-to-30-minutes-with-codex'>18. NTT DATA Group cuts incident analysis to 30 minutes with Codex</a><a class='toc-h3' href='#19-3-google-updates-from-galaxy-unpacked-2026'>19. 3 Google updates from Galaxy Unpacked 2026</a><a class='toc-h3' href='#20-make-long-running-nvidia-tensorrt-engine-builds-observable-and-cancelable-in-python-or-c'>20. Make Long-Running NVIDIA TensorRT Engine Builds Observable and Cancelable in Python or C++</a></nav><main><div class="meta">Source: 99_System/Reports/RichLens/Discovery/2026-07-23-RichLens-Candidate-Feed.md</div><h1 id='richlens-candidate-feed-2026-07-23'>RichLens Candidate Feed — 2026-07-23</h1>
+<ul>
+<li>Discovered candidates: 115</li>
+<li>Added to queue: 20</li>
+<li>Snoozed by source fatigue: 0</li>
+</ul>
+<h2 id='candidates'>Candidates</h2>
+<h3 id='1-openai-s-accidental-cyberattack-against-hugging-face-is-science-fiction-that-happened'>1. OpenAI’s accidental cyberattack against Hugging Face is science fiction that happened</h3>
+<ul>
+<li>ID: <code>RL-4fecb70b0c</code></li>
+<li>Source: Simon Willison / <code>rss</code></li>
+<li>URL: https://simonwillison.net/2026/Jul/22/openai-cyberattack/#atom-everything</li>
+<li>Score: <code>0.77</code></li>
+<li>Why: Matches topics: AI agents, agentic coding, coding agents, LLM evaluation; source fatigue -0.18</li>
+</ul>
+<h3 id='2-copilot-vs-raw-api-access-what-are-you-actually-paying-for'>2. Copilot vs. raw API access: What are you actually paying for?</h3>
+<ul>
+<li>ID: <code>RL-b8eb1fb948</code></li>
+<li>Source: GitHub AI and ML Blog / <code>rss</code></li>
+<li>URL: https://github.blog/ai-and-ml/github-copilot/copilot-vs-raw-api-access-what-are-you-actually-paying-for/</li>
+<li>Score: <code>0.73</code></li>
+<li>Why: Matches topics: agentic coding, AI coding, coding agents, personal AI workflow</li>
+</ul>
+<h3 id='3-show-hn-mwe-mcp-self-hosted-memory-for-ai-agents-that-knows-who-may-know-what'>3. Show HN: Mwe-MCP – self-hosted memory for AI agents that knows who may know what</h3>
+<ul>
+<li>ID: <code>RL-36ecc4fec6</code></li>
+<li>Source: Hacker News AI Search / <code>rss</code></li>
+<li>URL: https://github.com/Fr4nZ82/mwe-mcp</li>
+<li>Score: <code>0.63</code></li>
+<li>Why: Matches topics: AI agents, coding agents, personal AI workflow, RAG</li>
+</ul>
+<h3 id='4-benchmarking-confidential-gpu-inference-on-nvidia-h100-under-intel-tdx'>4. Benchmarking Confidential GPU Inference on NVIDIA H100 under Intel TDX</h3>
+<ul>
+<li>ID: <code>RL-2088cc721c</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.19353</li>
+<li>Score: <code>0.61</code></li>
+<li>Why: Matches topics: LLM evaluation, inference, model serving</li>
+</ul>
+<h3 id='5-scaling-laws-for-hypernetwork-based-knowledge-injection-in-large-language-models'>5. Scaling Laws for Hypernetwork-Based Knowledge Injection in Large Language Models</h3>
+<ul>
+<li>ID: <code>RL-076c2426b6</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.19604</li>
+<li>Score: <code>0.49</code></li>
+<li>Why: Matches topics: knowledge management, Obsidian knowledge management</li>
+</ul>
+<h3 id='6-bringing-nunchaku-4-bit-diffusion-inference-to-diffusers'>6. Bringing Nunchaku 4-bit Diffusion Inference to Diffusers</h3>
+<ul>
+<li>ID: <code>RL-37c9890bc3</code></li>
+<li>Source: Hugging Face Blog / <code>rss</code></li>
+<li>URL: https://huggingface.co/blog/nunchaku-diffusers</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: inference</li>
+</ul>
+<h3 id='7-eval-engineering-skill-build-evals-from-repo-context-and-traces'>7. Eval Engineering Skill: Build Evals From Repo Context and Traces</h3>
+<ul>
+<li>ID: <code>RL-b026998ae9</code></li>
+<li>Source: LangChain Blog / <code>rss</code></li>
+<li>URL: https://www.langchain.com/blog/towards-automating-eval-engineering</li>
+<li>Score: <code>0.47</code></li>
+<li>Why: Matches topics: evals</li>
+</ul>
+<h3 id='8-amd-to-launch-next-generation-of-ai-infrastructure-to-challenge-nvidia'>8. AMD to launch next generation of AI infrastructure to challenge Nvidia</h3>
+<ul>
+<li>ID: <code>RL-a4f5758ffc</code></li>
+<li>Source: Hacker News AI Search / <code>rss</code></li>
+<li>URL: https://www.reuters.com/business/amd-expected-launch-next-generation-ai-infrastructure-challenge-nvidia-2026-07-23/</li>
+<li>Score: <code>0.39</code></li>
+<li>Why: Matches topics: AI infrastructure, investment AI infrastructure</li>
+</ul>
+<h3 id='9-fineserve-a-fine-grained-dataset-and-characterization-of-global-llm-serving-workloads'>9. FineServe: A Fine-Grained Dataset and Characterization of Global LLM Serving Workloads</h3>
+<ul>
+<li>ID: <code>RL-512d58a28c</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.19349</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: model serving</li>
+</ul>
+<h3 id='10-hybrid-lstm-graph-neural-framework-for-robust-financial-fraud-detection-and-adversarial-resilience'>10. Hybrid LSTM-Graph Neural Framework for Robust Financial Fraud Detection and Adversarial Resilience</h3>
+<ul>
+<li>ID: <code>RL-5f0f9145b6</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.19350</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='11-formulaspin-self-play-fine-tuning-for-natural-language-to-spreadsheet-formula-generation'>11. FormulaSPIN: Self-Play Fine-Tuning for Natural Language to Spreadsheet Formula Generation</h3>
+<ul>
+<li>ID: <code>RL-38b93ff2a0</code></li>
+<li>Source: arXiv cs.AI / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.19354</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: model serving</li>
+</ul>
+<h3 id='12-stateful-guardrails-for-multi-turn-llm-systems-a-conversational-risk-accumulation-framework'>12. Stateful Guardrails for Multi-Turn LLM Systems: A Conversational Risk Accumulation Framework</h3>
+<ul>
+<li>ID: <code>RL-ff846736fa</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.19361</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='13-when-reasoning-narrows-the-move-diversity-collapse-in-llm-game-play'>13. When Reasoning Narrows the Move: Diversity Collapse in LLM Game Play</h3>
+<ul>
+<li>ID: <code>RL-94f42a9693</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.19523</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='14-on-the-computational-complexity-of-structural-generalization'>14. On the Computational Complexity of Structural Generalization</h3>
+<ul>
+<li>ID: <code>RL-6aed5314c4</code></li>
+<li>Source: arXiv cs.CL / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.19573</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='15-cruisebench-a-real-flight-aligned-n-cmapss-benchmark-for-engine-rul-prediction'>15. CruiseBench: A Real-Flight-Aligned N-CMAPSS Benchmark for Engine RUL Prediction</h3>
+<ul>
+<li>ID: <code>RL-784dcfa666</code></li>
+<li>Source: arXiv cs.LG / <code>rss</code></li>
+<li>URL: https://arxiv.org/abs/2607.19380</li>
+<li>Score: <code>0.37</code></li>
+<li>Why: Matches topics: LLM evaluation</li>
+</ul>
+<h3 id='16-how-news-organizations-are-using-ai-to-advance-their-vital-missions'>16. How news organizations are using AI to advance their vital missions</h3>
+<ul>
+<li>ID: <code>RL-130e23c4bd</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/how-news-organizations-are-using-ai</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='17-advancing-the-next-era-of-national-science'>17. Advancing the next era of national science</h3>
+<ul>
+<li>ID: <code>RL-fc3528d001</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/advancing-the-next-era-of-national-science</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='18-ntt-data-group-cuts-incident-analysis-to-30-minutes-with-codex'>18. NTT DATA Group cuts incident analysis to 30 minutes with Codex</h3>
+<ul>
+<li>ID: <code>RL-ce627deb99</code></li>
+<li>Source: OpenAI News / <code>rss</code></li>
+<li>URL: https://openai.com/index/ntt-data</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='19-3-google-updates-from-galaxy-unpacked-2026'>19. 3 Google updates from Galaxy Unpacked 2026</h3>
+<ul>
+<li>ID: <code>RL-23fca7e728</code></li>
+<li>Source: Google AI Blog / <code>rss</code></li>
+<li>URL: https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul>
+<h3 id='20-make-long-running-nvidia-tensorrt-engine-builds-observable-and-cancelable-in-python-or-c'>20. Make Long-Running NVIDIA TensorRT Engine Builds Observable and Cancelable in Python or C++</h3>
+<ul>
+<li>ID: <code>RL-12e3d93431</code></li>
+<li>Source: NVIDIA Technical Blog / <code>rss</code></li>
+<li>URL: https://developer.nvidia.com/blog/make-long-running-nvidia-tensorrt-engine-builds-observable-and-cancelable-in-python-or-c/</li>
+<li>Score: <code>0.35</code></li>
+<li>Why: Trusted source / recent item; weak topical match.</li>
+</ul></main></div>
+</body></html>
